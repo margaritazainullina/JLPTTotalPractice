@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:showDividers="middle"
+    tools:context=".MenuListActivity" >
+
+    <!-- android:divider="?android:attr/dividerHorizontal" -->
+
+
+    <!--
+    This layout is a two-pane layout for the Items
+    master/detail flow. See res/values-large/refs.xml and
+    res/values-sw600dp/refs.xml for an example of layout aliases
+    that replace the single-pane version of the layout with
+    this two-pane version.
+    -->
+
+
+    <!-- left side for small devices -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/textViewUserInfo"
+        android:layout_toRightOf="@+id/item_list" />
+
+    <TextView
+        android:id="@+id/textViewUserInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:textSize="@dimen/largeText" />
+
+    <RatingBar
+        android:id="@+id/levelRatingBar"        
+        style="?android:attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_below="@+id/textViewUserInfo"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:stepSize="1" />
+
+    <fragment
+        android:id="@+id/item_list"
+        android:name="ua.hneu.languagetrainer.masterdetailflow.MenuListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/levelRatingBar"
+        tools:context=".ItemListActivity" />
+
+    <!-- tools:layout="@android:layout/list_content" /> -->
+
+</RelativeLayout>

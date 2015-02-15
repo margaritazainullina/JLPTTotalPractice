@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Greeting activity -->
+    <string name="greeting">Welcome to JLPT trainer. </string>
+    <string name="info">You can take a level definition test or choose target level, if you\'re confident in your knowledge. You can choose another level anytime you want with saving all information.</string>
+    <string name="take_test">Take a test</string>
+    <string name="start_learning">Start learning</string>
+    <string name="level">Level:</string>
+    <string name="title_greeting">Greeting</string>
+    <!-- Level definition -->
+    <string name="title_level_def_test_activity">Level definition test</string>
+    <string name="desc">Choose correct answer from list</string>
+    <string name="question">Question</string>
+    <string name="choose_answer_for">Choose correct answer for:</string>
+    <string name="correct">Correct!</string>
+    <string name="wrong">Wrong!</string>
+    <string name="dont_know">I don\'t know</string>
+    <string name="end_test">End test</string>
+    <!-- Test results -->
+    <string name="title_lev_def_test_result">Recommendations</string>
+    <string name="recommendation">It\'s recommended to choose level</string>
+    <string name="results_desc">Press \"I agree\", to follow the recommendation</string>
+    <string name="choose_level">Choose level</string>
+    <string name="percentage">Correct answers:</string>
+    <string name="i_agree">I agree</string>
+    <!-- Titles -->
+    <string name="app_name">JLPT Total Practice</string>
+    <string name="title">JLPT Trainer</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_vocabulary">VocabularyActivity</string>
+    <string name="title_activity_grammar">GrammarActivity</string>
+    <string name="practice_words">Practice words</string>
+    <string name="title_activity_word_practice">Introduction of words</string>
+    <string name="title_activity_word_practice_result">Your result</string>
+    <string name="i_already_know">I already know it</string>
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip exercise</string>
+    <string name="skipIntroduction">Skip introduction</string>
+    <string name="ok">OK</string>
+    <string name="repeatTraining">Repeat training</string>
+    <string name="title_translation_test_activity">Select right translation from the list</string>
+    <string name="title_transcription_test_activity"> Select right transcription from the list </string>
+    <string name="title_activity_match_the_words">Match words with their readings and translation</string>
+
+    <string name="title_activity_allvocabulary">All words in level</string>
+    <string name="title_activity_allgrammar">All grammar in level</string>
+    <string name="title_activity_allgiongo">All giongo</string>
+    <string name="title_activity_allcw">All counter words</string>
+    <string name="title_activity_giongo_intro">Giongo learning</string>
+    <string name="title_activity_vocabulary_intro">Words learning</string>
+    <string name="title_activity_grammar_intro">Grammar learning</string>
+    <string name="title_activity_cw_intro">Counter words learning</string>
+    <string name="title_cw_intro">Counter words</string>
+    <string name="title_activity_grammar_test">Grammar exercises</string>
+    <string name="title_activity_giongo_test">Giongo exercises</string>
+    <string name="title_activity_cw_test">Counter words exercises</string>
+
+
+    <!-- Main activity -->
+    <string name="your_level">Your level is: N</string>
+    <string name="vocabulary">Vocabulary</string>
+    <string name="grammar">Grammar</string>
+    <string name="mock_tests">Mock tests</string>
+    <string name="other">Other</string>
+    <string name="settings">Settings</string>
+    <string name="statistics">Learning progress</string>
+    <!-- Vocabulary activity fragment -->
+    <string name="you_have_learned">You have learned </string>
+    <!-- Result activity -->
+    <string name="you_havent_learned_any_word">You haven\'t learned any word yet :(</string>
+    <string name="you_havent_learned_any_rule">You haven\'t learned any rule yet :(</string>
+    <string name="by_now_youve_learned">By now you have learned </string>
+    <string name="out_of"> out of </string>
+    <string name="percentage_of_voc"> % of vocabulary</string>
+    <string name="percentage_of_gr"> % of grammar</string>
+    <string name="percentage_of_cw"> % of counter words</string>
+    <string name="percentage_of_giongo"> % of giongo/gitaigo</string>
+    <string name="pay_attention_to">Pay attention to:</string>
+    <string name="great">Great! </string>
+    <string name="good">Good! </string>
+    <string name="more_attentive">You should be more attentive! </string>
+    <string name="correct_answer_rate">Your correct answer rate is </string>
+    <string name="enough">It\'s enough vocabulary for today. </string>
+    <string name="words_learned">Words learned </string>
+    <string name="rules_learned">Rules learned </string>
+    <string name="to_main_menu">Return to main menu </string>
+    <string name="results">Results </string>
+    <!-- Grammar activity fragment -->
+    <string name="practice_grammar">Practice grammar</string>
+    <string name="grammar_learned">Grammar rules learned </string>
+    <string name="title_activity_giongo_practice">Giongo</string>
+    <string name="title_activity_grammar_practice">Grammar </string>
+    <string name="giongo">Giongo and gitaigo </string>
+    <string name="giongo_info">Sound symbolic words are found in written as well as spoken Japanese. Known popularly as onomatopoeia, these words are not just imitative of sounds but cover a much wider range of meanings indeed, many sound-symbolic words in Japanese are for things that don\'t make any noise originally. Sound symbolic words function as adverbs, they are often introduced by a quotative complementizer と (to).</string>
+    <string name="counter_words">Counter words </string>
+    <string name="counter_words_info">In Japanese, numerals cannot quantify nouns by themselves (except, in certain cases, for the numbers from one to ten). For example, to express the idea "two dogs" in Japanese one must say 二匹の犬 ni hiki no inu. Here 犬 inu means "dog", 二 ni is the number 2, "の" "no" is a possessive particle, and 匹 hiki is the counter for small animals. These counters are not independent words and always appear with a number (or question word) before them. If the number is unknown, a question word is used, most often 何 nan, as in 何名様 nan-mei-sama "how many guests", or sometimes 幾 iku as in 幾晩 iku-ban "how many nights?".</string>
+    <string name="start_test">Start test</string>
+    <string name="test">Test</string>
+    <string name="test_name">Test #</string>
+    <string name="voc_gr">Vocabulary/Grammar</string>
+    <string name="reading">Reading</string>
+    <string name="listening">Listening</string>
+    <string name="test_results">Test results</string>
+    <string name="total">Total</string>
+    <string name="skip_section">Skip section</string>
+    <string name="skip_section_confirmation">Do you really want to skip section?</string>
+    <string name="end_test_confirmation">Do you really want to end test?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="your_time_is_over">Your time is over!</string>
+    <!-- Settings -->
+    <string name="general">General</string>
+    <string name="level_settings">Level settings</string>
+    <string name="level_settings_desc">JLPT level N5-N1</string>
+    <string name="transcription_settings">Transcription settings</string>
+    <string name="transcription_settings_desc">Show/hide transcription</string>
+    <string name="learning_settings">Learning settings</string>
+    <string name="learning_settings_desc">Number of entries and repetitions</string>
+    <string name="show_romaji">Show romaji</string>
+    <string name="always">Always</string>
+    <string name="only_4_5">Only for levels N4 and N5</string>
+    <string name="never">Never (except for phrases without hiragana)</string>
+    <string name="num_of_entries">Number of entries in exercise iteration</string>
+    <string name="num_of_repetitions">An entry is learned after number of repetitions </string>
+    <string name="color_words">Highlight words with color</string>
+    <string name="play_auto">Play spelling of words automatically</string>
+    <string name="gold_version">Gold version of application</string>
+    <string name="lang">Language</string>
+    <string name="ui_lang">Interface language</string>
+    <string name="after_reload">Settings will take effect after restart</string>
+    <string name="congratulations">Congratulations! You\'ve learned all in level</string>
+    <string name="or">or choose a level</string>
+    <string name="voc_learned">Congratulations! You\'ve learned all vocabulary of level</string>
+    <string name="gr_learned">Congratulations! You\'ve learned all grammar of level</string>
+    <string name="cw_learned">Congratulations! You\'ve learned all counter words</string>
+    <string name="g_learned">Congratulations! You\'ve learned all giongo</string>
+    <string name="loading">Loading...</string>
+    <string name="loading_wait">Loading data, please wait...</string>
+    <string name="jlpt_level">JLPT level:</string>
+    <string name="pause">Test paused</string>
+    <string name="resume">Click to resume</string>
+
+    <!-- All entries activity -->
+    <string name="all_vocabulary">All words of the level</string>
+    <string name="all_grammar">All grammar rules of the level</string>
+    <string name="all_giongo">All giongo</string>
+    <string name="all_counters">All counter words</string>
+    <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="title_activity_learning_statistics">LearningStatistics</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>

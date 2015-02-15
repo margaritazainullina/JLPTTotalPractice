@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Greeting activity -->
+    <string name="greeting">JLPT Total Practice へようこそ。 </string>
+    <string name= "info">あなたはレベルテストを受けるか、リストからレベルを選択することができます。いつでも設定オプションに変更するよろしいです。</string>
+    <string name="take_test">テストを取る</string>
+    <string name= "start_learning">勉強を始める </string>
+    <string name="level">レベル：</string>
+    <string name="title_greeting">ご挨拶</string>
+    <!-- Level definition -->
+    <string name="title_level_def_test_activity">レベルテスト</string>
+    <string name="desc">リストから正しい答えを選択してください</string>
+    <string name="question">質問</string>
+    <string name="choose_answer_for">正しい答えを選択してください：</string>
+    <string name="correct">正解です</string>
+    <string name="wrong">間違いです</string>
+    <string name= "dont_know">知らない</string>
+    <string name="end_test">テストを完了する</string>
+    <!-- Test results -->
+    <string name="title_lev_def_test_result">勧告</string>
+    <string name="recommendation">これは、レベルを選択することをお勧めします</string>
+    <string name="results_desc">勧告に従うように、「 勧告に賛成です押し」を押してください</string>
+    <string name="choose_level">レベルを選ぶ</string>
+    <string name="percentage">正しい答えの割合：</string>
+    <string name="i_agree"> 勧告に賛成です</string>
+    <!--Titles -->
+    <string name="app_name"> JLPT Total Practice </string>
+    <string name="title"> JLPT Total Practice </string>
+    <string name="action_settings">設定</string>
+    <string name="practice_words">語彙を勉強する</string>
+    <string name= "title_activity_word_practice">語彙を勉強する</string>
+    <string name="title_activity_word_practice_result">あなたの結果</string>
+    <string name="i_already_know">それを知っている</string>
+    <string name="previous">前へ</string>
+    <string name="next">次へ</string>
+    <string name="skip"> 問題をスキップ</string>
+    <string name= "skipIntroduction">紹介をスキップ</string>
+    <string name="ok"> OK </string>
+    <string name="repeatTraining">勉強を繰り返す</string>
+    <string name="title_translation_test_activity">リストから正しい訳を選択してください</string>
+    <string name="title_transcription_test_activity">リストから正しい音訳を選択してください</string>
+    <string name="title_activity_match_the_words"> 言葉を訳と音訳に合わせる.</string>
+    <string name="title_activity_allvocabulary">すべての語彙</string>
+    <string name="title_activity_allgrammar">すべての文法</string>
+    <string name="title_activity_allgiongo">すべての擬音語と擬態語</string>
+    <string name="title_activity_allcw">すべての助数詞</string>
+         <!-- Vocabulary activity -->
+    <string name="your_level">あなたのレベルはN</string>
+    <string name="vocabulary">語彙</string>
+    <string name="grammar">文法</string>
+    <string name="mock_tests">模擬試験</string>
+    <string name="other">その他</string>
+    <string name="settings">設定</string>
+    <string name="statistics">進捗の統計</string>
+    <!-- Vocabulary activity fragment -->
+    <string name="you_have_learned">あなたは すでに勉強した</string>
+    <!-- Result activity -->
+    <string name="you_havent_learned_any_word">あなたはまだ言葉を覚えていなかった</string>
+    <string name="you_havent_learned_any_rule">あなたはまだ文法規則を覚えていなかった</string>
+    <string name= "by_now_youve_learned">あなたはそこまで勉強した</string>
+    <string name="out_of">中の</string>
+    <string name="percentage_of_voc">語彙の割合</string>
+    <string name="percentage_of_gr">文法規則の割合</string>
+    <string name="percentage_of_cw">助数詞の割合</string>
+    <string name="percentage_of_giongo">擬音語と擬態語の割合</string>
+    <string name="pay_attention_to">それに注意してください：</string>
+    <string name="great">優</string>
+    <string name="good">良</string>
+    <string name="more_attentive">あなたはもっと注意を払わなければいけない</string>
+    <string name="correct_answer_rate">あなたの正解率</string>
+    <string name="words_learned">語彙を勉強した数</string>
+    <string name="rules_learned">文法規則を勉強した数</string>
+    <string name="to_main_menu">メインメニューに戻る</string>
+    <string name="results">結果</string>
+    <!-- Grammar activity fragment -->
+    <string name="practice_grammar">文法を勉強する</string>
+    <string name="grammar_learned">の文法規則を勉強した</string>
+    <string name="title_activity_giongo_practice"> 擬音語と擬態語</string>
+    <string name="title_activity_grammar_practice">文法</string>
+    <string name="giongo">擬音語と擬態語</string>
+        <string name="giongo_info">擬音語は物が発する音を字句で模倣したものである。このうち『オノマトピア』は人や動物が発する声を擬声語と分類している。同じ言語でも時代によって異なる。例えば、狂言などで犬の泣き声は「びよ」と表現される[5]。通常カタカナで表記される。
+擬態語。状態や感情などの音を発しないものを字句で模倣したものである。通常ひらがなで表記される。日本語には「たっぷり」「ちょうど」のように擬態語と一般語彙の中間的なものもある。擬態語の多さは日本語の特徴でもある。</string>
+    <string name="counter_words">助数詞</string>
+        <string name="counter_words_info">助数詞（じょすうし）は、数を表す語の後ろに付けてどのような事物の数量であるかを表す語要素である。数詞を作る接尾辞の一群。類別詞の一種である。
+日本語のほか、中国語・韓国語など東アジア・東南アジアの多くの言語、またアメリカ大陸先住民の言語などにある</string>
+    <string name="start_test">テストを始める</string>
+    <string name="test">テスト</string>
+    <string name="test_name">テスト＃</string>
+    <string name="voc_gr">語彙・文法</string>
+    <string name="reading">読解</string>
+    <string name="listening">聴解</string>
+    <string name="test_results">テストの結果</string>
+    <string name="total">総合点</string>
+    <string name="skip_section"> セクションをスキップ</string>
+    <string name="skip_section_confirmation">あなたが本当にセクションをスキップしたいか？</string>
+    <string name="end_test_confirmation">あなたが本当にテストを完了したいか？</string>
+    <string name="yes">はい</string>
+    <string name="no">いいえ</string>
+    <string name="your_time_is_over">時間が終わった!</string>
+    <!-- Settings -->
+    <string name="general">一般的な設定</string>
+    <string name="level_settings">レベルの設定</string>
+    <string name="level_settings_desc">日本語能力試験のレベルN5-N1</string>
+    <string name="transcription_settings">音訳の設定</string>
+    <string name="transcription_settings_desc">音訳を表示する・表示しない</string>
+    <string name="learning_settings">勉強の設定</string>
+    <string name="learning_settings_desc">言葉と繰り返し回数</string>
+    <string name="show_romaji">ローマ字を表示</string>
+    <string name="always">いつも</string>
+    <string name="only_4_5">N4とN5のレベルだけ</string>
+    <string name="never">表示しない</string>
+    <string name="num_of_entries">単語の繰り返しの数</string>
+    <string name="num_of_repetitions">単語の繰り返しの数</string>
+    <string name="color_words">単語 を彩る</string>
+    <string name="play_auto">単語の音訳を自動てきな再現</string>
+    <string name="gold_version">アプリケーションのゴールドバージョン</string>
+    <string name="lang">言語</string>
+    <string name="ui_lang">インターフェース言語</string>
+    <string name="after_reload">設定は再起動後に有効になります。</string>
+    <string name="congratulations">おめでとう！あなたはこのレベルにすべての単語を勉強した！</string>
+    <string name="or">とか</string>
+    <string name="voc_learned">おめでとう！あなたはこのレベルにすべての語彙をを勉強した！</string>
+    <string name="gr_learned">おめでとう！あなたはこのレベルにすべての文法規則をを勉強した！</string>
+    <string name="cw_learned">おめでとう！あなたはすべての助数詞をを勉強した！</string>
+    <string name="g_learned">おめでとう！あなたはすべての擬音語と擬態語をを勉強した！</string>
+    <string name="loading">読み込んでいます...</string>
+    <string name="loading_wait">読み込んでいます、お待ちください...</string>
+    <string name="jlpt_level">日本語能力試験の級</string>
+    <string name="pause">テストが一時停止されている</string>
+    <string name="resume">続ける</string>
+
+    <!-- All entries activity -->
+    <string name="all_vocabulary">すべての語彙</string>
+    <string name="all_grammar">すべての文法</string>
+    <string name="all_giongo">すべての擬音語と擬態語</string>
+    <string name="all_counters">すべての助数詞</string>
+
+    <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="title_activity_learning_statistics">進捗の統計</string>
+
+</resources>

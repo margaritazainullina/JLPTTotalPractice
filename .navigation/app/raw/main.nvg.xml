@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigationModel
+  ns = "http://schemas.android.com?import=com.android.tools.idea.editors.navigation.model.*">
+  <locations  
+    class = "java.util.ArrayList">
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        xmlResourceName = "match_the_words"/>
+      <point      
+        x = "2080"      
+        y = "6160"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.counterwords.CounterWordsIntroductionActivity"/>
+      <point      
+        x = "500"      
+        y = "100"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        xmlResourceName = "word_practice"/>
+      <point      
+        x = "2060"      
+        y = "100"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.grammar.AllGrammar"/>
+      <point      
+        x = "500"      
+        y = "2120"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.masterdetailflow.GiongoActivity"/>
+      <point      
+        x = "500"      
+        y = "38480"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.masterdetailflow.CounterWordsActivity"/>
+      <point      
+        x = "550"      
+        y = "38530"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.vocabulary.VocabularyResultActivity"/>
+      <point      
+        x = "500"      
+        y = "4140"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.vocabulary.MatchWordsActivity"/>
+      <point      
+        x = "500"      
+        y = "6160"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.test.TestResultActivity"/>
+      <point      
+        x = "600"      
+        y = "38580"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.grammar.GrammarTestActivity"/>
+      <point      
+        x = "500"      
+        y = "8180"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.counterwords.CounterWordsResultActivity"/>
+      <point      
+        x = "500"      
+        y = "10200"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.SettingsActivity"/>
+      <point      
+        x = "3660"      
+        y = "18280"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.LoadingScreenActivity"/>
+      <point      
+        x = "650"      
+        y = "38630"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.giongo.GiongoIntroductionActivity"/>
+      <point      
+        x = "500"      
+        y = "12220"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.masterdetailflow.TestActivity"/>
+      <point      
+        x = "700"      
+        y = "38680"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        xmlResourceName = "word_practice_result"/>
+      <point      
+        x = "2080"      
+        y = "4140"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.grammar.GrammarIntroductionActivity"/>
+      <point      
+        x = "480"      
+        y = "14240"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.masterdetailflow.MenuListActivity"/>
+      <point      
+        x = "750"      
+        y = "38730"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.counterwords.AllCounterWords"/>
+      <point      
+        x = "500"      
+        y = "16260"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.masterdetailflow.VocabularyActivity"/>
+      <point      
+        x = "800"      
+        y = "38780"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        xmlResourceName = "settings"/>
+      <point      
+        x = "2080"      
+        y = "18280"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.test.LevelDefTestResultActivity"/>
+      <point      
+        x = "850"      
+        y = "38830"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.MainActivity"/>
+      <point      
+        x = "500"      
+        y = "18280"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.vocabulary.TranslationTestActivity"/>
+      <point      
+        x = "500"      
+        y = "20300"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        xmlResourceName = "searchview_in_menu"/>
+      <point      
+        x = "2080"      
+        y = "2080"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.grammar.AllGrammarExamples"/>
+      <point      
+        x = "900"      
+        y = "38880"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.masterdetailflow.GrammarActivity"/>
+      <point      
+        x = "1600"      
+        y = "38560"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.giongo.AllGiongo"/>
+      <point      
+        x = "500"      
+        y = "22320"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.vocabulary.TranscriptionTestActivity"/>
+      <point      
+        x = "500"      
+        y = "24340"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.GreetingActivity"/>
+      <point      
+        x = "1000"      
+        y = "38980"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.giongo.GiongoTestActivity"/>
+      <point      
+        x = "500"      
+        y = "26360"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.vocabulary.AllVocabulary"/>
+      <point      
+        x = "500"      
+        y = "28380"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.giongo.AllGiongoExamples"/>
+      <point      
+        x = "1050"      
+        y = "39030"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.counterwords.CounterWordsTestActivity"/>
+      <point      
+        x = "500"      
+        y = "30400"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.giongo.GiongoResultActivity"/>
+      <point      
+        x = "500"      
+        y = "32420"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.grammar.GrammarResultActivity"/>
+      <point      
+        x = "500"      
+        y = "34440"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.test.MockTestActivity"/>
+      <point      
+        x = "1100"      
+        y = "39080"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "ua.hneu.languagetrainer.pages.vocabulary.WordIntroductionActivity"/>
+      <point      
+        x = "500"      
+        y = "36460"/>
+    </statePointEntry>
+  </locations>
+</navigationModel>

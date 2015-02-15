@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toast_layout_root"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="8dp"
+    android:background="#DAAA"
+    >
+    <ImageView android:id="@+id/img"
+        android:src="@drawable/conglaturations5_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_gravity="center_horizontal" />
+    <TextView android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:text="Conglaturations! You have learned all vocabulary from N1 level."
+        android:layout_gravity="center"
+        android:clickable="false"
+        android:editable="false"
+        android:elegantTextHeight="true" />
+</LinearLayout>

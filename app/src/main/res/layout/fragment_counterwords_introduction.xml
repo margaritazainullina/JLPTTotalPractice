@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:scrollbars="vertical"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ua.hneu.languagetrainer.pages.counterwords.CounterWordsIntroductionActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/activity_vertical_margin" >
+
+                <TextView
+                    android:id="@+id/wordTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="面	"
+                    android:textSize="@dimen/xlargeText" />
+
+                <TextView
+                    android:id="@+id/hiraganaTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="めん"
+                    android:textSize="@dimen/largeText" />
+
+                <TextView
+                    android:id="@+id/romajiTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="men"
+                    android:textSize="@dimen/largeText" />
+            </LinearLayout>
+
+            <Button
+                style="@style/btnStyleOrange"
+                android:id="@+id/soundButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:drawableBottom="@drawable/sound"
+                android:gravity="left|center_vertical"
+                android:onClick="onPlayClick3" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/translationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="Mirrors, boards for board games (chess, igo, shogi), stages of computer games, walls of a room, tennis courts	"
+            android:textSize="@dimen/largeText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:gravity="center" >
+
+        <Button
+            android:id="@+id/buttonPrevious"
+            style="@style/btnStyleOrange"
+            android:layout_width="wrap_content"
+            android:layout_margin="@dimen/default_gap"
+            android:layout_height="wrap_content"
+            android:onClick="buttonPreviousOnClick"
+            android:text="@string/previous" />
+
+        <Button
+            android:id="@+id/buttonNext"
+            style="@style/btnStyleOrange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="buttonNextOnClick"
+            android:text="@string/next" />
+
+        <Button
+            android:id="@+id/buttonSkip"
+            style="@style/btnStyleOrange"
+            android:layout_margin="@dimen/default_gap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="buttonSkipOnClick"
+            android:text="@string/skipIntroduction" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="@string/general" >
+        <ListPreference
+            android:entries="@array/languageValues"
+            android:entryValues="@array/language"
+            android:key="language"
+            android:summary="@string/lang"
+            android:title="@string/ui_lang"
+            android:defaultValue="en"/>
+        <CheckBoxPreference
+            android:title="@string/gold_version"
+            android:defaultValue="false"
+            android:key="@string/gold_version" />
+        <ListPreference
+            android:entries="@array/levelValues"
+            android:entryValues="@array/level"
+            android:key="level"
+            android:summary="@string/level_settings_desc"
+            android:title="@string/level" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/transcription_settings" >
+        <ListPreference
+            android:entries="@array/showRomajiValues"
+            android:entryValues="@array/showRomaji"
+            android:key="showRomaji"
+            android:summary="@string/transcription_settings_desc"
+            android:title="@string/show_romaji"
+            android:defaultValue="always"/>
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:summary="@string/learning_settings_desc"
+        android:title="@string/learning_settings" >
+        <EditTextPreference
+            android:inputType="number"
+            android:defaultValue="7"
+            android:key="numOfEntries"
+            android:title="@string/num_of_entries" />
+         <EditTextPreference
+            android:inputType="number"
+            android:key="numOfRepetations"
+            android:defaultValue="7"
+            android:title="@string/num_of_repetitions" />
+        <CheckBoxPreference
+            android:title="@string/color_words"
+            android:defaultValue="true"
+            android:key="color" />
+        <CheckBoxPreference
+            android:title="@string/play_auto"
+            android:defaultValue="true"
+            android:key="autoplay"
+            />
+    </PreferenceCategory>
+
+</PreferenceScreen>

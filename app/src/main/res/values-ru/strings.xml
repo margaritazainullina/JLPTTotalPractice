@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Greeting activity -->
+    <string name="greeting">Добро пожаловать в программу JLPT Total Practice.</string>
+    <string name="info">Вы можете пройти небольшой тест на определение уровня или выбрать уровень самостоятельно, позже, вы можете поменять его в настройках. </string>
+    <string name="take_test">Пройти тест</string>
+    <string name="start_learning">Начать изучение</string>
+    <string name="level">Уровень:</string>
+    <string name="title_greeting">Приветствие</string>
+    <!-- Level definition -->
+    <string name="title_level_def_test_activity">Тест на определения уровня</string>
+    <string name="desc">Выберите правильный вариант ответа из списка</string>
+    <string name="question">Вопрос</string>
+    <string name="choose_answer_for">Выберите вариант ответа для:</string>
+    <string name="correct">Правильно!</string>
+    <string name="wrong">Неправильно!</string>
+    <string name="dont_know">Я не знаю</string>
+    <string name="end_test">Закончить тест</string>
+    <!-- Test results -->
+    <string name="title_lev_def_test_result">Результат</string>
+    <string name="recommendation">Рекомендуется выбрать уровень</string>
+    <string name="results_desc">Нажмите \"Я согласен\", чтобы последовать рекомендации</string>
+    <string name="percentage">Правильных ответов:</string>
+    <string name="i_agree">Я согласен</string>
+    <string name="choose_level">Выбрать уровень</string>
+    <!--Titles -->
+    <string name="app_name">JLPT Total Practice</string>
+    <string name="title">JLPT Total Practice</string>
+    <string name="action_settings">Настройки</string>
+    <string name="title_activity_vocabulary">VocabularyActivity</string>
+    <string name="title_activity_grammar">GrammarActivity</string>
+    <!-- Vocabulary activity -->
+    <string name="practice_words">Учить слова</string>
+    <string name="title_activity_word_practice">Слова для запоминания</string>
+    <string name="title_activity_word_practice_result">Результат</string>
+    <string name="previous">Назад</string>
+    <string name="next">Далее</string>
+    <string name="i_already_know">Я уже знаю это</string>
+    <string name="skip">Пропустить упражнение</string>
+    <string name="skipIntroduction">Перейти к упражнениям </string>
+    <string name="ok">OK</string>
+    <string name="repeatTraining">Пройти еще раз</string>
+    <string name="title_translation_test_activity">Выберите правильный вариант перевода из списка</string>
+    <string name="title_activity_giongo_practice">Гионго</string>
+    <string name="title_transcription_test_activity">Выберите правильную транскрипцию из списка </string>
+    <string name="title_activity_match_the_words">Поставьте в соответствие слово, произношение и перевод</string>
+    <string name="title_activity_allvocabulary">Все слова уровня</string>
+    <string name="title_activity_allgrammar">Вся грамматика уровня</string>
+    <string name="title_activity_allgiongo">Все гионго</string>
+    <string name="title_activity_allcw">Все счетные слова</string>
+    <string name="title_activity_vocabulary_intro">Слова лдя запоминания</string>
+    <string name="title_activity_grammar_intro">Грамматика для запоминания</string>
+    <string name="title_activity_giongo_intro">Гионго</string>
+    <string name="title_activity_cw_intro">Счетные слова</string>
+    <string name="title_cw_intro">Счетные слова</string>
+    <string name="title_activity_grammar_test">Упражнения на грамматику</string>
+    <string name="title_activity_giongo_test">Упражнения на гионго</string>
+    <string name="title_activity_cw_test">Упражнения на счетные слова</string>
+
+    <!-- Main activity -->
+    <string name="your_level">Ваш уровень: N</string>
+    <string name="vocabulary">Слова</string>
+    <string name="grammar">Грамматика</string>
+    <string name="mock_tests">Тесты</string>
+    <string name="other">Дополнительно</string>
+    <string name="settings">Настройки</string>
+    <string name="statistics">Статистика обучения</string>
+    <!-- Vocabulary activity fragment -->
+    <string name="you_have_learned">Вы выучили </string>
+    <!-- Result activity -->
+    <string name="you_havent_learned_any_word">Вы не выучили ни одного слова :(</string>
+    <string name="you_havent_learned_any_rule">Вы не выучили ни одного правила :(</string>
+    <string name="by_now_youve_learned">Всего выучено слов </string>
+    <string name="out_of">из </string>
+    <string name="percentage_of_voc"> % от всех слов</string>
+    <string name="percentage_of_gr"> % от всех правил</string>
+    <string name="percentage_of_cw"> % от всех счетных слов</string>
+    <string name="percentage_of_giongo"> % от всех гионго/гитайго</string>
+    <string name="pay_attention_to">Обратите вниание на:</string>
+    <string name="great">Отлично! </string>
+    <string name="good">Хорошо! </string>
+    <string name="more_attentive">Будьте внимательнее! </string>
+    <string name="correct_answer_rate">Ваш процент правильных ответов состаляет </string>
+    <string name="enough">Достаточно прохождения на сегодня. </string>
+    <string name="words_learned">Выучено слов </string>
+    <string name="rules_learned">Выучено правил </string>
+    <string name="to_main_menu">Вернуться в главное меню</string>
+    <string name="results">Результаты </string>
+    <!-- Grammar activity fragment -->
+    <string name="practice_grammar">Учить грамматику</string>
+    <string name="grammar_learned">Выучено правил </string>
+    <string name="title_activity_grammar_practice">Грамматика </string>
+    <string name="giongo">Гионго и гитайго</string>
+    <string name="giongo_info">Звукоподражательные слова в японском встречаются и в письменной, и в устной речи. Также называемые ономатопеей, эти слова не просто передают звук, но и охватывают более широкий диапазон значений, многие такие слова в японском обозначают понятия не связанные со звуком. Звукоподражательные слова грамматически являются наречиями, к ним часто добаляется частица と (to).</string>
+    <string name="counter_words">Счетные слова</string>
+    <string name="counter_words_info">В японском языке, числительные не могут существовать сами по себе (за исключением, в некоторых случаях, для чисел от одного до десяти). Например, "две собаки" на японском будет звучать как 二匹の犬 ni hiki no inu. Здесь 犬 inu означает "собака", 二 ni - число 2, "の" "no" является притяжательной частицей, и 匹 hiki это счетное слово для мелких животных. Эти счетные слова не являются самостоятельными и используются с существительными. В вопросительном предложении, чаще всего вместо счетного слова используется 何 nan, как, например, 何名様 nan-mei-sama ", сколько гостей", или иногда 幾 iku как в 幾晩 iku-ban "сколько ночей?".</string>
+    <string name="start_test">Начать тест</string>
+    <string name="test">Tест</string>
+    <string name="test_name">Тест №</string>
+    <string name="voc_gr">Слова/Граматика</string>
+    <string name="reading">Чтение</string>
+    <string name="listening">Аудирование</string>
+    <string name="test_results">Результаты теста</string>
+    <string name="total">Всего</string>
+    <string name="skip_section">Пропустить раздел</string>
+    <string name="skip_section_confirmation">Вы действительно хотите пропустить раздел?</string>
+    <string name="end_test_confirmation">Вы действительно хотите закончить тест?</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="your_time_is_over">Время кончилось!</string>
+    <!-- Settings -->
+    <string name="general">Общие</string>
+    <string name="level_settings">Уровень</string>
+    <string name="level_settings_desc">Уровень JLPT: N5-N1</string>
+    <string name="transcription_settings">Транскрипция</string>
+    <string name="transcription_settings_desc">Показать/скрыть транскрипцию</string>
+    <string name="learning_settings">Настройки изучения</string>
+    <string name="learning_settings_desc">Количество записей и повторений</string>
+    <string name="show_romaji">Показывать ромадзи</string>
+    <string name="always">Всегда</string>
+    <string name="only_4_5">Только для уровней N4 и N5</string>
+    <string name="never">Никогда (за исключнием фраз, без транскрипции хираганой)</string>
+    <string name="num_of_entries">Количество записей в цикле заданий</string>
+    <string name="num_of_repetitions">Слово выучено после числа повторений</string>
+    <string name="color_words">Выделять слова цветом</string>
+    <string name="play_auto">Воспроизводить слова автоматически</string>
+    <string name="gold_version">Расширенная версия без рекламы</string>
+    <string name="lang">Язык</string>
+    <string name="ui_lang">Язык интерфейса</string>
+    <string name="after_reload">Настройки вступят в силу после перезапуска приложения</string>
+
+    <string name="congratulations">Поздравляем, вы выучили все на уровне</string>
+    <string name="voc_learned">Поздравляем! Вы выучили все слова уровня</string>
+    <string name="gr_learned">Поздравляем! Вы выучили всю грамматику уровня</string>
+    <string name="cw_learned">>Поздравляем! Вы выучили все счетные слова</string>
+    <string name="g_learned">Поздравляем! Вы выучили все гионго</string>
+    <string name="or">или выберите уровень</string>
+    <string name="loading">Загрузка...</string>
+    <string name="loading_wait">Данные загружаются...</string>
+    <string name="jlpt_level">Уровень JLPT:</string>
+    <string name="pause">Пауза</string>
+    <string name="resume">Продолжить тест</string>
+
+    <!-- All entries activity -->
+    <string name="all_vocabulary">Все слова уровня</string>
+    <string name="all_grammar">Все правила уровня</string>
+    <string name="all_giongo">Все гионго</string>
+    <string name="all_counters">Все счетные слова</string>
+
+</resources>

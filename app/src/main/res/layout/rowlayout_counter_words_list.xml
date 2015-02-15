@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/section"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="Extent and frequency"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:textSize="@dimen/buttonTextSize" >
+    </TextView>
+
+    <TextView
+        android:id="@+id/ListElementInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_toRightOf="@+id/section"
+        android:layout_alignParentRight="true"
+        android:text="5 / 25"
+        android:textSize="@dimen/buttonTextSize" />
+
+</RelativeLayout>

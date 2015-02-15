@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ua.hneu.edu.languagetrainer"
+    android:installLocation="preferExternal"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name="ua.hneu.languagetrainer.App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Lime" >
+        <provider
+            android:name="ua.hneu.languagetrainer.db.dao.VocabularyDAO"
+            android:authorities="ua.edu.hneu.languagetrainer.db.vocabularyprovider" >
+        </provider>
+        <provider
+            android:name="ua.hneu.languagetrainer.db.dao.UserDAO"
+            android:authorities="ua.edu.hneu.languagetrainer.db.userprovider" >
+        </provider>
+        <provider
+            android:name="ua.hneu.languagetrainer.db.dao.TestDAO"
+            android:authorities="ua.edu.hneu.languagetrainer.db.testprovider" >
+        </provider>
+        <provider
+            android:name="ua.hneu.languagetrainer.db.dao.QuestionDAO"
+            android:authorities="ua.edu.hneu.languagetrainer.db.questionprovider" >
+        </provider>
+        <provider
+            android:name="ua.hneu.languagetrainer.db.dao.AnswerDAO"
+            android:authorities="ua.edu.hneu.languagetrainer.db.answerprovider" >
+        </provider>
+        <provider
+            android:name="ua.hneu.languagetrainer.db.dao.CounterWordsDAO"
+            android:authorities="ua.edu.hneu.languagetrainer.db.counterwordsprovider" >
+        </provider>
+        <provider
+            android:name="ua.hneu.languagetrainer.db.dao.GiongoDAO"
+            android:authorities="ua.edu.hneu.languagetrainer.db.giongoprovider" >
+        </provider>
+        <provider
+            android:name="ua.hneu.languagetrainer.db.dao.GiongoExamplesDAO"
+            android:authorities="ua.edu.hneu.languagetrainer.db.giongoexamplesprovider" >
+        </provider>
+        <provider
+            android:name="ua.hneu.languagetrainer.db.dao.GrammarDAO"
+            android:authorities="ua.edu.hneu.languagetrainer.db.grammarprovider" >
+        </provider>
+        <provider
+            android:name="ua.hneu.languagetrainer.db.dao.GrammarExamplesDAO"
+            android:authorities="ua.edu.hneu.languagetrainer.db.grammarexamplesprovider" >
+        </provider>
+
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.masterdetailflow.MenuListActivity"
+            android:label="@string/title_greeting"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.GreetingActivity"
+            android:label="@string/title_greeting"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.test.MockTestActivity"
+            android:label="@string/title_level_def_test_activity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.vocabulary.WordIntroductionActivity"
+            android:label="@string/title_activity_word_practice"
+            android:parentActivityName="ua.hneu.languagetrainer.pages.MainActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+            />
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.vocabulary.AllVocabulary"
+            android:label="@string/title_activity_allvocabulary"
+            android:launchMode="singleTop"
+            android:parentActivityName="ua.hneu.languagetrainer.pages.MainActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.SEARCH"
+                    android:launchMode="singleTop" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW"
+                    android:launchMode="singleTop" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.grammar.AllGrammar"
+            android:label="@string/title_activity_allgrammar"
+            android:launchMode="singleTop"
+            android:parentActivityName="ua.hneu.languagetrainer.pages.MainActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.SEARCH"
+                    android:launchMode="singleTop" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW"
+                    android:launchMode="singleTop" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.giongo.AllGiongo"
+            android:label="@string/title_activity_allgiongo"
+            android:launchMode="singleTop"
+            android:parentActivityName="ua.hneu.languagetrainer.pages.MainActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.SEARCH"
+                    android:launchMode="singleTop" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW"
+                    android:launchMode="singleTop" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.counterwords.AllCounterWords"
+            android:label="@string/title_activity_allcw"
+            android:launchMode="singleTop"
+            android:parentActivityName="ua.hneu.languagetrainer.pages.MainActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.SEARCH"
+                    android:launchMode="singleTop" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW"
+                    android:launchMode="singleTop" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable" />
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.grammar.AllGrammarExamples"
+            android:label="@string/title_activity_allgrammar"
+            android:parentActivityName="ua.hneu.languagetrainer.pages.grammar.AllGrammar"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.giongo.AllGiongoExamples"
+            android:label="@string/title_activity_allgiongo"
+            android:parentActivityName="ua.hneu.languagetrainer.pages.giongo.AllGiongo"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.grammar.GrammarIntroductionActivity"
+            android:label="@string/title_activity_grammar_intro"
+            android:parentActivityName="ua.hneu.languagetrainer.pages.MainActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.giongo.GiongoIntroductionActivity"
+            android:label="@string/title_activity_giongo_intro"
+            android:parentActivityName="ua.hneu.languagetrainer.pages.MainActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.counterwords.CounterWordsIntroductionActivity"
+            android:label="@string/title_cw_intro"
+            android:parentActivityName="ua.hneu.languagetrainer.pages.MainActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.vocabulary.VocabularyResultActivity"
+            android:label="@string/title_activity_word_practice_result"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.test.LevelDefTestResultActivity"
+            android:label="@string/title_lev_def_test_result"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.test.TestResultActivity"
+            android:label="@string/test_results"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.vocabulary.MatchWordsActivity"
+            android:label="@string/title_activity_match_the_words"
+            android:parentActivityName="ua.hneu.languagetrainer.pages.vocabulary.WordIntroductionActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.vocabulary.TranslationTestActivity"
+            android:label="@string/title_translation_test_activity"
+            android:parentActivityName="ua.hneu.languagetrainer.pages.vocabulary.MatchWordsActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.vocabulary.TranscriptionTestActivity"
+            android:label="@string/title_transcription_test_activity"
+            android:parentActivityName="ua.hneu.languagetrainer.pages.vocabulary.TranslationTestActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.grammar.GrammarTestActivity"
+            android:label="@string/title_activity_grammar_test"
+            android:parentActivityName="ua.hneu.languagetrainer.pages.grammar.GrammarIntroductionActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.giongo.GiongoTestActivity"
+            android:label="@string/title_activity_giongo_test"
+            android:parentActivityName="ua.hneu.languagetrainer.pages.giongo.GiongoIntroductionActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.counterwords.CounterWordsTestActivity"
+            android:label="@string/title_activity_cw_test"
+            android:parentActivityName="ua.hneu.languagetrainer.pages.counterwords.CounterWordsIntroductionActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.counterwords.CounterWordsResultActivity"
+            android:label="@string/results"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.giongo.GiongoResultActivity"
+            android:label="@string/results"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.grammar.GrammarResultActivity"
+            android:label="@string/results"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.SettingsActivity"
+            android:label="@string/settings"
+            android:parentActivityName="ua.hneu.languagetrainer.pages.MainActivity"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.masterdetailflow.GrammarActivity"
+            android:label="@string/title_activity_grammar"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.masterdetailflow.CounterWordsActivity"
+            android:label="@string/counter_words"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.masterdetailflow.GiongoActivity"
+            android:label="@string/title_activity_giongo_practice"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.masterdetailflow.TestActivity"
+            android:label="@string/test"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.LearningStatistics"
+            android:label="@string/title_activity_learning_statistics"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.dictionary.DictionaryActivity"
+            android:label="@string/title_activity_learning_statistics"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.dictionary.VocabularyEntryDictionaryDetail"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.dictionary.GrammarEntryDictionaryDetail"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.dictionary.GiongoEntryDictionaryDetail"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.dictionary.CWEntryDictionaryDetail"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
+    </application>
+
+</manifest>
