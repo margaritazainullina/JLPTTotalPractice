@@ -45,25 +45,6 @@ public class DoubleListViewAdapter extends ArrayAdapter<String> {
 		return rowView;
 	}
 
-	public void changeColor(View rowView, int color) {
-		TextView textView = (TextView) rowView.findViewById(R.id.label);
-		TextView textView1 = (TextView) rowView.findViewById(R.id.reading);
-		textView.setTextColor(color);
-		textView1.setTextColor(color);
-	}
-
-	public void setTextColorOfListViewRow(ListView l, int position, int color) {
-		for (int i = 0; i < l.getChildCount(); i++) {
-			View row = l.getChildAt(i);
-			this.changeColor(row, Color.parseColor("#eaeaea"));
-		}
-		View currentRow = l.getChildAt(position);
-		TextView textView = (TextView) currentRow.findViewById(R.id.label);
-		textView.setTextColor(color);
-		textView = (TextView) currentRow.findViewById(R.id.reading);
-		textView.setTextColor(color);
-	}
-
 	public void hideElement(View listRow, Animation anim, long duration) {
 		// settings for fading of listView row
 		anim.setDuration(duration);

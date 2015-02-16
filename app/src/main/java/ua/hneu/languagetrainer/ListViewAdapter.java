@@ -40,23 +40,6 @@ public class ListViewAdapter extends ArrayAdapter<String> {
 		return rowView;
 	}
 
-	public void changeColor(View rowView, int color) {
-		TextView textView = (TextView) rowView.findViewById(R.id.label);
-		textView.setTextColor(color);
-	}
-
-	public void setTextColorOfListViewRow(ListView l, int position, int color) {
-		for (int i = 0; i < l.getChildCount(); i++) {
-			View row = l.getChildAt(i);
-			this.changeColor(row, Color.parseColor("#eaeaea"));
-			this.changeColor(row.findViewById(R.id.label),
-					Color.parseColor("#eaeaea"));
-		}
-		View currentRow = l.getChildAt(position);
-		TextView textView = (TextView) currentRow.findViewById(R.id.label);
-		textView.setTextColor(color);
-	}
-
 	public void hideElement(View listRow, Animation anim, long duration) {
 		// settings for fading of listView row
 		anim.setDuration(duration);

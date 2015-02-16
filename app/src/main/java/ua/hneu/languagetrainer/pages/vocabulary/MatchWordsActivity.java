@@ -173,12 +173,10 @@ public class MatchWordsActivity extends Activity {
         public void onItemClick(final AdapterView<?> parent, final View view,
                                 final int position, final long itemID) {
             currentAnswer[0] = kanjiIndices.get(position);
-            // change color of selected row
-            adapter1.setTextColorOfListViewRow((ListView) parent, position,
-                    Color.parseColor("#ffbb33"));
             // and remember this row for fading out if it is correct
             v1 = view;
             rowsSelected[0] = position;
+            view.setSelected(true);
         }
     };
     final private transient OnItemClickListener readingListClickListener = new OnItemClickListener() {
@@ -186,10 +184,9 @@ public class MatchWordsActivity extends Activity {
         public void onItemClick(final AdapterView<?> parent, final View view,
                                 final int position, final long itemID) {
             currentAnswer[1] = readingIndices.get(position);
-            adapter2.setTextColorOfListViewRow((ListView) parent, position,
-                    Color.parseColor("#ffbb33"));
             v2 = view;
             rowsSelected[1] = position;
+            view.setSelected(true);
         }
     };
     final private transient OnItemClickListener translationListClickListener = new OnItemClickListener() {
@@ -197,10 +194,9 @@ public class MatchWordsActivity extends Activity {
         public void onItemClick(final AdapterView<?> parent, final View view,
                                 final int position, final long itemID) {
             currentAnswer[2] = translationIndices.get(position);
-            adapter3.setTextColorOfListViewRow((ListView) parent, position,
-                    Color.parseColor("#ffbb33"));
             v3 = view;
             rowsSelected[2] = position;
+            view.setSelected(true);
         }
     };
 
@@ -260,11 +256,6 @@ public class MatchWordsActivity extends Activity {
             // add given answer to wrong
             wrongAnswers.add(currentEntry);
             isCorrect.setImageResource(R.drawable.no);
-            // make selected items white
-            if (currentAnswer[0] != -1)
-                adapter1.changeColor(v1, Color.parseColor("#eaeaea"));
-            adapter2.changeColor(v2, Color.parseColor("#eaeaea"));
-            adapter3.changeColor(v3, Color.parseColor("#eaeaea"));
             // set information about wrong answer in VocabularyPassing
             App.vp.incrementNumberOfIncorrectAnswersInMatching();
             App.vp.addProblemWord(currentEntry);

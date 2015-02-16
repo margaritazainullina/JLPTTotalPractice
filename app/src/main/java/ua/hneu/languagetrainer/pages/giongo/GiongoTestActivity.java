@@ -169,6 +169,7 @@ public class GiongoTestActivity extends Activity {
 		@Override
 		public void onItemClick(final AdapterView<?> parent, final View view,
 				final int position, final long itemID) {
+            view.setSelected(true);
 			String selected = answers.get(position);
 			// comparing correct and selected answer
 			if (selected.equals(rightAnswer.getPart2())) {
@@ -187,7 +188,6 @@ public class GiongoTestActivity extends Activity {
 				App.gs.update(rightWord, getContentResolver());
 				// change color to green and fade out
 				isCorrect.setImageResource(R.drawable.yes);
-				adapter.changeColor(view, Color.parseColor("#669900"));
 				// fading out textboxes
 				fadeOut(part1TextView, 750);
 				fadeOut(part2TextView, 750);
@@ -228,7 +228,6 @@ public class GiongoTestActivity extends Activity {
 						});
 			} else {
 				// change color of row and set text
-				adapter.changeColor(view, Color.parseColor("#CC0000"));
 				isCorrect.setImageResource(R.drawable.no);
 				ifWasWrong = true;
 				// set information about wrong answer in GPassing

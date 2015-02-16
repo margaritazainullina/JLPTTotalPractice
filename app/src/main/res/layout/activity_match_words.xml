@@ -22,6 +22,7 @@
             <ListView
                 android:id="@+id/kanjiListView"
                 android:layout_width="60dp"
+                android:listSelector="@drawable/listitem_selector"
                 android:layout_height="wrap_content"
                 android:visibility="visible" >
             </ListView>

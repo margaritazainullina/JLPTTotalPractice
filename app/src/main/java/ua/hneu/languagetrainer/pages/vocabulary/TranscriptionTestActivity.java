@@ -191,6 +191,7 @@ public class TranscriptionTestActivity extends Activity {
         @Override
         public void onItemClick(final AdapterView<?> parent, final View view,
                                 final int position, final long itemID) {
+            view.setSelected(true);
             VocabularyEntry selected = randomDictionaryList.get(position);
             // comparing correct and selected answer
             if (selected == rightAnswer) {
@@ -207,7 +208,6 @@ public class TranscriptionTestActivity extends Activity {
                 App.vs.update(rightAnswer, getContentResolver());
                 // change color to green and fade out
                 isCorrect.setImageResource(R.drawable.yes);
-                adapter.changeColor(view, Color.parseColor("#669900"));
                 // fading out textboxes
                 fadeOut(wordTextView, 750);
                 fadeOut(transcriptionTextView, 750);
@@ -250,7 +250,6 @@ public class TranscriptionTestActivity extends Activity {
                         });
             } else {
                 // change color of row and set text
-                adapter.changeColor(view, Color.parseColor("#CC0000"));
                 isCorrect.setImageResource(R.drawable.no);
                 ifWasWrong = true;
                 // set information about wrong answer in VocabularyPassing
