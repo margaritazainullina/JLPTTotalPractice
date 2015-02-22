@@ -128,7 +128,7 @@ public class App extends Application {
 
         // creating and inserting into whole database
         // vocabulary
-       /*vs.dropTable();
+        vs.dropTable();
         vs.createTable();
         vs.bulkInsertFromCSV("vocabulary/N5.txt", getAssets(), 5,
                 getContentResolver());
@@ -146,7 +146,7 @@ public class App extends Application {
                 getContentResolver());
         Log.d("App", "loaded vocabulary/N1.txt");
 
-         // test
+        /* // test
         ts.createTable();
         TestService.startCounting(getContentResolver());
         qs.createTable();
@@ -223,9 +223,9 @@ public class App extends Application {
         Log.d("App", "loaded tests/mock_test_n5_#4.xml");
         ts.insertFromXml("tests/mock_test_n5_#5.xml",
                 getAssets(), getContentResolver());
-        Log.d("App", "loaded tests/mock_test_n5_#5.xml");
+        Log.d("App", "loaded tests/mock_test_n5_#5.xml");*/
 
-        GiongoService gs = new GiongoService();
+        /*GiongoService gs = new GiongoService();
         gs.dropTable();
         gs.createTable();
         ges.dropTable();

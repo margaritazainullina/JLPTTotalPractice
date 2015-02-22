@@ -3,6 +3,7 @@ package ua.hneu.languagetrainer.model.other;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Comparator;
 import java.util.Date;
 
@@ -144,6 +145,11 @@ public class CounterWord extends EntryAbstr implements Parcelable {
             return translationRus;
     }
 
+    @Override
+    public String toString(){
+        return word;
+    }
+
     public int getIntColor() {
         String[] rgb = this.color.split(",");
         int color = Color.rgb(Integer.parseInt(rgb[0]),
@@ -171,7 +177,46 @@ public class CounterWord extends EntryAbstr implements Parcelable {
             return hiragana;
     }
 
-    private int mData;
+    public ArrayList<String> getSplittedWord() {
+        ArrayList<String> d = new ArrayList<String>();
+            String[] s = word.split("(;|,|/)");
+            for(String ss : s) {
+                /*ss=ss.replaceAll("\\d+[\\)|\\.]","");
+                ss=ss.trim();
+                ss=ss.replaceAll("\\d+[\\)|\\.]","");
+                ss=ss.replaceAll("(\\[|\\(|\\]|\\))","");
+                ss=ss.replaceAll("[?.!。]+$","");*/
+                ss=ss.toLowerCase();
+                ss=ss.trim();
+                d.add(ss);
+            }
+        return d;
+        }
+
+    public ArrayList<String> getSplittedDescriptions() {
+        ArrayList<String> d = new ArrayList<String>();
+        if (App.lang == Languages.ENG){
+            String[] s = translationEng.split("[;,]");
+            for(String ss : s) {
+                ss=ss.toLowerCase();
+                ss=ss.replaceAll("\\((.*?)\\)","");
+                ss=ss.replaceAll("\\[(.*?)\\]","");
+                ss=ss.trim();
+                ss=ss.replaceAll("[?.!。]+$","");
+                ss=ss.trim();
+                if(!ss.isEmpty()) d.add(ss);
+            }
+        }
+        else{
+            String[] s = translationRus.split(".|;|,|/");
+            for(String ss : s) {
+                ss=ss.replaceAll("\\((.*?)\\)","");
+                ss=ss.trim();
+                if(!ss.isEmpty()) d.add(ss);
+            }
+        }
+        return d;
+    }
 
     /* everything below here is for implementing Parcelable */
 
@@ -183,7 +228,6 @@ public class CounterWord extends EntryAbstr implements Parcelable {
     // write your object's data to the passed-in Parcel
     public void writeToParcel(Parcel out, int flags) {
         out.writeInt(id);
-        out.writeInt(mData);
         out.writeString(sectionEng);
         out.writeString(sectionRus);
         out.writeString(word);
@@ -222,5 +266,17 @@ public class CounterWord extends EntryAbstr implements Parcelable {
         shownTimes= in.readInt();
         lastview= in.readString();
         color= in.readString();
+    }
+
+
+    @Override
+    public int compareTo(Object another) {
+        return this.toString().compareTo(another.toString());
+    }
+
+    public  String getTranslation() {
+        if (App.lang == Languages.RUS)
+            return this.translationRus;
+        return this.translationEng;
     }
 }

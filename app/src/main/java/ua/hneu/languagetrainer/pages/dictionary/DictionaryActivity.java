@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.provider.SyncStateContract;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.View;
@@ -13,9 +14,14 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.SearchView.OnCloseListener;
 
+import com.google.android.gms.internal.en;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.TreeSet;
 
 import ua.hneu.edu.languagetrainer.R;
 import ua.hneu.languagetrainer.AllVocabularyListViewAdapter;
@@ -34,8 +40,14 @@ import ua.hneu.languagetrainer.service.VocabularyService;
 
 public class DictionaryActivity extends ListActivity {
     DictionaryListViewAdapter adapter1;
-    ArrayList<EntryAbstr> allSortedByJap = new ArrayList<>();
-    ArrayList<EntryAbstr> allSortedByTransl = new ArrayList<>();
+
+    //entries to show in list
+    ArrayList<String> entriesToShow = new ArrayList<>();
+    ArrayList<String> allJapToShow = new ArrayList<>();
+    ArrayList<String> allTranslToShow = new ArrayList<>();
+
+    //all real entries
+    Set<EntryAbstr> all = new TreeSet<>();
 
     boolean fromJapanese = true;
     int counter=0;
@@ -47,17 +59,47 @@ public class DictionaryActivity extends ListActivity {
         handleIntent(getIntent());
         VocabularyDictionary vd = VocabularyService.allEntriesDictionary(App.cr);
         GrammarDictionary gd = GrammarService.allEntriesDictionary(App.cr);
-        allSortedByJap.addAll(vd.getEntries());
-        allSortedByJap.addAll(gd.getEntries());
-        allSortedByJap.addAll(App.giongoWordsDictionary.getEntries());
-        allSortedByJap.addAll(App.counterWordsDictionary.getEntries());
+        GrammarDictionary gd1 = GrammarService.selectAllEntriesOflevel(1, App.cr);
+        all.addAll(gd1.getEntries());
+        GrammarDictionary gd2 = GrammarService.selectAllEntriesOflevel(2, App.cr);
+        all.addAll(gd2.getEntries());
+        GrammarDictionary gd3 = GrammarService.selectAllEntriesOflevel(3, App.cr);
+        all.addAll(gd3.getEntries());
+        GrammarDictionary gd4 = GrammarService.selectAllEntriesOflevel(4, App.cr);
+        all.addAll(gd4.getEntries());
+        GrammarDictionary gd5 = GrammarService.selectAllEntriesOflevel(5, App.cr);
+        all.addAll(gd5.getEntries());
+        all.addAll(vd.getEntries());
+        all.addAll(App.allGiongoDictionary.getEntries());
+        all.addAll(App.allCounterWordsDictionary.getEntries());
+        Log.d("TOTAL:", all.size()+"");
 
-        allSortedByTransl = (ArrayList<EntryAbstr>)allSortedByJap.clone();
+        TreeSet<String> temp = new TreeSet<>();
+        for(EntryAbstr ea: all ){
+            if(ea instanceof VocabularyEntry) {
+                VocabularyEntry ve = (VocabularyEntry) ea;
+                temp.addAll(ve.getTranslations());
+                allJapToShow.add(ve.getKanjiOrHiragana());
+            }
+            if(ea instanceof GrammarRule) {
+                GrammarRule ve = (GrammarRule) ea;
+                temp.addAll(ve.getSplittedDescriptions());
+                allJapToShow.add(ea.toString());
+            }
+            if(ea instanceof Giongo) {
+                Giongo ve = (Giongo) ea;
+                temp.addAll(ve.getSplittedDescriptions());
+                allJapToShow.add(ea.toString());
+            }
+            if(ea instanceof CounterWord) {
+                CounterWord ve = (CounterWord) ea;
+                temp.addAll(ve.getSplittedDescriptions());
+                allJapToShow.addAll(ve.getSplittedWord());
+            }
+       }
 
-        Collections.sort(allSortedByJap,
-                EntryAbstr.DictionaryEntryComparator.ALPH_JAP);
-        Collections.sort(allSortedByTransl,
-                EntryAbstr.DictionaryEntryComparator.ALPH_TRANSLATED);
+        allTranslToShow = new ArrayList(temp);
+       // Collections.sort(allTranslToShow);
         showAll();
     }
 
@@ -104,7 +146,21 @@ public class DictionaryActivity extends ListActivity {
     }
 
     public void onListItemClick(ListView l, View v, int position, long id) {
-        EntryAbstr ea;
+        String search =  (String) getListAdapter().getItem(position);
+        Log.d("onListItemClick", search);
+        Set<EntryAbstr> result = new TreeSet<>();
+        for(EntryAbstr ea : all){
+            if(fromJapanese){
+                if(ea.toString().equals(search)) result.add(ea);
+            }
+            else{
+                if(ea.translationsToString().equals(search)) result.add(ea);
+            }
+        }
+
+        for(EntryAbstr ea : result) Log.d("FOUND: ",ea.toString());
+
+       /* EntryAbstr ea;
         if(fromJapanese)
              ea = allSortedByJap.get(position);
         else  ea = allSortedByTransl.get(position);
@@ -132,13 +188,57 @@ public class DictionaryActivity extends ListActivity {
             Intent intent = new Intent(this, CWEntryDictionaryDetail.class);
             intent.putExtra("entry",cw);
             startActivity(intent);
-        }
+        }*/
 
     }
 
     private void search(String query) {
-        ArrayList<EntryAbstr>  entriestoShow1 = new ArrayList<EntryAbstr>();
+        entriesToShow.clear();
+        Log.d("query", query);
+            for (EntryAbstr entry : all) {
+                if (fromJapanese) {
+                    if (entry instanceof VocabularyEntry) {
+                        VocabularyEntry ve = (VocabularyEntry) entry;
+                        if ((ve.getKanji().toLowerCase()).startsWith(query.toLowerCase())
+                                || (ve.getRomaji().toLowerCase()).startsWith(query.toLowerCase())
+                                || (ve.getTranscription().toLowerCase()).startsWith(query.toLowerCase())) {
+                            entriesToShow.add(ve.getKanjiOrHiragana());
+                        }
+                    } else if (entry instanceof GrammarRule) {
+                        GrammarRule ve = (GrammarRule) entry;
+                        if ((ve.getRule().toLowerCase()).contains(query.toLowerCase())) {
+                            entriesToShow.add(ve.toString());
+                        }
+                    } else if (entry instanceof Giongo) {
+                        Giongo ve = (Giongo) entry;
+                        if ((ve.getRomaji().toLowerCase()).startsWith(query.toLowerCase())
+                                || (ve.getWord().toLowerCase()).startsWith(query.toLowerCase()))
+                            entriesToShow.add(ve.toString());
+                    } else if (entry instanceof CounterWord) {
+                        CounterWord ve = (CounterWord) entry;
+                        if ((ve.getRomaji().toLowerCase()).startsWith(query.toLowerCase())
+                                || (ve.getWord().toLowerCase()).startsWith(query.toLowerCase()))
+                            entriesToShow.add(ve.toString());
+                    }
+                } else {
+                    if (entry.translationsToString().startsWith(query)) {
+                        entriesToShow.add(entry.translationsToString());
+                        Log.d("found", entry.toString());
+                    }
+                }
+            }
+
+        adapter1 = new DictionaryListViewAdapter(this,  new ArrayList<String>(entriesToShow), fromJapanese);
+        this.setListAdapter(adapter1);
+
+        /*Log.d("DictionaryActivity", "search "+query);
+        ArrayList<String>  entriestoShow1 = new ArrayList<String>();
         boolean isFound = false;
+        for (String word : japToShow) {
+            if(word.contains(query)) entriestoShow1.add(word);
+            Log.d("DictionaryActivity", "word "+word);
+        }
+
 
             if(fromJapanese) {
                 //if VocabularyEntry
@@ -203,20 +303,15 @@ public class DictionaryActivity extends ListActivity {
             for(EntryAbstr ea : allSortedByJap) entriesToShow.add(ea.translationsToString());
             adapter1 = new DictionaryListViewAdapter(this, entriesToShow, fromJapanese);
         }
-        this.setListAdapter(adapter1);
+        adapter1 = new DictionaryListViewAdapter(this, entriestoShow1, fromJapanese);
+        this.setListAdapter(adapter1);*/
     }
 
     private void showAll() {
-        if(fromJapanese){
-            ArrayList<String> entriesToShow = new ArrayList<>();
-            for(EntryAbstr ea : allSortedByJap) entriesToShow.add(ea.toString());
-            adapter1 = new DictionaryListViewAdapter(this, entriesToShow, fromJapanese);
-        }
-        else {
-            ArrayList<String> entriesToShow = new ArrayList<>();
-            for(EntryAbstr ea : allSortedByJap) entriesToShow.add(ea.translationsToString());
-            adapter1 = new DictionaryListViewAdapter(this, entriesToShow, fromJapanese);
-        }
+        entriesToShow.clear();
+        if(fromJapanese) entriesToShow.addAll(allJapToShow);
+        else  entriesToShow.addAll(allTranslToShow);
+        adapter1 = new DictionaryListViewAdapter(this, new ArrayList<String>(entriesToShow), fromJapanese);
         this.setListAdapter(adapter1);
     }
     public void switchButtonOnClick(View v){

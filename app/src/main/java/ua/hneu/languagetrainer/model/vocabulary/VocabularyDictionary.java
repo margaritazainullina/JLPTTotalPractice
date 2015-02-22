@@ -27,10 +27,6 @@ public class VocabularyDictionary extends DictionaryAbstr {
 		return null;
 	}
 
-    /*public void addAll(ArrayList<VocabularyEntry> newEntries){
-        entries.addAll(newEntries);
-    }*/
-
 	// all entries with kanji, transcription, romaji and translation
 	public ArrayList<VocabularyEntry> getEntries() {
 		return entries;

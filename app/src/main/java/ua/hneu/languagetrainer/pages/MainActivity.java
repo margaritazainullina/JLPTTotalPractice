@@ -2,6 +2,13 @@ package ua.hneu.languagetrainer.pages;
 
 import ua.hneu.edu.languagetrainer.R;
 import ua.hneu.languagetrainer.App;
+import ua.hneu.languagetrainer.model.EntryAbstr;
+import ua.hneu.languagetrainer.model.grammar.GrammarDictionary;
+import ua.hneu.languagetrainer.model.grammar.GrammarRule;
+import ua.hneu.languagetrainer.model.other.CounterWord;
+import ua.hneu.languagetrainer.model.other.Giongo;
+import ua.hneu.languagetrainer.model.vocabulary.VocabularyDictionary;
+import ua.hneu.languagetrainer.model.vocabulary.VocabularyEntry;
 import ua.hneu.languagetrainer.pages.counterwords.AllCounterWords;
 import ua.hneu.languagetrainer.pages.counterwords.CounterWordsIntroductionActivity;
 import ua.hneu.languagetrainer.pages.dictionary.DictionaryActivity;
@@ -33,7 +40,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.Locale;
+import java.util.Set;
+import java.util.TreeSet;
 
 public class MainActivity extends FragmentActivity implements
 		ActionBar.TabListener {
@@ -169,7 +181,7 @@ public class MainActivity extends FragmentActivity implements
 	                synchronized (this)  
 	                {
                         // load vocabulary
-	            		App.vocabularyDictionary = VocabularyService.createCurrentDictionary(
+	            		/*App.vocabularyDictionary = VocabularyService.createCurrentDictionary(
 	            				App.userInfo.getLevel(), App.numberOfEntriesInCurrentDict,
 	            				App.cr);
                         Log.d("MainActivity", "loaded vocabularyDictionary");
@@ -180,7 +192,7 @@ public class MainActivity extends FragmentActivity implements
 	            				App.cr);
 
                         Log.d("MainActivity", "loaded grammarDictionary");
-
+*/
 	            		// load giongo
 	            		GiongoService gs = new GiongoService();
 	            		App.giongoWordsDictionary = gs.createCurrentDictionary(
@@ -229,7 +241,27 @@ public class MainActivity extends FragmentActivity implements
                 cws.makeProgress(App.cr);
                 Log.d("Main activity", "fake cw progress");*/
 
-	            //close the progress dialog  
+                /*Set<EntryAbstr> all = new TreeSet<>();
+                VocabularyDictionary vd = VocabularyService.selectTestEntries(App.cr);
+                all.addAll(vd.getEntries());
+                ArrayList<String> entriesToShow = new ArrayList<>();
+                ArrayList<String> allJapToShow = new ArrayList<>();
+                ArrayList<String> allTranslToShow = new ArrayList<>();
+                HashSet<String> temp = new HashSet<>();
+
+                for(EntryAbstr ea: all ){
+                    allJapToShow.add(ea.toString());
+                    if(ea instanceof VocabularyEntry) {
+                        VocabularyEntry ve = (VocabularyEntry) ea;
+                        temp.addAll(ve.getTranslations());
+                    }
+                }
+
+                allTranslToShow = new ArrayList(temp);
+                Collections.sort(allTranslToShow);
+
+*/
+	            //close the progress dialog
 	            progressDialog.dismiss();
 	        }
 	    }

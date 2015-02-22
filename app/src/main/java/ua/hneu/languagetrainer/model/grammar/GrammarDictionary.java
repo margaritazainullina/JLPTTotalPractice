@@ -30,6 +30,10 @@ public class GrammarDictionary extends DictionaryAbstr {
 		this.entries = new ArrayList<GrammarRule>();
 	}
 
+    public int size() {
+        return entries.size();
+    }
+
 	public void add(GrammarRule e) {
 		entries.add(e);
 	}

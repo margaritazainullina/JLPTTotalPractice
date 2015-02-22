@@ -162,6 +162,35 @@ public class GrammarRule extends EntryAbstr implements ExampleInterface, Parcela
 			return descRus;
 	}
 
+    public ArrayList<String> getSplittedDescriptions() {
+        ArrayList<String> d = new ArrayList<String>();
+        if (App.lang == Languages.ENG){
+            descEng=descEng.replaceAll("\\((.*?)\\)","");
+            String[] s = descEng.split("[;,./]");
+            for(String ss : s) {
+                ss=ss.toLowerCase();
+                ss = ss.replaceAll("\\((.*?)\\)", "");
+                ss = ss.replaceAll("\\[(.*?)\\]", "");
+                ss=ss.replaceAll("\\d+[\\)|\\.]","");
+                ss=ss.trim();
+                ss = ss.replaceAll("^((an|a|the|to)(\\s))+", "");
+                ss = ss.replaceAll("^(be|become|being)(\\s)+", "");
+                ss=ss.replaceAll("[?.!。]+$","");
+                ss=ss.trim();
+                if(!ss.isEmpty())d.add(ss);
+            }
+        }
+        else{
+                String[] s = descRus.split(".|;|,|/");
+                for(String ss : s) {
+                    ss=ss.replaceAll("\\(((|\\[).*?()|\\])\\)","");
+                    ss=ss.trim();
+                    if(!ss.isEmpty())d.add(ss);
+                }
+            }
+            return d;
+    }
+
 	public int getIntColor() {
 		String[] rgb = this.color.split(",");
 		int color = Color.rgb(Integer.parseInt(rgb[0]),
@@ -232,4 +261,19 @@ public class GrammarRule extends EntryAbstr implements ExampleInterface, Parcela
         ArrayList<GrammarExample> examples = new ArrayList<GrammarExample>();
         in.readList(examples, ArrayList.class.getClassLoader());
     }
+
+    @Override
+    public int compareTo(Object another) {
+        try{
+            if(another==null||this==null) return 0;
+            GrammarRule gr = (GrammarRule) another;
+            Log.d("compareTo",this.toString()+" - "+gr.toString());
+        return this.toString().compareTo(another.toString());
+        }
+        //all can be
+        catch(Exception e){
+            return 0;
+        }
+    }
+
 }

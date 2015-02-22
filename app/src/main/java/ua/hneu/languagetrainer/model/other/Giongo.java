@@ -74,6 +74,33 @@ public class Giongo extends EntryAbstr implements ExampleInterface, Parcelable {
         return text;
     }
 
+    public ArrayList<String> getSplittedDescriptions() {
+        ArrayList<String> d = new ArrayList<String>();
+        if (App.lang == Languages.ENG){
+            translEng=translEng.replaceAll("\\((.*?)\\)","");
+            translEng=translEng.replaceAll("\\[(.*?)\\]","");
+            String[] s = translEng.split("[;,./]");
+            for(String ss : s) {
+                ss=ss.replaceAll("\\d+[\\)|\\.]","");
+                ss=ss.replaceAll("[?.!。]+$","");
+                ss=ss.trim();
+                ss=ss.replaceAll("^to","");
+                ss=ss.toLowerCase();
+                ss=ss.trim();
+                if(!ss.isEmpty()) d.add(ss);
+            }
+        }
+        else{
+            String[] s = translRus.split(".|;|,|/");
+            for(String ss : s) {
+                ss=ss.replaceAll("\\(((|\\[).*?()|\\])\\)","");
+                ss=ss.trim();
+                if(!ss.isEmpty()) d.add(ss);
+            }
+        }
+        return d;
+    }
+
     public String getLastview() {
         return lastview;
     }
@@ -247,5 +274,10 @@ public class Giongo extends EntryAbstr implements ExampleInterface, Parcelable {
         color= in.readString();
         ArrayList<Giongo> examples = new ArrayList<Giongo>();
         in.readList(examples, ArrayList.class.getClassLoader());
+    }
+
+    @Override
+    public int compareTo(Object another) {
+        return this.toString().compareTo(another.toString());
     }
 }

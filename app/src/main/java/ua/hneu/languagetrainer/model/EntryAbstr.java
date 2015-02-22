@@ -18,7 +18,7 @@ import ua.hneu.languagetrainer.model.vocabulary.VocabularyEntry;
 /**
  * Created by Margarita on 2015/02/13.
  */
-public abstract class EntryAbstr {
+public abstract class EntryAbstr implements Comparable{
     protected int id;
     protected String kanji;
     protected int level;

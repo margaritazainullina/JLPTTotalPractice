@@ -177,8 +177,82 @@ public class TranslationTestActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+    final private transient OnItemClickListener answersListViewClickListener = new OnItemClickListener() {
+        @Override
+        public void onItemClick(final AdapterView<?> parent, final View view,
+                                final int position, final long itemID) {
+            view.setSelected(true);
+            VocabularyEntry selected = randomDictionaryList.get(position);
+            // comparing correct and selected answer
+            if (selected == rightAnswer) {
+                App.grp.incrementNumberOfCorrectAnswers();
+                // increment percentage of right answers if wrong answer wasn't
+                // given
+                if (!ifWasWrong)
+                    rightAnswer.setLearnedPercentage(rightAnswer
+                            .getLearnedPercentage()
+                            + App.getPercentageIncrement());
+
+                if (rightAnswer.getLearnedPercentage() >= 1) {
+                    makeWordLearned(rightAnswer, false);
+                }
+
+                App.vs.update(rightAnswer, getContentResolver());
+                // change color to green and fade out
+                isCorrect.setImageResource(R.drawable.yes);
+                // fading out textboxes
+                fadeOut(wordTextView, 750);
+                fadeOut(transcriptionTextView, 750);
+                fadeOut(romajiTextView, 750);
+                fadeOut(isCorrect, 750);
+                // fading out listview
+                ListView v = (ListView) view.getParent();
+                fadeOut(v, 750);
+
+                Animation fadeOutAnimation = AnimationUtils.loadAnimation(
+                        v.getContext(), android.R.anim.fade_out);
+                fadeOutAnimation.setDuration(750);
+                v.startAnimation(fadeOutAnimation);
+
+                fadeOutAnimation
+                        .setAnimationListener(new Animation.AnimationListener() {
+                            @Override
+                            public void onAnimationEnd(Animation animation) {
+                                // when previous information faded out
+                                // show next word and possible answers or go to
+                                // next exercise
+                                if (currentWordNumber < App.grammarDictionary
+                                        .size() - 1) {
+                                    nextWord();
+                                } else {
+                                    endTesting();
+                                }
+                            }
+
+                            // doesn't needed, just implementation
+                            @Override
+                            public void onAnimationRepeat(Animation arg0) {
+                            }
+
+                            @Override
+                            public void onAnimationStart(Animation arg0) {
+                            }
+                        });
+            } else {
+                // change color of row and set text
+                isCorrect.setImageResource(R.drawable.no);
+                ifWasWrong = true;
+                // set information about wrong answer in GrammarPassing
+                App.vp.incrementNumberOfCorrectAnswersInTranslation();
+                App.vp.addProblemWord(rightAnswer);
+
+            }
+        }
+    };
+
+
 	// listeners for click on the list row
-	final private transient OnItemClickListener answersListViewClickListener = new OnItemClickListener() {
+	/*final private transient OnItemClickListener answersListViewClickListener = new OnItemClickListener() {
 		@Override
 		public void onItemClick(final AdapterView<?> parent, final View view,
 				final int position, final long itemID) {
@@ -250,7 +324,7 @@ public class TranslationTestActivity extends Activity {
 						.get(currentWordNumber));
 			}
 		}
-	};
+	};*/
 
 	public void fadeOut(View v, long duration) {
 		Animation fadeOutAnimation = AnimationUtils.loadAnimation(

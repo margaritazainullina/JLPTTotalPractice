@@ -97,8 +97,11 @@ public class GrammarService {
 				GrammarDAO.LEVEL, GrammarDAO.DESC_ENG, GrammarDAO.DESC_RUS,
 				GrammarDAO.PERCENTAGE, GrammarDAO.LASTVIEW,
 				GrammarDAO.SHOWNTIMES, GrammarDAO.COLOR };
-		Cursor c = contentResolver.query(GrammarDAO.CONTENT_URI, selectionArgs,
+		Cursor c;
+        if(level!=-1) c=contentResolver.query(GrammarDAO.CONTENT_URI, selectionArgs,
 				"level=" + level, null, null);
+        else c = contentResolver.query(GrammarDAO.CONTENT_URI, selectionArgs,
+                null, null, null);
 		c.moveToFirst();
 		int id = 0;
 		String rule = "";
@@ -415,6 +418,7 @@ public class GrammarService {
 					this.insert(g, cr);
 					Log.i("GrammarService bulkInsertFromCSV: ", g.getRule()
 							+ " incerted. ");
+
 					g = new GrammarRule();
 					isFirst = true;
 				}
@@ -481,12 +485,7 @@ public class GrammarService {
     }
 
     public static GrammarDictionary allEntriesDictionary(ContentResolver contentResolver) {
-        GrammarDictionary currentDict = new GrammarDictionary();
-        currentDict = selectAllEntriesOflevel(5,contentResolver);
-        currentDict.addAll(selectAllEntriesOflevel(4,contentResolver).getEntries());
-        currentDict.addAll(selectAllEntriesOflevel(3,contentResolver).getEntries());
-        currentDict.addAll(selectAllEntriesOflevel(2,contentResolver).getEntries());
-        currentDict.addAll(selectAllEntriesOflevel(1,contentResolver).getEntries());
+        GrammarDictionary currentDict = selectAllEntriesOflevel(-1,contentResolver);
         return currentDict;
     }
 }

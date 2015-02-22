@@ -21,6 +21,10 @@ public class CounterWordsDictionary extends DictionaryAbstr {
         entries.add(counterWord);
     }
 
+    public int size() {
+        return entries.size();
+    }
+
     public CounterWord get(int i) {
         return entries.get(i);
     }

@@ -27,6 +27,10 @@ public class GiongoDictionary extends DictionaryAbstr {
         return entries.get(i);
     }
 
+    public int size() {
+        return entries.size();
+    }
+
     public void remove(Giongo g) {
         entries.remove(g);
     }

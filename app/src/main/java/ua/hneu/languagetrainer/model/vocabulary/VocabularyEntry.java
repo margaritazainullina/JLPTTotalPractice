@@ -31,13 +31,14 @@ public class VocabularyEntry extends EntryAbstr implements Parcelable{
 
 	public VocabularyEntry(int id, String kanji, int level,
 			String transcription, String romaji, List<String> translations,
-			List<String> translationsRus, double percentage, String lastview,
+			List<String> translationsRus, String translationsStr,String translationsStrRus,
+            double percentage, String lastview,
 			int showntimes, String color) {
 
 		VocabularyMeaning meaning = new VocabularyMeaning(transcription,
-				romaji, translations);
+				romaji, translations, translationsStr);
 		VocabularyMeaning meaningRus = new VocabularyMeaning(transcription,
-				romaji, translationsRus);
+				romaji, translationsRus, translationsStrRus);
 		this.id = id;
 		this.kanji = kanji;
 		this.level = level;
@@ -144,7 +145,7 @@ public class VocabularyEntry extends EntryAbstr implements Parcelable{
 	}
 
 	public String getTranscription() {
-		return this.meaningEng.hiragana;
+        return this.meaningEng.hiragana;
 	}
 
 	public String getRomaji() {
@@ -186,9 +187,13 @@ public class VocabularyEntry extends EntryAbstr implements Parcelable{
 			return this.getTranscription();
 	}
 
+    public String getKanjiOrHiragana(){
+        return ((!kanji.isEmpty())? kanji: meaningEng.hiragana);
+    }
+
     @Override
     public String toString(){
-        return ((!kanji.isEmpty())? kanji: meaningEng.hiragana);
+        return getTranscription();
     }
 
 
@@ -253,5 +258,22 @@ public class VocabularyEntry extends EntryAbstr implements Parcelable{
         meaningRus.translations = translations1;
 
         color = in.readString();
+    }
+
+    @Override
+    public int compareTo(Object another) {
+        //Log.d("compareTo", this.getTranscription() + " - " + ((VocabularyEntry) another).getTranscription());
+        if(this.toString().startsWith("'")) return -1;
+        return this.toString().compareTo(another.toString());
+    }
+
+    public List<String> getTranslations() {
+        if(this.getRomaji().equals("akudoi"))
+    {
+        int t=0;
+    }
+        if (App.lang == Languages.RUS)
+            return this.meaningRus.translations;
+        return this.meaningEng.translations;
     }
 }

@@ -93,7 +93,7 @@ public class GrammarTestActivity extends Activity {
 		isCorrect.setImageResource(android.R.color.transparent);
 		// move pointer to next word
 		currentWordNumber++;
-		if (currentWordNumber >= App.grammarDictionary.size())
+		if (currentWordNumber >=App.grammarDictionary.size())
 			endTesting();
 		// create random dictionary again for every show
 		randomExamplesDictionary = App.grammarDictionary
