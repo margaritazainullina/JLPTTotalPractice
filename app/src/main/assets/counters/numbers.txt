@@ -31,5 +31,5 @@ Numbers	Числа
 一万	いちまん	ichiman	000
 十万	じゅうまんjuuman		100 000
 百万	ひゃくまん	hyakuman	1 000 000
-千万	せんまん	senman	000 000
+千万	せんまん	senman	1000 000
 一億	いちおく	ichioku	100 000 000

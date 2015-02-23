@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.List;
 
 import ua.hneu.languagetrainer.App;
 import ua.hneu.languagetrainer.App.Languages;
@@ -245,7 +246,7 @@ public class Giongo extends EntryAbstr implements ExampleInterface, Parcelable {
         out.writeInt(shownTimes);
         out.writeString(lastview);
         out.writeString(color);
-        out.writeList(examples);
+        out.writeTypedList(examples);
     }
 
     // this is used to regenerate your object. All Parcelables must have a CREATOR that implements these two methods
@@ -272,8 +273,7 @@ public class Giongo extends EntryAbstr implements ExampleInterface, Parcelable {
         lastview= in.readString();
         color= in.readString();
         color= in.readString();
-        ArrayList<Giongo> examples = new ArrayList<Giongo>();
-        in.readList(examples, ArrayList.class.getClassLoader());
+        in.readTypedList((List<GiongoExample>)examples, GiongoExample.CREATOR);
     }
 
     @Override

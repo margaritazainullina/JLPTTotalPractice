@@ -410,7 +410,7 @@
 ことに	I decided, it was decided, it is a rule.	Я решил, это было решено, это является правилом. 
 日本へ行く	ことに	する。	nippon e iku koto ni suru.	I have decided to go to japan.	Я решил поехать в Японию. 
 日本へ行く	ことに	なった。	nippon e iku koto ni natta.	It has been decided I will go to japan.	Было решено, что я пойду в Японию. 
-日本へ行く	ことに	なっている。	nippon e iku koto ni natte iru.	I go to japan (e. g. as a rule, once a month.)	Я езжу в Японию (например, как правило, раз в месяц.) 
+日本へ行く	ことに	なっている。	nippon e iku koto ni natte iru.	I go to japan (e.g. as a rule, once a month.)	Я езжу в Японию (например, как правило, раз в месяц.) 
 
 ことになる	To be decided, to be arranged.	Быть принятым, быть организованным. 
 留学する	ことになりました	。	ryūgaku suru koto ni nari mashi ta.	It has been arranged that I will study abroad.	Было решено, что я буду учиться за границей. 
@@ -679,7 +679,7 @@ A社のテレビは、画面の美しさ	にかけては	他社の製品に勝�
 
 にしては	Even though (it is); for.	Даже при том, что (это); Для. 
 年寄り	にしては	若く見える。	toshiyori ni shi te wa wakaku mieru.	Even though he's old, he looks young.	Даже при том, что он старый, он выглядит молодо. 
-お金持ち	にしては	古い車に乗っている。	o kanemochi ni shi te wa furui kuruma ni notte iru.	For (e. g.: even though he is) a rich person, he drives an old car.	Для богатого человека, он ездит на старом автомобиле
+お金持ち	にしては	古い車に乗っている。	o kanemochi ni shi te wa furui kuruma ni notte iru.	For (e.g.: even though he is) a rich person, he drives an old car.	Для богатого человека, он ездит на старом автомобиле
 ６月	にしては	寒い朝だ。	rokugatsu ni shi te wa samui asa da.	It is a cold morning for June.	Это холодное утро для июня. 
 
 に沿って	Go along with; in line with.	Идти наряду с; в соответствии с. 
@@ -924,7 +924,7 @@ A社のテレビは、画面の美しさ	にかけては	他社の製品に勝�
 おいしそうに見える食べ物が必ずしもおいしい	とは限らない	。	oishi sō ni mieru tabemono ga kanarazushimo oishii to wa kagira nai.	Delicious looking food doesn't necessarily taste good.	Вкусная на вид пища не всегда оказывается вкусной
 お金が幸福をもたらす	とは限らない	。	okane ga kōfuku o motarasu to wa kagira nai.	Money does not always bring happiness.	Деньги не всегда приносят счастье. 
 
-といったら	Express admiration/horror; e. g., how (+adjective), so(+adjective.)	Выражает восхищение / ужас
+といったら	Express admiration/horror; e.g., how (+adjective), so(+adjective.)	Выражает восхищение / ужас
 これを見たときの私の驚き	といったら	。	kore o mi ta toki no watashi no odoroki to ittara.	How astonished I was to see this.	Как удивлен я был, когда увидел это
 メアリーは彼に何	といったら	良いのか途方に暮れている。	mearī wa kare ni nani to ittara yoi no ka tohō ni kure te iru.	Mary is at a loss what to say to him.	Мария в недоумении, что сказать ему. 
 私にできること	といったら	彼女に忠告してやるくらいのことです。	watashi ni dekiru koto to ittara kanojo ni chūkoku shi te yaru kurai no koto desu.	All I can do is to give her advice.	Все, что я могу сделать, это дать ей совет. 
@@ -969,7 +969,7 @@ A社のテレビは、画面の美しさ	にかけては	他社の製品に勝�
 お忙しい	ところを	来てくださって、ありがとうございます。	oisogashii tokoro o ki te kudasatte, arigatō gozai masu.	Thank you very much for coming when you're so busy.	Большое спасибо за то, что вы пришли, когда так заняты
 本日は、休日の	ところを	、おいでいただき恐れ入ります。	honjitsu wa, kyūjitsu no tokoro o, oide itadaki osoreiri masu.	I'm amazed that you came all the way out here when today is a holiday.	Я поражен, что вы прошли весь этот путь, когда сегодня праздник. 
 
-とも限らない	There's a chance that, it could be that. (With とは限らない、what comes before is not 100% guaranteed. With ないとも限らない what comes before it is not unlikely to happen) (i. e. There is a possibility.)	Есть шанс, возможно. (С とは限らない перед этой формой, означает что не гарантируется на 100%. Если до него поставить ないとも限らない, тогда эта фраза будет обозначать сомнение/возможность)
+とも限らない	There's a chance that, it could be that. (With とは限らない、what comes before is not 100% guaranteed. With ないとも限らない what comes before it is not unlikely to happen) (i.e. There is a possibility.)	Есть шанс, возможно. (С とは限らない перед этой формой, означает что не гарантируется на 100%. Если до него поставить ないとも限らない, тогда эта фраза будет обозначать сомнение/возможность)
 将来海外に転勤しない	とも限らない	から、英語を勉強しておこう。	shōrai kaigai ni tenkin shi nai to mo kagira nai kara, eigo o benkyō shi te oko u.	There's a chance I’ll get transferred overseas in the future, so I’m going to learn English.	Есть шанс, что я перееду за рубеж в будущем, так что я собираюсь изучать английский язык. 
 試験の日に、風邪をひかない	とも限らない	。	shiken no hi ni, kaze o hika nai to mo kagira nai.	You never know, you might end up catching a cold on the day of the test.	Никогда бы не подумал, что можно простыть в день теста
 彼らが、明日の試合に絶対勝てる	とは限らない	。	karera ka ?, ashita no shiai ni zettai kateru to wa kagira nai.	There's no guarantee they are going to win tomorrow's match.	Там нет гарантии, что они выиграют завтрашний матч. 

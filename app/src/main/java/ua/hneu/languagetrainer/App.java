@@ -128,7 +128,7 @@ public class App extends Application {
 
         // creating and inserting into whole database
         // vocabulary
-        vs.dropTable();
+        /*vs.dropTable();
         vs.createTable();
         vs.bulkInsertFromCSV("vocabulary/N5.txt", getAssets(), 5,
                 getContentResolver());

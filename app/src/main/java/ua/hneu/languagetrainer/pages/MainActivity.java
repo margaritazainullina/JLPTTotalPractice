@@ -181,7 +181,7 @@ public class MainActivity extends FragmentActivity implements
 	                synchronized (this)  
 	                {
                         // load vocabulary
-	            		/*App.vocabularyDictionary = VocabularyService.createCurrentDictionary(
+	            		App.vocabularyDictionary = VocabularyService.createCurrentDictionary(
 	            				App.userInfo.getLevel(), App.numberOfEntriesInCurrentDict,
 	            				App.cr);
                         Log.d("MainActivity", "loaded vocabularyDictionary");
@@ -192,7 +192,7 @@ public class MainActivity extends FragmentActivity implements
 	            				App.cr);
 
                         Log.d("MainActivity", "loaded grammarDictionary");
-*/
+
 	            		// load giongo
 	            		GiongoService gs = new GiongoService();
 	            		App.giongoWordsDictionary = gs.createCurrentDictionary(

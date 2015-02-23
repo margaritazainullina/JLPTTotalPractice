@@ -220,23 +220,18 @@ public class VocabularyService {
             String transcription = entry[1];
             List<String> translations = new ArrayList<>();
             List<String> translationsRus= new ArrayList<>();
-            if(romaji.equals("akudoi"))
-            {
-                int t=0;
-            }
-            Log.d("q", romaji);
             for(String s : entry[3].split(";")){
                 s = s.trim();
                 s = s.replaceAll("\\((.*?)\\)", "");
-                s = s.replaceAll("\\d\\)", "");
-                s = s.replaceAll("^(a||the||to)\\s", "");
-                s = s.replaceAll("^(be||become||being)\\s", "");
+                s = s.replaceAll("\\(\\d\\)", "");
+                s = s.replaceAll("^(a|an|the|to)\\s", "");
+                s = s.replaceAll("^(be|become|being)\\s", "");
                 s = s.trim();
                 translations.add(s);
             }
             for(String s : entry[4].split(";")){
                 s = s.replaceAll("\\(\\d\\)", "");
-                s = s.replaceAll("^(a||the)\\s", "");
+                s = s.replaceAll("^(a|the)\\s", "");
                 s = s.replaceAll("\\d(\\.\\s*)\\w", "");
                 s = s.trim();
                 translationsRus.add(s);
@@ -367,25 +362,23 @@ public class VocabularyService {
 
             HashSet<String> translations1 = new HashSet<String>();
             HashSet<String> translations2 = new HashSet<String>();
-if(kanji.equals("あくどい")) {
-    int i=0;
-}
+
             for(String s:translationsStr.split(";")){
+                s = s.trim();
+                s = s.replaceAll("\\(\\d\\)", "");
+                s = s.replaceAll("^(a||the||to)\\s", "");
+                s = s.replaceAll("^(be||become||being)\\s", "");
                 s = s.replaceAll("\\((.*?)\\)", "");
-                s = s.replaceAll("\\[(.*?)\\]","");
+                s = s.replaceAll("\\d(\\.\\s*)\\w", "");
                 s = s.trim();
-                s = s.replaceAll("^((an|a|the|to)(\\s))+", "");
-                s = s.replaceAll("^(be|become|being)(\\s)+", "");
-                s = s.replaceAll("\\d(\\.\\s*)", "");
-                s = s.trim();
-                if(!s.isEmpty())translations1.add(s);
+                translations1.add(s);
             }
             for(String s:translationsStrRus.split(";")){
                 s = s.trim();
                 s = s.replaceAll("\\(\\d\\)", "");
                 s = s.replaceAll("\\d(\\.\\s*)\\w", "");
                 s = s.trim();
-                if(!s.isEmpty())translations2.add(s);
+                translations2.add(s);
             }
 
             VocabularyEntry de = new VocabularyEntry(id, kanji, level,

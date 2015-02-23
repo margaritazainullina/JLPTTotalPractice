@@ -164,10 +164,10 @@ public class VocabularyEntryDictionaryDetail extends Activity {
         }
 
         examples = new  ArrayList<ExampleAbstr>();
-        examples.addAll(App.gres.getAllExamplesWithWord(entry.translationsToString(), App.cr));
-        examples.addAll(App.ges.getAllExamplesWithWord(entry.translationsToString(), App.cr));
+        examples.addAll(App.gres.getAllExamplesWithWord(entry.getKanjiOrHiragana(), App.cr));
+        examples.addAll(App.ges.getAllExamplesWithWord(entry.getKanjiOrHiragana(), App.cr));
 
-            ArrayList<String> text = new ArrayList<String>();
+        ArrayList<String> text = new ArrayList<String>();
         ArrayList<String> romaji = new ArrayList<String>();
         ArrayList<String> translation = new ArrayList<String>();
             for (ExampleAbstr ge : examples) {

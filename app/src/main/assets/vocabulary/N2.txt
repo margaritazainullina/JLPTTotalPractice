@@ -60,7 +60,7 @@
 	いきなり	ikinari	(uk) abruptly; suddenly; all of a sudden; without warning	резко; вдруг; внезапно; без предупреждения
 育児	いくじ	ikuji	childcare; nursing; upbringing	уход за детьми; уход за больными; воспитание
 幾分	いくぶん	ikubun	somewhat	отчасти
-生け花	いけばな	ikebana	(flower arrangement	икебана
+生け花	いけばな	ikebana	flower arrangement	икебана
 以後	いご	igo	after this; from now on; hereafter; thereafter	после этого; с этого момента; в дальнейшем; после
 以降	いこう	ikou	on and after; hereafter; thereafter	и после; далее; после этого
 	イコール	ikooru	equal	равный
@@ -130,7 +130,7 @@
 運河	うんが	unga	canal; waterway	водный канал; 
 	うんと	unto	a great deal; very much	много; очень много
 英文	えいぶん	eibun	sentence in english	предложение в английском языке
-英和	えいわ	eiwa	english-japanese (e. g. dictionary)	англо-японский (например словарь)
+英和	えいわ	eiwa	english-japanese (e.g. dictionary)	англо-японский (например словарь)
 	ええと	eeto	let me see; well; er...	ну; э-э... 
 液体	えきたい	ekitai	liquid; fluid	жидкость; 
 	エチケット	echiketto	etiquette	этикет
@@ -145,7 +145,7 @@
 延長	えんちょう	enchou	extension; elongation; prolongation; lengthening	расширение; удлинение; продление
 煙突	えんとつ	entotsu	chimney	дымоход
 追い掛ける	おいかける	oikakeru	to chase or run after someone; to run down; to pursue	преследовать; бежать за кем-то
-追い越す	おいこす	oikosu	to pass (e. g. car); to outdistance; to outstrip	опередить; обогнать
+追い越す	おいこす	oikosu	to pass (e.g. car); to outdistance; to outstrip	опередить; обогнать
 	オイル	oiru	oil; engine oil; kerosene	нефть; масло; керосин
 応援	おうえん	ouen	aid; assistance; help; reinforcement	помощь; содействие
 王女	おうじょ	oujo	princess	принцесса
@@ -170,7 +170,7 @@
 補う	おぎなう	oginau	to compensate for	компенсировать
 	おきのどくに	okinodokuni	my sympathies; that's too bad; my condolences	мои соболезнования
 屋外	おくがい	okugai	outdoors	на открытом воздухе
-	おくさん	okusan	(hon) wife; your wife; madam	(веждиво) ваша жена
+	おくさん	okusan	(hon) wife; your wife; madam	(вежливо) ваша жена
 送り仮名	おくりがな	okurigana	part of word written in kana	сопроводительная кана
 	おげんきで	ogenkide	stay safe	берегите себя
 怠る	おこたる	okotaru	to neglect; to be off guard; to be feeling better	пренебрегать; отлынивать; ослаблять внимание
@@ -209,8 +209,8 @@
 思いっ切り	おもいっきり	omoikkiri	with all one's strength; with all one's heart; resignation; resolution	решительно
 思い付く	おもいつく	omoitsuku	to think of; to hit upon	думать; вспомнить
 重たい	おもたい	omotai	heavy; massive; serious	тяжелый; массивный; серьезный
-	おやすみ	oyasumi	(holiday; absence; rest; ((exp) good night	отдых; спокойной ночи
-	おやつ	oyatsu	(between meal snack; afternoon refreshment	полдник
+	おやすみ	oyasumi	holiday; absence; rest; (exp) good night	отдых; спокойной ночи
+	おやつ	oyatsu	between meal snack; afternoon refreshment	полдник
 親指	おやゆび	oyayubi	thumb	большой палец руки
 	オルガン	orugan	organ	орган
 卸す	おろす	orosu	to sell wholesale; grated (vegetables)	продавать оптом
@@ -220,7 +220,7 @@
 温帯	おんたい	ontai	temperate zone	умеренный пояс
 御中	おんちゅう	onchuu	and company; messrs.	суффикс к названиям компаний и учреждений (обычно не переводится)
 蚊	か	ka	mosquito	комар
-	カーブ	kaabu	(curve; (curve ball (baseball)	кривая
+	カーブ	kaabu	curve; curve ball (baseball)	кривая
 貝	かい	kai	shell; shellfish	моллюск; раковина
 開会	かいかい	kaikai	opening of a meeting	открытие встречи
 会館	かいかん	kaikan	meeting hall; assembly hall	зал заседаний; актовый зал
@@ -232,7 +232,7 @@
 改正	かいせい	kaisei	revision; amendment; alteration	пересмотр; поправка; изменение
 快晴	かいせい	kaisei	good weather	хорошая погода
 解説	かいせつ	kaisetsu	explanation; commentary	объяснение; комментарий
-改造	かいぞう	kaizou	(remodeling; (modding (comp)	ремонт
+改造	かいぞう	kaizou	remodeling; modding (comp)	ремонт
 開通	かいつう	kaitsuu	opening; open	открытие
 回転	かいてん	kaiten	rotation; revolution; turning	вращение; революция; поворот
 解答	かいとう	kaitou	answer; solution	ответ; решение
@@ -266,7 +266,7 @@
 確率	かくりつ	kakuritsu	probability	вероятность
 学力	がくりょく	gakuryoku	scholarship; knowledge; literary ability	знания; способность
 掛け算	かけざん	kakezan	multiplication	умножение
-可決	かけつ	kaketsu	approval; adoption (e. g. motion, bill); passage	утверждение; принятие (например законопроекта); прохождение
+可決	かけつ	kaketsu	approval; adoption (e.g. motion, bill); passage	утверждение; принятие (например законопроекта); прохождение
 火口	かこう	kakou	a burner; origin of a fire	кратер
 下降	かこう	kakou	downward; descent; fall; drop; subsidence	спуск; падение; погружение
 重なる	かさなる	kasanaru	to be piled up; lie on top of one another; overlap each other	быть сложеным; накладываться друг на друга
@@ -353,12 +353,12 @@
 缶詰	かんづめ	kanzume	packing (in cans); canning; canned goods; tin can	консервы; консервная банка
 乾電池	かんでんち	kandenchi	dry cell; battery	сухой элемент; аккумулятор
 関東	かんとう	kantou	eastern half of japan; including tokyo	восточная половина японии; в том числе токио
-観念	かんねん	kannen	(idea; notion; conception; (sense (e. g. of duty)	идея; понятие; концепция; чувство (например; долга)
+観念	かんねん	kannen	idea; notion; conception; sense (e.g. of duty)	идея; понятие; концепция; чувство (например, долга)
 乾杯	かんぱい	kanpai	toast (drink)	тост
 看板	かんばん	kanban	sign; signboard; doorplate; poster	знак; вывеска; плакат
 看病	かんびょう	kanbyou	nursing (a patient)	выписка (пациента)
 冠	かんむり	kanmuri	crown; diadem; first; best	корона; диадема
-漢和	かんわ	kanwa	chinese character-japanese (e. g. dictionary)	китайско-японский
+漢和	かんわ	kanwa	chinese character-japanese (e.g. dictionary)	китайско-японский
 気圧	きあつ	kiatsu	atmospheric pressure	атмосферное давление
 器械	きかい	kikai	instrument	инструмент
 着替え	きがえ	kigae	changing clothes; change of clothes	переодевание; смена одежды
@@ -382,7 +382,7 @@
 客間	きゃくま	kyakuma	parlor; guest room	зал; комната для гостей
 	ギャング	gyangu	gang	банда
 	キャンパス	kyanpasu	campus	кампус
-休業	きゅうぎょう	kyuugyou	closed (e. g. store); business suspended; shutdown; holiday	закрыто (вывеска в магазине)
+休業	きゅうぎょう	kyuugyou	closed (e.g. store); business suspended; shutdown; holiday	закрыто (вывеска в магазине)
 休講	きゅうこう	kyuukou	lecture cancelled	лекции отменены
 休息	きゅうそく	kyuusoku	rest; relief; relaxation	отдых; передышка
 給与	きゅうよ	kyuuyo	allowance; grant; supply	оплата; жалование; пособие по безработице; паёк
@@ -393,11 +393,11 @@
 行事	ぎょうじ	gyouji	event; function	мероприятие; функция
 恐縮	きょうしゅく	kyoushuku	shame; very kind of you; sorry to trouble	быть смущённым (тронутым; благодарным)
 教養	きょうよう	kyouyou	culture; education; refinement; cultivation	культура; образование; воспитание
-行列	ぎょうれつ	gyouretsu	(line; procession; (matrix (math)	линия; шествие; матрица (математика)
+行列	ぎょうれつ	gyouretsu	line; procession; matrix (math)	линия; шествие; матрица (математика)
 漁業	ぎょぎょう	gyogyou	fishing (industry)	рыболовля (промышленность)
 曲線	きょくせん	kyokusen	curve	кривая
 規律	きりつ	kiritsu	order; rules; law	порядок; правила; закон
-斬る	きる	kiru	(v5r) to behead; to murder	обезглавливать
+斬る	きる	kiru	to behead; to murder	обезглавливать
 気を付ける	きをつける	kiotsukeru	to be careful; to pay attention; to take care	быть осторожными; обращать внимание; заботиться
 金魚	きんぎょ	kingyo	goldfish	золотая рыбка
 区域	くいき	kuiki	limits; boundary; domain; zone; sphere; territory	пределы; граница; домен; зона; сфера; территория
@@ -431,7 +431,7 @@
 区分	くぶん	kubun	division; section; classification	разделение; раздел; классификация
 組合せ	くみあわせ	kumiawase	combination	сочетание
 組み立てる	くみたてる	kumitateru	to assemble; to set up; to construct	собрать; установить; построить
-汲む	くむ	kumu	(to draw (water); to dip; to scoop; to pump	черпать; вычерпывать; выкачивать
+汲む	くむ	kumu	to draw (water); to dip; to scoop; to pump	черпать; вычерпывать; выкачивать
 酌む	くむ	kumu	to serve sake	пить с кем-л.; понимать; входить в положение
 悔しい	くやしい	kuyashii	regrettable; mortifying; vexing	досадный; прискорбный; обиднй
 悔やむ	くやむ	kuyamu	to mourn	сожалеть; раскаиваться
@@ -487,7 +487,7 @@
 原理	げんり	genri	principle; theory; fundamental truth	принцип; теория; фундаментальная истина
 原料	げんりょう	genryou	raw materials	сырье
 碁	ご	go	go (board game of capturing territory)	го (настольная игра)
-恋しい	こいしい	koishii	(dear; beloved; darling; (yearned for	дорогой; любимый
+恋しい	こいしい	koishii	dear; beloved; darling; yearned for	дорогой; любимый
 請う	こう	kou	to ask; to request	просить
 工員	こういん	kouin	factory worker	заводской рабочий
 強引	ごういん	gouin	overbearing; coercive; pushy; forcible; high-handed	принуждение; напор; своеволие
@@ -523,7 +523,7 @@
 鉱物	こうぶつ	koubutsu	mineral	минерал
 公務	こうむ	koumu	official business; public business	официальный бизнес; общественное бизнес
 項目	こうもく	koumoku	item	пункт
-紅葉	こうよう	kouyou	((japanese) maple	(японский) клен
+紅葉	こうよう	kouyou	(japanese) maple	(японский) клен
 合理	ごうり	gouri	rational	рациональный
 交流	こうりゅう	kouryuu	alternating current; intercourse; (cultural) exchange; intermingling	переменный ток; общение; культурный обмен
 合流	ごうりゅう	gouryuu	confluence; union; linking up; merge	стечение; союз
@@ -553,7 +553,7 @@
 	ごちそうさま	gochisousama	feast	праздник; угощение
 	こちらこそ	kochirakoso	it is i who should say so	это я должен сказать об этом
 小遣い	こづかい	kozukai	personal expenses; pocket money; spending money; incidental expenses; allowance	личные расходы; карманные деньги; непредвиденные расходы; пособие
-	コック	kokku	(cook (nl:); (tap; spigot; faucet; cock	повар; кран
+	コック	kokku	cook; tap; spigot; faucet; cock	повар; кран
 	こっそり	kossori	stealthily; secretly	украдкой; тайком
 古典	こてん	koten	old book; classics; classic	старая книга; классика; классический
 琴	こと	koto	koto (japanese harp)	кото (японская арфа)
@@ -571,17 +571,17 @@
 	こらえる	koraeru	to bear; to stand; to endure; to put up with	нести; стоять; терпеть; мириться с
 娯楽	ごらく	goraku	pleasure; amusement	удовольствие; развлечение
 御覧	ごらん	goran	(hon) look; inspection; try	(вежл.) смотреть
-	コレクション	korekushon	(collection; (correction	коррекция
+	コレクション	korekushon	collection; correction	коррекция
 転がす	ころがす	korogasu	to roll	свернуть
 転がる	ころがる	korogaru	to roll; to tumble	катиться; падать
 紺	こん	kon	navy blue; deep blue	темно-синий
 	コンクール	konkuuru	contest (fr: concours)	конкурс
 	コンクリート	konkuriito	concrete	бетон
 混合	こんごう	kongou	mixing; mixture	смешивание; смесь
-	コンセント	konsento	(consent; (concentric	согласие; концентрация
+	コンセント	konsento	consent; concentric	согласие; концентрация
 献立	こんだて	kondate	menu; program; schedule	меню; программа; расписание
 	こんばんは	konbanha	good evening	добрый вечер
-	サークル	saakuru	circle; sports club (i. e. at a company)	круг; спортивный клуб
+	サークル	saakuru	circle; sports club (i.e. at a company)	круг; спортивный клуб
 在学	ざいがく	zaigaku	(enrolled) in school	поступить в школу
 再三	さいさん	saisan	again and again; repeatedly	снова и снова; повторно
 祭日	さいじつ	saijitsu	national holiday; festival day	национальный праздник; день фестиваля
@@ -688,7 +688,7 @@
 児童	じどう	jidou	children; juvenile	дети; несовершеннолетние
 縛る	しばる	shibaru	to tie; to bind	связывать
 地盤	じばん	jiban	(the) ground	земля
-	しびれる	shibireru	to become numb; to go to sleep (i. e. a limb)	затекать; неметь
+	しびれる	shibireru	to become numb; to go to sleep (i.e. a limb)	затекать; неметь
 紙幣	しへい	shihei	paper money; notes; bills	бумажные деньги; векселя
 	しぼむ	shibomu	to wither; to fade (away); to shrivel; to wilt	чахнуть; увядать; высыхать; слабеть
 絞る	しぼる	shiboru	to press; to wring; to squeeze	выдавливать; выжимать
@@ -728,7 +728,7 @@
 周辺	しゅうへん	shuuhen	circumference; outskirts; environs; (computer) peripheral	окружность; окраина; окрестности; периферия
 重役	じゅうやく	juuyaku	director; high executive	директор; высокая исполнительная должность
 終了	しゅうりょう	shuuryou	end; close; termination	конец; прекращение
-重量	じゅうりょう	juuryou	(weight; (heavyweight boxer	вес; боксер-тяжеловес
+重量	じゅうりょう	juuryou	weight; heavyweight boxer	вес; боксер-тяжеловес
 重力	じゅうりょく	juuryoku	gravity	вес
 熟語	じゅくご	jukugo	idiom; idiomatic phrase; kanji compound	идиома; идиоматические фразы; кандзи соединение
 祝日	しゅくじつ	shukujitsu	national holiday	национальный праздник
@@ -846,7 +846,7 @@
 	スチュワーデス	suchuwaadesu	stewardess	стюардесса
 	すっきり	sukkiri	shapely; clear; neat	стройно; четко; конкретно
 	すっぱい	suppai	sour; acid	кислый; кислота
-	ステージ	suteeji	(stage; (performance	этап; производительность
+	ステージ	suteeji	stage; performance	этап; производительность
 棄てる	すてる	suteru	throw away	выбрасывть
 	ストッキング	sutokkingu	stockings	чулки
 	ストップ	sutoppu	stop	стоп
@@ -858,7 +858,7 @@
 住まい	すまい	sumai	dwelling; house; residence; address	жилище; дом; места жительства; адрес
 	すまない	sumanai	sorry (phrase)	жаль (фраза)
 墨	すみ	sumi	ink	чернила
-澄む(清む)	すむ	sumu	to clear (e. g. weather); to become transparent	очистить (например погоду); чтобы стать прозрачной
+澄む(清む)	すむ	sumu	to clear (e.g. weather); to become transparent	очистить (например погоду); чтобы стать прозрачной
 相撲	すもう	sumou	sumo wrestling	борьба сумо
 	スライド	suraido	slide	слайд
 	ずらす	zurasu	to put off; to delay	откладывать; отложить
@@ -889,7 +889,7 @@
 正方形	せいほうけい	seihoukei	square	площадь
 正門	せいもん	seimon	main gate; main entrance	главные ворота; главный вход
 成立	せいりつ	seiritsu	coming into existence; arrangements; establishment; completion	вступления в существовании; договоренностей; учреждения; завершения
-西暦	せいれき	seireki	christian era; anno domini (a. d.)	христианская эра; н. э. 
+西暦	せいれき	seireki	christian era; anno domini (a.d.)	христианская эра; н.э. 
 背負う	せおう	seou	to be burdened with; to carry on back or shoulder	быть обремененным; проводить на спине или плече
 赤道	せきどう	sekidou	equator	экватор
 折角	せっかく	sekkaku	with trouble; at great pains; long-awaited	с неприятности; на большие усилия; долгожданная
@@ -897,7 +897,7 @@
 石鹸	せっけん	sekken	soap	мыло
 接する	せっする	sessuru	to come in contact with; to connect; to attend; to receive	войти в контакт с
 	せっせと	sesseto	hard; diligently; assiduously	тяжело; старательно; усердно
-接続	せつぞく	setsuzoku	(connection; union; join; link; (changing trains	соединение; союз; объединение
+接続	せつぞく	setsuzoku	connection; union; join; link; changing trains	соединение; союз; объединение
 瀬戸物	せともの	setomono	earthenware; crockery; china	фаянс; фарфор
 	ぜひとも	zehitomo	by all means (with sense of not taking no for an answer)	всеми средствами (с чувством не принимая никаких за ответ)
 迫る	せまる	semaru	to draw near; to press	приблизиться; нажать
@@ -1022,14 +1022,14 @@
 段階	だんかい	dankai	gradation; grade; stage	градация; класс; этап
 短期	たんき	tanki	short term	короткий срок
 炭鉱	たんこう	tankou	coal mine; coal pit	угольная шахта
-短所	たんしょ	tansho	(defect; demerit; weak point; (disadvantage	дефект; слабое место; недостаток
+短所	たんしょ	tansho	defect; demerit; weak point; disadvantage	дефект; слабое место; недостаток
 	たんす	tansu	chest of drawers	комод
 淡水	たんすい	tansui	fresh water	пресная вода
 断水	だんすい	dansui	water outage	отключение воды
 単数	たんすう	tansuu	singular (number)	единственное число
 団地	だんち	danchi	multi-unit apartments	многоквартирных квартиры
 断定	だんてい	dantei	conclusion; decision	вывод; решение
-短編	たんぺん	tanpen	short (e. g. story, film)	короткий (например история, фильм)
+短編	たんぺん	tanpen	short (e.g. story, film)	короткий (например история, фильм)
 誓う	ちかう	chikau	to swear; to vow; to take an oath; to pledge	клясться; давать слово
 地下水	ちかすい	chikasui	underground water	подземная вода
 近々	ちかぢか	chikajika	nearness; before long	близость; в скором времени
@@ -1043,7 +1043,7 @@
 縮む	ちぢむ	chijimu	to shrink; to be contracted	сокращаться; сжиматься
 縮める	ちぢめる	chijimeru	to shorten; to reduce; to boil down; to shrink	сократить; уменьшить; сжать
 縮れる	ちぢれる	chijireru	to be wavy; to be curled	мяться; завиваться
-	チップ	chippu	(gratuity; tip; (chip	чаевые; чип
+	チップ	chippu	gratuity; tip; chip	чаевые; чип
 地点	ちてん	chiten	site; point on a map	сайт; точка на карте
 地名	ちめい	chimei	place name	разместить название
 茶色い	ちゃいろい	chairoi	brown	коричневый
@@ -1058,7 +1058,7 @@
 中年	ちゅうねん	chuunen	middle-aged	средних лет
 超過	ちょうか	chouka	excess; being more than	избыток
 彫刻	ちょうこく	choukoku	carving; engraving; sculpture	резьба; гравировка; скульптура
-長所	ちょうしょ	chousho	(strong point; merit; (advantage	сильная сторона; заслуга; преимущество
+長所	ちょうしょ	chousho	strong point; merit; advantage	сильная сторона; заслуга; преимущество
 長女	ちょうじょ	choujo	eldest daughter	старшая дочь
 調整	ちょうせい	chousei	regulation; adjustment; tuning	регулирование; наладка; настройка
 調節	ちょうせつ	chousetsu	regulation; adjustment; control	регулирование; наладка; контроль
@@ -1080,7 +1080,7 @@
 散らかる	ちらかる	chirakaru	to be in disorder; to lie scattered around	быть разбросанным; быть в беспорядке
 散らす	ちらす	chirasu	to scatter; to disperse; to distribute	раскидывать; разбрасывать
 塵紙	ちりがみ	chirigami	tissue paper; toilet paper	папиросная бумаги
-散る	ちる	chiru	to fall; to scatter (e. g. blossoms)	падать; опадать; оцвести
+散る	ちる	chiru	to fall; to scatter (e.g. blossoms)	падать; опадать; оцвести
 追加	ついか	tsuika	addition; supplement; appendix	добавка; дополнение
 	ついで	tsuide	opportunity; occasion	возможность; повод
 通貨	つうか	tsuuka	currency	валюта
@@ -1092,7 +1092,7 @@
 通用	つうよう	tsuuyou	popular use; circulation	популярное использование; тираж
 通路	つうろ	tsuuro	passage; pathway	проезд; путь
 付合う	つきあう	tsukiau	to associate with; to keep company with; to get on with	связать с; чтобы держать компанию с; чтобы попасть на
-突き当たり	つきあたり	tsukiatari	end (e. g. of street)	конец (например улицы)
+突き当たり	つきあたり	tsukiatari	end (e.g. of street)	конец (например улицы)
 突き当たる	つきあたる	tsukiataru	to run into; to collide with	нарваться на; столкнуться с
 月日	つきひ	tsukihi	time; years; days	время; годы; дни
 点く	つく	tsuku	to catch fire; (electricity) comes on	загораться; зажигаться
@@ -1128,7 +1128,7 @@
 定期券	ていきけん	teikiken	commuter pass; season ticket	сезонный (проездной) билет
 定休日	ていきゅうび	teikyuubi	regular holiday	фиксированный нерабочий день
 停止	ていし	teishi	suspension; interruption; stoppage; ban	прерывание; прекращение; запрет
-停車	ていしゃ	teisha	stopping (e. g. train)	остановка (например поезда)
+停車	ていしゃ	teisha	stopping (e.g. train)	остановка (например поезда)
 停電	ていでん	teiden	failure of electricity	отключение электроэнергии
 出入り	でいり	deiri	in and out; coming and going; free association; income and expenditure; debits and credit	доходы и расходы; дебет и кредит
 出入口	でいりぐち	deiriguchi	exit and entrance	выход и вход
@@ -1136,12 +1136,12 @@
 	テーマ	teema	(n) theme; project; topic (de: thema)	тема
 出掛ける	でかける	dekakeru	to depart; to set out; to start; to be going out	выходить; отправляться
 出来上がり	できあがり	dekiagari	be finished; ready; made for; cut out	завершение; окончание (работы); качество работы
-出来上がる	できあがる	dekiagaru	(to be finished; to be ready; by definition; (to be very drunk	быть законченным; быть готовым; быть созданным для чего-л. (о врождённых качествах)
+出来上がる	できあがる	dekiagaru	to be finished; to be ready; by definition; to be very drunk	быть законченным; быть готовым; быть созданным для чего-л. (о врождённых качествах)
 的確/適確	てきかく	tekikaku	precise; accurate	точный; четкий
 手首	てくび	tekubi	wrist	запястье
 凸凹	でこぼこ	dekoboko	unevenness; roughness; ruggedness	неравномерность; шероховатость
 手頃	てごろ	tegoro	moderate; handy	удобный; приемлемый; подходящий
-	でたらめ	detarame	(irresponsible utterance; nonsense; nonsensical; (random	ерунда; бессмысленность
+	でたらめ	detarame	irresponsible utterance; nonsense; nonsensical; random	ерунда; бессмысленность
 手帳	てちょう	techou	notebook	тетрадь; блокнот
 鉄橋	てっきょう	tekkyou	railway bridge; iron bridge	железнодорожный мост; железный мост
 手続き	てつづき	tetsuzuki	procedure; (legal) process; formalities	(юридический) процесс; формальности
@@ -1210,18 +1210,18 @@
 	とっくに	tokkuni	long ago; already; a long time ago	давно уже
 	どっと	dotto	suddenly	вдруг
 整う	ととのう	totonou	to be prepared; to be in order; to be put in order; to be arranged	быть подготовленным; быть в порядке; быть организованым
-留まる	とどまる	todomaru	(to be fixed; (to abide; to stay (in the one place)	быть закреплённым; держаться
+留まる	とどまる	todomaru	to be fixed; to abide; to stay (in the one place)	быть закреплённым; держаться
 	どなる	donaru	to shout; to yell	кричать; орать
 飛び込む	とびこむ	tobikomu	to jump in; to leap in; to plunge into; to dive	прыгать в; окунуться в; нырять
 跳ぶ	とぶ	tobu	to jump; to fly; to leap	прыгать; летать
-留まる	とまる	tomaru	(to be fixed; (to abide; to stay (in the one place)	для крепления; соблюдать; оставаться (в одном месте)
+留まる	とまる	tomaru	to be fixed; to abide; to stay (in the one place)	для крепления; соблюдать; оставаться (в одном месте)
 泊める	とめる	tomeru	to give shelter to; to lodge	давать приют
 	ともかく	tomokaku	anyhow; anyway; somehow or other; generally speaking; in any case	во всяком случае; так или иначе; вообще говоря
 捕える	とらえる	toraeru	to seize; to grasp; to capture; to arrest	ухватиться; схватить; поймать
 取り入れる	とりいれる	toriireru	to harvest; to take in; to adopt	класть; убирать во что-л.; снимать урожай
 取り消す	とりけす	torikesu	to cancel	отменить
 取り出す	とりだす	toridasu	to take out; to produce; to pick out	вынуть; выбрать
-採る	とる	toru	(to adopt (measure; proposal); (to pick (fruit)	принять (меры; предложение); собирать (плоды)
+採る	とる	toru	to adopt (measure; proposal); to pick (fruit)	принять (меры, предложение); собирать (плоды)
 捕る	とる	toru	to take; to catch (fish); to capture	хватать; ловить (рыбу); захватывать
 	トレーニング	toreeningu	training	обучение
 丼	どんぶり	donburi	porcelain bowl; bowl of rice with food on top	чаша; миска
@@ -1272,7 +1272,7 @@
 日用品	にちようひん	nichiyouhin	daily necessities	предметы первой необходимости
 日課	にっか	nikka	daily lesson; daily work; daily routine	ежедневная работа; распорядок дня
 日程	にってい	nittei	agenda	повестка дня
-鈍い	にぶい	nibui	dull (e. g. a knife); thickheaded; slow (opposite of fast); stupid	тупой; тусклый; глупо
+鈍い	にぶい	nibui	dull (e.g. a knife); thickheaded; slow (opposite of fast); stupid	тупой; тусклый; глупо
 入社	にゅうしゃ	nyuusha	entry to a company	вход для компании
 女房	にょうぼう	nyoubou	wife	жена
 睨む	にらむ	niramu	to glare at; to scowl at; to keep an eye on	пронзить взглядом; следить за; держать под подозрением
@@ -1304,7 +1304,7 @@
 糊	のり	nori	paste; starch	клейстер; клей; крахмал
 乗換	のりかえ	norikae	(n) transfer (trains, buses, etc.)	пересадка транспорта
 載る	のる	noru	to appear (in print); to be recorded	лежать на чём-л.; быть погруженным
-鈍い	のろい	noroi	dull (e. g. a knife); thickheaded; slow (opposite of fast); stupid	медлительный; тупой; влюбчивый
+鈍い	のろい	noroi	dull (e.g. a knife); thickheaded; slow (opposite of fast); stupid	медлительный; тупой; влюбчивый
 	のろのろ	noronoro	slowly; sluggishly	медленно; вяло
 呑気	のんき	nonki	carefree; optimistic; careless; reckless; heedless	беззаботность; небрежность; безрассудность
 灰色	はいいろ	haiiro	grey; gray; ashen	серый; пепельный
@@ -1314,7 +1314,7 @@
 	バイバイ	baibai	bye-bye	bye-bye
 売買	ばいばい	baibai	trade; buying and selling	торговля; покупка и продажа
 這う	はう	hau	to creep; to crawl	ползать
-生える	はえる	haeru	(to grow; to spring up; (to cut (teeth)	расти; возникать
+生える	はえる	haeru	to grow; to spring up; to cut (teeth)	расти; возникать
 剥す	はがす	hagasu	to tear off; to peel off; to rip off	шелушиться; сдирать
 	ばからしい	bakarashii	absurd	абсурд
 秤	はかり	hakari	scales; weighing machine	весы
@@ -1331,7 +1331,7 @@
 始めに/初めに	はじめに	hajimeni	to begin with; first of all	в первую очередь
 	はじめまして	hajimemashite	how do you do?; i am glad to meet you	рад встретиться с вами
 斜	はす	hasu	diagonal	косой; наклонный; диагональный
-外れる	はずれる	hazureru	to be disconnected; to get out of place; to be off; to be out (e. g. of gear)	выключать; снимать; быть вне
+外れる	はずれる	hazureru	to be disconnected; to get out of place; to be off; to be out (e.g. of gear)	выключать; снимать; быть вне
 	パターン	pataan	pattern	шаблон
 肌着	はだぎ	hadagi	underwear	нижнее белье
 果して	はたして	hatashite	as was expected; really	как и ожидалось; действительно
@@ -1341,7 +1341,7 @@
 	バック	bakku	back	назад
 発射	はっしゃ	hassha	firing; shooting; discharge; catapult	стрельба
 発想	はっそう	hassou	expression (music); conceptualization	экспрессия; выразительность
-発電	はつでん	hatsuden	generation (e. g. power)	выработка электроэнергии
+発電	はつでん	hatsuden	generation (e.g. power)	выработка электроэнергии
 発売	はつばい	hatsubai	sale	продажа
 派手	はで	hade	showy; loud; gay; flashy; gaudy	эффектный; громкий; кричащий; яркий
 話合い	はなしあい	hanashiai	discussion; conference	обсуждение
@@ -1352,7 +1352,7 @@
 花嫁	はなよめ	hanayome	bride	невеста
 放れる	はなれる	hanareru	to leave; to get free; to cut oneself off	отпускать
 羽根	はね	hane	shuttlecock	волан
-	ばね	bane	spring (e. g. coil, leaf)	пружина
+	ばね	bane	spring (e.g. coil, leaf)	пружина
 跳ねる	はねる	haneru	to jump; to leap	прыгать
 破片	はへん	hahen	fragment; splinter; broken piece	фрагмент; осколок; обломок
 歯磨き	はみがき	hamigaki	dentifrice; toothpaste	зубная паста
@@ -1484,7 +1484,7 @@
 	プラスチック	purasuchikku	plastic	пластик
 	プラットホーム	purattohoomu	platform	платформа
 	フリー	furii	free	бесплатно
-振り仮名	ふりがな	furigana	; pronunciation key	фуригана (кана рядом с иероглифом; обозначающая чтение)
+振り仮名	ふりがな	furigana	pronunciation key	фуригана (кана рядом с иероглифом; обозначающая чтение)
 	プリント	purinto	print; handout	печать; раздаточный материал
 振舞う	ふるまう	furumau	to behave; to conduct oneself; to entertain (vt)	манеры; поведение
 	ブローチ	buroochi	brooch	брошь
@@ -1519,7 +1519,7 @@
 	ヘリコプター	herikoputaa	helicopter	вертолет
 	へる	heru	to decrease (in size or number); to diminish; to abate	уменьшаться (в размере или количестве); спадать
 	ぺん	pen	pen	ручка
-編集	へんしゅう	henshuu	editing; compilation; editorial (e. g. committee)	редактирование; составление
+編集	へんしゅう	henshuu	editing; compilation; editorial (e.g. committee)	редактирование; составление
 便所	べんじょ	benjo	toilet; lavatory; rest room; latrine; comfort station	туалет; санузел
 	ペンチ	penchi	(abbr) pliers (lit: pinchers)	плоскогубцы
 望遠鏡	ぼうえんきょう	bouenkyou	telescope	телескоп
@@ -1536,12 +1536,12 @@
 庖丁	ほうちょう	houchou	kitchen knife; carving knife	кухонный нож
 方程式	ほうていしき	houteishiki	equation	уравнение
 防犯	ぼうはん	bouhan	prevention of crime	предотвращение совершения преступления
-方面	ほうめん	houmen	direction; district; field (e. g. of study)	направление; район; поле (например исследования)
+方面	ほうめん	houmen	direction; district; field (e.g. of study)	направление; район; поле (например исследования)
 坊や	ぼうや	bouya	boy	мальчик
 放る	ほうる	houru	to let go	отпустить
 	ボーナス	boonasu	bonus	бонус
 朗らか	ほがらか	hogaraka	brightness; cheerfulness; melodious	яркость; жизнерадостность; весёлый; бодрый
-牧場	ぼくじょう	bokujou	(farm (livestock); (pasture land; meadow; grazing land	пастбище; скотоводческая ферма
+牧場	ぼくじょう	bokujou	farm (livestock); pasture land; meadow; grazing land	пастбище; скотоводческая ферма
 牧畜	ぼくちく	bokuchiku	stock-farming	скотоводство
 保健	ほけん	hoken	health preservation; hygiene; sanitation	сохранение здоровья; гигиена; санитария
 募集	ぼしゅう	boshuu	recruiting; taking applications	вербовка; призыв
@@ -1555,7 +1555,7 @@
 彫る	ほる	horu	to carve; to engrave; to sculpture; to chisel	вырезать; гравировать; выдалбливать
 	ぼろ	boro	rag; scrap; tattered clothes; fault (esp. in a pretense)	тряпка; лом; потрепанные одежды
 盆	ぼん	bon	lantern festival; festival of the dead; tray	бон (праздник поминовения предков)
-盆地	ぼんち	bonchi	basin (e. g. between mountains)	котловина; впадина; низина
+盆地	ぼんち	bonchi	basin (e.g. between mountains)	котловина; впадина; низина
 本部	ほんぶ	honbu	headquarters	штаб-квартира
 本来	ほんらい	honrai	essentially; naturally; by nature	по существу; естественно; по своей природе
 	まあまあ	maamaa	so-so	так себе
@@ -1599,7 +1599,7 @@
 満員	まんいん	manin	full house; no vacancy; sold out	полный дом; никакой вакансии; не проданы
 	マンション	manshon	large apartment; apartment house	большая квартира; жилой дом
 満点	まんてん	manten	perfect score	высший балл
-見送る	みおくる	miokuru	(to see off; to farewell; (to escort; (to let pass	провожать
+見送る	みおくる	miokuru	to see off; to farewell; to escort; to let pass	провожать
 見下ろす	みおろす	miorosu	to overlook; to command a view of; to look down on something	не заметить; смотреть вниз на что-то
 見掛け	みかけ	mikake	outward appearance	внешний вид
 三日月	みかづき	mikazuki	new moon; crescent moon	новолуние; полумесяц
@@ -1621,11 +1621,11 @@
 見舞う	みまう	mimau	to ask after (health); to visit	спросить о здоровье; посещать больного
 未満	みまん	miman	less than; insufficient	меньше; недостаточно
 名字	みょうじ	myouji	surname; family name	фамилия; имя семьи
-	ミリ(メートル)	miri(meetoru)	milli-; 10^-3	милли; 0. 001
+	ミリ(メートル)	miri(meetoru)	milli-; 10^-3	милли; 0.001
 診る	みる	miru	to examine (medical)	обследовать (медицинское)
 民間	みんかん	minkan	private; civilian; civil; popular; folk; unofficial	гражданский; частный; негосударственный; неофициальный
 民謡	みんよう	minyou	folk song; popular song	народная песня; популярная песня
-向う	むかう	mukau	(v5u) to face; to go towards	направляться к; идти навстречу
+向う	むかう	mukau	to face; to go towards	направляться к; идти навстречу
 剥く	むく	muku	to peel; to skin; to pare; to hull	сдирать; обдирать; чистить; шелушить
 無限	むげん	mugen	infinite	бесконечный
 無地	むじ	muji	plain; unfigured	одноцветный; гладкий
@@ -1669,7 +1669,7 @@
 	モーター	mootaa	motor	двигатель
 木材	もくざい	mokuzai	lumber; timber; wood	пиломатериал; лесоматериал; древесина
 目次	もくじ	mokuji	table of contents	оглавление
-潜る	もぐる	moguru	(to drive; to pass through; (to evade; to hide; (to dive (into or under water); to go undergroun	нырять; залезать; прятаться
+潜る	もぐる	moguru	to drive; to pass through; to evade; to hide; to dive (into or under water); to go undergroun	нырять; залезать; прятаться
 	もしかしたら/もしかすると	moshikashitara/ moshikasuruto	perhaps; maybe; by some chance	возможно; может быть; если вдруг
 	もたれる	motareru	to lean against; to lean on; to recline on; to lie heavy (on the stomach)	прислониться; опереться; откинуться на
 	モダン	modan	modern	современный
@@ -1682,13 +1682,13 @@
 物差し	ものさし	monosashi	ruler; measure	мера
 物凄い	ものすごい	monosugoi	earth-shattering; staggering; to a very great extent	из ряда вон выходящее; в очень большой степени
 	モノレール	monoreeru	monorail	монорельс
-紅葉	もみじ	momiji	((japanese) maple	(японский) клен
+紅葉	もみじ	momiji	(japanese) maple	(японский) клен
 揉む	もむ	momu	to rub; to crumple (up); to wrinkle	мять; комкать; тереть
 燃やす	もやす	moyasu	to burn	сжигать
 催し	もよおし	moyooshi	event; festivities; function	собрание; празднество
-盛る	もる	moru	(to serve (food; etc.); (to fill up; (to prescribe	накладывать (напр. еду); прописывать (лекарство)
+盛る	もる	moru	to serve (food; etc.); to fill up; to prescribe	накладывать (напр. еду); прописывать (лекарство)
 問答	もんどう	mondou	questions and answers; dialogue	вопросы и ответы; диалог
-	やかましい	yakamashii	(noisy; (strict; fussy	шумный; суетливый
+	やかましい	yakamashii	noisy; strict; fussy	шумный; суетливый
 夜間	やかん	yakan	at night; nighttime	в ночное время; ночное время
 薬缶	やかん	yakan	kettle	чайник
 役者	やくしゃ	yakusha	actor; actress	актер; актриса
@@ -1741,15 +1741,15 @@
 要領	ようりょう	youryou	point; gist; essentials; outline	точка; суть; предметы первой необходимости; план
 欲張り	よくばり	yokubari	avarice; covetousness; greed	алчность; жадность
 余計	よけい	yokei	too much; unnecessary; abundance; surplus; excess; superfluity	слишком много; изобилие; избыток
-	よこす	yokosu	(to send; to forward; (to hand over (e. g. money)	посылать; направлять
-汚す	よごす	yogosu	(to disgrace; to dishonour; (to pollute; to contaminate; to soil; to make dirty; to stain	опозорить; обесчестить; загрязнить
+	よこす	yokosu	to send; to forward; (to hand over (e.g. money)	посылать; направлять
+汚す	よごす	yogosu	to disgrace; to dishonour; to pollute; to contaminate; to soil; to make dirty; to stain	опозорить; обесчестить; загрязнить
 寄せる	よせる	yoseru	to collect; to gather; to add; to put aside	собирать; добавить; отложить в сторону
 余所	よそ	yoso	another place; somewhere else; strange parts	другое место; где-то еще
 四つ角	よつかど	yotsukado	four corners; crossroads	четыре угла; перекресток
 酔っ払い	よっぱらい	yopparai	drunkard	пьяница
 予備	よび	yobi	preparation; preliminaries; reserve; spare	подготовка; запас
 呼び掛ける	よびかける	yobikakeru	to call out to; to accost; to address (crowd); to appeal	окликнуть; приставать; обратиться
-呼び出す	よびだす	yobidasu	to summon; to call (e. g. phone)	вызвать (например по телефону)
+呼び出す	よびだす	yobidasu	to summon; to call (e.g. phone)	вызвать (например по телефону)
 蘇る	よみがえる	yomigaeru	to be resurrected; to be revived; to be resuscitated; to be rehabilitated	воскресать; оживать
 因る	よる	yoru	to come from	исходить от
 慶び	よろこび	yorokobi	(n) (a) joy; (a) delight; rapture; pleasure; gratification; rejoicing; congratulations; felicitations	радость; восторг
@@ -1757,9 +1757,9 @@
 来日	らいにち	rainichi	arrival in japan; coming to japan; visit to japan	прибытие в японию
 落第	らくだい	rakudai	failure; dropping out of a class	неудача на экзамене
 	ラッシュアワー	rasshuawaa	rush hour	час пик
-欄	らん	ran	column of text (e. g. as in a newspaper)	колонка текста (как в газете)
+欄	らん	ran	column of text (e.g. as in a newspaper)	колонка текста (как в газете)
 	ランチ	ranchi	launch; lunch	обед; ланч
-	ランニング	ranningu	(running; (tank top	бег
+	ランニング	ranningu	running; tank top	бег
 乱暴	らんぼう	ranbou	rude; violent; rough; lawless; unreasonable; reckless	грубость; насилие; беспорядки
 理科	りか	rika	science	наука
 利害	りがい	rigai	advantages and disadvantages; interest	преимущества и недостатки

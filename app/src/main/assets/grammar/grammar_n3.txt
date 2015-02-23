@@ -25,7 +25,7 @@
 かれはさくやここに到着した	ばかり	です。	kare wa saku ya koko ni tōchaku shi ta bakari desu.	He arrived here just last night.	Он приехал сюда только вчера вечером. 
 かわいそうにその少女は一日中泣いて	ばかり	だ。	kawaisō ni sono shōjo wa ichi nichi chū nai te bakari da.	The poor little girl did nothing but sob all day.	Бедная девочка ничего не делала, только рыдала весь день. 
 
-べき	Should (do v-ru.) (It is incorrect to use negative+beki. E. g. その本を読まないべきです。 is wrong. This is considered strong because the thing that is expected to happen usually carries a sense of obligation)	Нужно сделать. (Нельзя использовать с отрицанием. Например その本を読まないべきです - неправильно. Считается сильным указанием, потому что определяет моральный долг.)
+べき	Should (do v-ru.) (It is incorrect to use negative+beki. e.g. その本を読まないべきです。 is wrong. This is considered strong because the thing that is expected to happen usually carries a sense of obligation)	Нужно сделать. (Нельзя использовать с отрицанием. Например その本を読まないべきです - неправильно. Считается сильным указанием, потому что определяет моральный долг.)
 いかに生きる	べき	かは、青年にとって重要な問題である。	ikani ikiru beki ka wa, seinen nitotte jūyō na mondai de aru.	How to live is an important question to young people.	Как жить - это важный вопрос для молодых людей. 
 いつ出発する	べき	か私に教えてください。	itsu shuppatsu suru beki ka watashi ni oshie te kudasai.	Please tell me when to leave.	Скажите, когда мне нужно идти. 
 
@@ -75,7 +75,7 @@
 僕は君	ほど	速く歩けません。	boku wa kimi hodo hayaku aruke mase n.	I can't walk as fast as you can.	Я не могу ходить так быстро, как вы можете. 
 ジェニファー	ほど	よく勉強する学生はいない。	jenifā hodo yoku benkyō suru gakusei wa i nai.	There is no student who studies as hard as Jennifer.	Там нет студент, изучающий так сложно, как Дженнифер. 
 
-が欲しい	N, to want something (desirative.) (The negative of hoshii is hoshikunai, 　e. g. 行って欲しくない)	Хотеть чего-то (Отрицательная форма - hoshikunai, например 行って欲しくない)
+が欲しい	N, to want something (desirative.) (The negative of hoshii is hoshikunai, 　e.g. 行って欲しくない)	Хотеть чего-то (Отрицательная форма - hoshikunai, например 行って欲しくない)
 君は何	がほしい	。	kimi wa nani ga hoshii.	What do you want now?	Что вы хотите сейчас?
 領収書	がほしい	のですが。	ryōshū sho ga hoshii no desu ga.	I would like a receipt, please.	Я хочу взять квитанцию, пожалуйста. 
 

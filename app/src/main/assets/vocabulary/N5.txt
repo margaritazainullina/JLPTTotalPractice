@@ -536,7 +536,7 @@
 二日	ふつか	futsuka	two days; second day of the month	второй день месяца
 太い	ふとい	futoi	fat	жирный; толстый
 冬	ふゆ	fuyu	winter	зима
-降る	ふる	furu	to fall; e. g. rain or snow	идти (о дожде или снеге)
+降る	ふる	furu	to fall; e.g. rain or snow	идти (о дожде или снеге)
 古い	ふるい	furui	old (not used for people)	старый (не используется о людях)
 	ふろ	furo	bath	ванна
 文章	ぶんしょう	bunshou	sentence; text	художественный текст; литературный стиль

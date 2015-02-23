@@ -212,12 +212,15 @@ public class VocabularyEntry extends EntryAbstr implements Parcelable{
         out.writeString(lastview);
         out.writeInt(shownTimes);
         out.writeDouble(learnedPercentage);
+
         out.writeString(meaningEng.hiragana);
         out.writeString(meaningEng.romaji);
-        out.writeList(meaningEng.translations);
+        out.writeString(meaningEng.translationsToString());
+
         out.writeString(meaningRus.hiragana);
         out.writeString(meaningRus.romaji);
-        out.writeList(meaningRus.translations);
+        out.writeString(meaningRus.translationsToString());
+
         out.writeString(color);
     }
 
@@ -234,7 +237,6 @@ public class VocabularyEntry extends EntryAbstr implements Parcelable{
 
     // example constructor that takes a Parcel and gives you an object populated with it's values
     private VocabularyEntry(Parcel in) {
-
         id = in.readInt();
         kanji = in.readString();
         level = in.readInt();
@@ -245,19 +247,22 @@ public class VocabularyEntry extends EntryAbstr implements Parcelable{
         meaningEng.hiragana = in.readString();
         meaningEng.romaji = in.readString();
 
-        List<String> translations = new ArrayList<>();
-        in.readList(translations, List.class.getClassLoader());
-        meaningEng.translations = translations;
+        meaningEng.translationsToString =  in.readString();
 
         meaningRus=new VocabularyMeaning();
         meaningRus.hiragana = in.readString();
         meaningRus.romaji = in.readString();
 
-        List<String> translations1 = new ArrayList<>();
+        /*List<String> translations1 = new ArrayList<>();
         in.readList(translations,List.class.getClassLoader());
-        meaningRus.translations = translations1;
+        meaningRus.translations = translations1;*/
+        meaningRus.translationsToString =  in.readString();
 
         color = in.readString();
+
+        Log.d("Parcel ", kanji+" "+
+                " "+level+" "+meaningEng+" "+meaningRus+" "+lastview+" "
+                +learnedPercentage+" "+shownTimes+" ");
     }
 
     @Override

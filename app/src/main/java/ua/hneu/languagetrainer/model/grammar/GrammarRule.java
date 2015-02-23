@@ -169,12 +169,11 @@ public class GrammarRule extends EntryAbstr implements ExampleInterface, Parcela
             String[] s = descEng.split("[;,./]");
             for(String ss : s) {
                 ss=ss.toLowerCase();
-                ss = ss.replaceAll("\\((.*?)\\)", "");
                 ss = ss.replaceAll("\\[(.*?)\\]", "");
-                ss=ss.replaceAll("\\d+[\\)|\\.]","");
+                //ss=ss.replaceAll("\\d+[\\)|\\.]","");
                 ss=ss.trim();
                 ss = ss.replaceAll("^((an|a|the|to)(\\s))+", "");
-                ss = ss.replaceAll("^(be|become|being)(\\s)+", "");
+                ss = ss.replaceAll("^((be|become|being)(\\s))+", "");
                 ss=ss.replaceAll("[?.!。]+$","");
                 ss=ss.trim();
                 if(!ss.isEmpty())d.add(ss);
@@ -224,8 +223,9 @@ public class GrammarRule extends EntryAbstr implements ExampleInterface, Parcela
 
     // write your object's data to the passed-in Parcel
     public void writeToParcel(Parcel out, int flags) {
+
         out.writeInt(id);
-        out.writeString(kanji);
+        out.writeString(rule);
         out.writeInt(level);
         out.writeString(descEng);
         out.writeString(descRus);
@@ -233,7 +233,7 @@ public class GrammarRule extends EntryAbstr implements ExampleInterface, Parcela
         out.writeString(lastview);
         out.writeInt(shownTimes);
         out.writeString(color);
-        out.writeList(examples);
+        out.writeTypedList(examples);
     }
 
     // this is used to regenerate your object. All Parcelables must have a CREATOR that implements these two methods
@@ -250,7 +250,7 @@ public class GrammarRule extends EntryAbstr implements ExampleInterface, Parcela
     // example constructor that takes a Parcel and gives you an object populated with it's values
     private GrammarRule(Parcel in) {
         id = in.readInt();
-        kanji = in.readString();
+        rule = in.readString();
         level = in.readInt();
         descEng = in.readString();
         descRus = in.readString();
@@ -258,8 +258,7 @@ public class GrammarRule extends EntryAbstr implements ExampleInterface, Parcela
         lastview = in.readString();
         shownTimes = in.readInt();
         color = in.readString();
-        ArrayList<GrammarExample> examples = new ArrayList<GrammarExample>();
-        in.readList(examples, ArrayList.class.getClassLoader());
+        in.readTypedList((List<GrammarExample>)examples, GrammarExample.CREATOR);
     }
 
     @Override

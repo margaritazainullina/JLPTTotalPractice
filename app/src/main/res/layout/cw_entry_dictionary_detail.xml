@@ -76,5 +76,9 @@
             android:text="Mirrors, boards for board games (chess, igo, shogi), stages of computer games, walls of a room, tennis courts	"
             android:textSize="@dimen/largeText" />
     </LinearLayout>
-
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/examplesListView"
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>
