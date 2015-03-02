@@ -158,7 +158,7 @@ public class CounterWordsIntroductionActivity extends FragmentActivity {
         speakOut(curWord);
 	}
     private void speakOut(final CounterWord entry) {
-        twmp.play(curWord.getHiragana());
+        twmp.loadAndPlay(curWord.getHiragana(), 0.5f, 1f);
     }
     public static class PlaceholderFragment extends Fragment {
 

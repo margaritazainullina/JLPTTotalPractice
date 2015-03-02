@@ -124,7 +124,7 @@ A:なんでその変なスタイルにしたの？ Ｂ：何か、	気になる	
 	こんな	風に持って下さい	konna kaze ni motte kudasai	Please hold it in this way	Пожалуйста, держите его таким образом
 	こんな	ことになろうとは、正に「お釈迦様でも気がつくめい」だね。	konna koto ni naro u to wa, masani 'oshakasama de mo kigatsuku mei' da ne.	It's precisely "even the Buddha could not have guessed it" in the sense that things turned out this way.	Дословно "даже Будда не мог догадаться" в том смысле, что все выйдет именно так. 
 
-ことになる	To be decided, to be arranged. (Verb(dictionary form) + ことに+なる/ない(	Быть определеным, организованным. (Глагол (в словарной форме) + ことに + なる / ない)
+ことになる	To be decided, to be arranged. (Verb in dictionary form + ことに+なる/ない)	Быть определеным, организованным. (Глагол в словарной форме + ことに + なる / ない)
 この仕事を引き受けると他の町へ引っ越す	ことになる	だろう。	kono shigoto o hikiukeru to ta no machi e hikkosu koto ni naru daro u.	This job will mean moving to another city.	Эта работа будет означать переезд в другой город. 
 私は来年大阪へ転勤する	ことになった	。	watashi wa rainen ōsaka e tenkin suru koto ni natta.	It has been decided that I will transfer to Osaka next year	Было решено, что я перееду в Осаку в следующем году
 

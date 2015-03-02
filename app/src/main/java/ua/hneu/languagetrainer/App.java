@@ -98,6 +98,10 @@ public class App extends Application {
 	public static Typeface titleFont;
 	public static Typeface titleFontItalic;
 
+    //for playing entries
+    public static float speechSpeed;
+    public static float speechVolume = 0.25f;
+
 	@Override
 	public void onCreate() {
         // get current location
@@ -146,7 +150,11 @@ public class App extends Application {
                 getContentResolver());
         Log.d("App", "loaded vocabulary/N1.txt");
 
-        /* // test
+         // test
+
+        ts.dropTable();
+        qs.dropTable();
+        as.dropTable();
         ts.createTable();
         TestService.startCounting(getContentResolver());
         qs.createTable();
@@ -155,7 +163,7 @@ public class App extends Application {
         ts.insertFromXml("tests/level_def_test.xml",
                 getAssets(), getContentResolver());
         Log.d("App", "loaded tests/level_def_test.xml");
-        ts.insertFromXml("tests/mock_test_n1_#1.xml", getAssets(),
+       /* ts.insertFromXml("tests/mock_test_n1_#1.xml", getAssets(),
                 getContentResolver());
         Log.d("App", "loaded tests/mock_test_n1_#1.xml");
         ts.insertFromXml("tests/mock_test_n1_#2.xml",
@@ -215,7 +223,7 @@ public class App extends Application {
         ts.insertFromXml("tests/mock_test_n5_#2.xml", getAssets(),
                 getContentResolver());
         Log.d("App", "loaded tests/mock_test_n5_#2.xml");
-        ts.insertFromXml("tests/mock_test_n5_#3.xml",
+        /*ts.insertFromXml("tests/mock_test_n5_#3.xml",
                 getAssets(), getContentResolver());
         Log.d("App", "loaded tests/mock_test_n5_#3.xml");
         ts.insertFromXml("tests/mock_test_n5_#4.xml", getAssets(),
@@ -223,9 +231,9 @@ public class App extends Application {
         Log.d("App", "loaded tests/mock_test_n5_#4.xml");
         ts.insertFromXml("tests/mock_test_n5_#5.xml",
                 getAssets(), getContentResolver());
-        Log.d("App", "loaded tests/mock_test_n5_#5.xml");*/
+        Log.d("App", "loaded tests/mock_test_n5_#5.xml");
 
-        /*GiongoService gs = new GiongoService();
+        GiongoService gs = new GiongoService();
         gs.dropTable();
         gs.createTable();
         ges.dropTable();
@@ -301,6 +309,15 @@ public class App extends Application {
                 "fonts/MAIAN.TTF");
         titleFontItalic = Typeface.createFromAsset(context.getAssets(),
                 "fonts/mvboli.ttf");
+
+
+        switch(userInfo.getLevel()){
+            case(1):speechSpeed=0.98f; break;
+            case(2):speechSpeed=0.95f; break;
+            case(3):speechSpeed=0.92f; break;
+            case(4):speechSpeed=0.89f; break;
+            case(5):speechSpeed=0.85f; break;
+        }
     }
 
 	public static void updateUserData() {
@@ -335,18 +352,22 @@ public class App extends Application {
 			timeLimit1 = 110 * 60 * 1000;
 			timeLimit2 = 0;
 			timeLimit3 = 60 * 60 * 1000;
+            break;
 		case 2:
 			timeLimit1 = 105 * 60 * 1000;
 			timeLimit2 = 0;
 			timeLimit3 = 50 * 60 * 1000;
+            break;
 		case 3:
 			timeLimit1 = 30 * 60 * 1000;
 			timeLimit2 = 70 * 60 * 1000;
 			timeLimit3 = 40 * 60 * 1000;
+            break;
 		case 4:
 			timeLimit1 = 30 * 60 * 1000;
 			timeLimit2 = 60 * 60 * 1000;
 			timeLimit3 = 35 * 60 * 1000;
+            break;
 		case 5:
 			// timeLimit1 = 20 * 1000;
 			timeLimit1 = 25 * 60 * 1000;

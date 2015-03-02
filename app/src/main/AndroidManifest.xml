@@ -375,6 +375,12 @@
             android:screenOrientation="portrait"
             android:configChanges="orientation|screenSize">
         </activity>
+        <activity
+            android:name="ua.hneu.languagetrainer.pages.dictionary.EntryDictionaryDetail"
+            android:label=""
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize">
+        </activity>
     </application>
 
 </manifest>

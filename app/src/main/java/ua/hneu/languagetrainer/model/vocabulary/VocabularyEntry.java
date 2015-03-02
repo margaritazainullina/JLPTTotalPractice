@@ -273,10 +273,6 @@ public class VocabularyEntry extends EntryAbstr implements Parcelable{
     }
 
     public List<String> getTranslations() {
-        if(this.getRomaji().equals("akudoi"))
-    {
-        int t=0;
-    }
         if (App.lang == Languages.RUS)
             return this.meaningRus.translations;
         return this.meaningEng.translations;

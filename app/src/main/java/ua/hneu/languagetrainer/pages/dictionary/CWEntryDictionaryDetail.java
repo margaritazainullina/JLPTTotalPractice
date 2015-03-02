@@ -147,7 +147,7 @@ public class CWEntryDictionaryDetail extends Activity {
         speakOut(curWord);
     }
     private void speakOut(final CounterWord entry) {
-        twmp.play(curWord.getHiragana());
+        twmp.loadAndPlay(curWord.getHiragana(),  App.speechVolume,App.speechSpeed);
     }
 
 

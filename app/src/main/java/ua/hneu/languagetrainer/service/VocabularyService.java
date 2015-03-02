@@ -338,6 +338,7 @@ public class VocabularyService {
         c.moveToFirst();
         int id = 0;
         String kanji = "";
+        int level1 = 0;
         String transcription = "";
         String romaji = "";
         String translationsStr = "";
@@ -350,6 +351,7 @@ public class VocabularyService {
         while (!c.isAfterLast()) {
             id = c.getInt(0);
             kanji = c.getString(1);
+            level1= c.getInt(2);
             transcription = c.getString(3);
             romaji = c.getString(4);
             translationsStr = c.getString(5);
@@ -381,7 +383,7 @@ public class VocabularyService {
                 translations2.add(s);
             }
 
-            VocabularyEntry de = new VocabularyEntry(id, kanji, level,
+            VocabularyEntry de = new VocabularyEntry(id, kanji, level1,
                     transcription, romaji, new ArrayList<String>(translations1), new ArrayList<String>(translations1), translationsStr, translationsStrRus,
                     percentage, lastview, showntimes, color);
 

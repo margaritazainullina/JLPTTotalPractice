@@ -7,9 +7,11 @@ import java.util.ArrayList;
 import ua.hneu.edu.languagetrainer.R;
 import ua.hneu.languagetrainer.App;
 import ua.hneu.languagetrainer.ListViewAdapter;
+import ua.hneu.languagetrainer.TextToVoiceMediaPlayer;
 import ua.hneu.languagetrainer.model.tests.Answer;
 import ua.hneu.languagetrainer.model.tests.Question;
 import ua.hneu.languagetrainer.model.tests.Test;
+import ua.hneu.languagetrainer.model.vocabulary.VocabularyEntry;
 import ua.hneu.languagetrainer.passing.TestPassing;
 import ua.hneu.languagetrainer.service.TestService;
 import android.app.Activity;
@@ -23,6 +25,7 @@ import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.SystemClock;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -49,8 +52,9 @@ public class MockTestActivity extends Activity {
 	ImageView isCorrect;
 	Button skipSection;
 	Chronometer chronometer;
-    long timeWhenStopped = 0;
 	MediaPlayer player;
+
+    TextToVoiceMediaPlayer ttwmp;
 
 	// custom adapter for ListView
 	ListViewAdapter adapter;
@@ -87,6 +91,7 @@ public class MockTestActivity extends Activity {
 		player = new MediaPlayer();
 		// clear test passing instance to clear previous results
 		tp.clearInfo();
+        ttwmp=new TextToVoiceMediaPlayer();
 		Bundle extras = getIntent().getExtras();
 		if (extras != null) {
 			testName = extras.getString("testName");
@@ -172,6 +177,7 @@ public class MockTestActivity extends Activity {
 	}
 
 	public void nextWord() {
+        ttwmp.stop();
 		isCorrect.setImageResource(android.R.color.transparent);
 		// move pointer to next word
 		currentWordNumber++;
@@ -203,7 +209,8 @@ public class MockTestActivity extends Activity {
 		if (!q.getImgRef().isEmpty()) {
 			InputStream ims;
 			try {
-				ims = getAssets().open("question_img/" + q.getImgRef());
+                Log.d("img path: ", "tests/question_img/"+q.getImgRef());
+				ims = getAssets().open("tests/question_img/" + q.getImgRef());
 				// load image as Drawable
 				Drawable d = Drawable.createFromStream(ims, null);
 				// set image to ImageView
@@ -213,7 +220,7 @@ public class MockTestActivity extends Activity {
 			}
 		}// if audio for question exists
 		if (!q.getAudioRef().isEmpty())
-			playAudio();
+			playAudio(q.getAudioRef());
 
 		sectionTextView.setText(q.getSection());
 		adapter = new ListViewAdapter(this, q.getAllAnswers(), true);
@@ -223,6 +230,10 @@ public class MockTestActivity extends Activity {
 	}
 	}
 
+    private void playAudio(final String s) {
+        float speed=0;
+        ttwmp.loadAndPlay(s, App.speechVolume,App.speechSpeed);
+    }
 
 	// listeners for click on the list row
 	final private transient OnItemClickListener answersListViewClickListener = new OnItemClickListener() {
@@ -312,13 +323,14 @@ public class MockTestActivity extends Activity {
 	}
 
 	public void onPlayClick(View v) {
-		playAudio();
+		playAudio(q.getAudioRef());
 	}
 
     long mLastStopTime;
 
     public void buttonPauseOnClick(View v) {
         onPause();
+        ttwmp.pause();
         mLastStopTime = SystemClock.elapsedRealtime();
         chronometer.stop();
         AlertDialog.Builder builder = new AlertDialog.Builder(MockTestActivity.this);
@@ -334,32 +346,12 @@ public class MockTestActivity extends Activity {
                                 long intervalOnPause = (SystemClock.elapsedRealtime() - mLastStopTime);
                                 chronometer.setBase( chronometer.getBase() + intervalOnPause );
                                 chronometer.start();
+                                ttwmp.resume();
                             }
                         });
         AlertDialog alert = builder.create();
         alert.show();
     }
-
-	public void playAudio() {
-		try {
-			if (player.isPlaying()) {
-				player.stop();
-				player.release();
-				player = new MediaPlayer();
-			}
-			AssetFileDescriptor descriptor = getAssets().openFd(
-					"question_audio/" + q.getAudioRef());
-			player.setDataSource(descriptor.getFileDescriptor(),
-					descriptor.getStartOffset(), descriptor.getLength());
-			descriptor.close();
-
-			player.prepare();
-			player.setVolume(1f, 1f);
-			player.setLooping(true);
-			player.start();
-		} catch (Exception e) {
-		}
-	}
 
 	public void endTesting() {
 		DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {

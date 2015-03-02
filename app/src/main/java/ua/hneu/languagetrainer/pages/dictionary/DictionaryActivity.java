@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -67,21 +68,60 @@ public class DictionaryActivity extends ListActivity {
         all.addAll(gd3.getEntries());
         GrammarDictionary gd4 = GrammarService.selectAllEntriesOflevel(4, App.cr);
         all.addAll(gd4.getEntries());
-        GrammarDictionary gd5 = GrammarService.selectAllEntriesOflevel(5, App.cr);*/
+        GrammarDictionary gd5 = GrammarService.selectAllEntriesOflevel(5, App.cr);
+        all.addAll(gd5.getEntries());
         all.addAll(gd.getEntries());
         all.addAll(vd.getEntries());
         all.addAll(App.allGiongoDictionary.getEntries());
-        all.addAll(App.allCounterWordsDictionary.getEntries());
+        all.addAll(App.allCounterWordsDictionary.getEntries());*/
         Log.d("TOTAL (set): ", all.size()+"");
         int u=gd.size()+vd.size()+App.allGiongoDictionary.getEntries().size()+App.allCounterWordsDictionary.getEntries().size();
         Log.d("TOTAL: ", u+"");
 
-       /* all.add(App.allGrammarDictionary.get(1));
-        all.add(App.allVocabularyDictionary.get(23));
-        all.add(App.allGiongoDictionary.get(4));
-        all.add(App.allCounterWordsDictionary.get(4));*/
+        /*ArrayList<String> vd1 = (ArrayList<String>) vd.getAllKanjiOrHiragana().clone();
+        ArrayList<String> vd2 = (ArrayList<String>) vd.getAllKanjiOrHiragana().clone();
+        ArrayList<String> vd3 = (ArrayList<String>) vd.getAllKanjiOrHiragana().clone();
+        ArrayList<String> grd1 = (ArrayList<String>) gd.getAllRules().clone();
+        ArrayList<String> grd2 = (ArrayList<String>) gd.getAllRules().clone();
+        ArrayList<String> gd1 = (ArrayList<String>) App.allGiongoDictionary.getAllGiongo().clone();
 
-        TreeSet<String> temp = new TreeSet<>();
+        vd1.retainAll(grd1);
+        vd2.retainAll(gd1);
+        vd3.retainAll(App.allCounterWordsDictionary.getEntries());
+        grd1.retainAll(gd1);
+        grd2.retainAll(App.allCounterWordsDictionary.getEntries());
+        gd1.retainAll(App.allCounterWordsDictionary.getEntries());
+
+        for(String entry: vd1){
+           Log.d("Retained voc - gr ", entry);
+        }
+        for(String entry: vd2){
+            Log.d("Retained voc - g ", entry);
+        }
+        for(String entry: vd3){
+            Log.d("Retained voc - cw ", entry);
+        }
+        for(String entry: grd1){
+            Log.d("Retained gr - g ", entry);
+        }
+        for(String entry: grd2){
+            Log.d("Retained gr - cw ", entry);
+        }
+        for(String entry: gd1){
+            Log.d("Retained g - cw ", entry);
+        }*/
+
+       /* List<String> l = (List<String>)vd.getAllKanjiOrHiragana();
+        displayDuplicate(l.toArray());*/
+
+
+
+        all.add(App.allGrammarDictionary.get(15));
+        all.add(App.allVocabularyDictionary.get(256));
+        all.add(App.allGiongoDictionary.get(17));
+        all.add(App.allCounterWordsDictionary.get(25));
+
+        /*TreeSet<String> temp = new TreeSet<>();
         for(EntryAbstr ea: all ){
             if(ea instanceof VocabularyEntry) {
                 VocabularyEntry ve = (VocabularyEntry) ea;
@@ -106,10 +146,28 @@ public class DictionaryActivity extends ListActivity {
        }
         Log.d("TOTAL jap ", allJapToShow.size()+"");
         Log.d("TOTAL eng ", allTranslToShow.size()+"");
-        allTranslToShow = new ArrayList(temp);
-       // Collections.sort(allTranslToShow);
+        allTranslToShow = new ArrayList(temp);*/
         showAll();
     }
+
+    static void displayDuplicate(Object[] ar) {
+        boolean[] done = new boolean[ar.length];
+        for(int i = 0; i < ar.length; i++) {
+            if(done[i])
+                continue;
+            int nb = 0;
+            for(int j = i; j < ar.length; j++) {
+                if(done[j])
+                    continue;
+                if(ar[j].equals(ar[i])) {
+                    done[j] = true;
+                    nb++;
+                }
+            }
+            System.out.println(ar[i] + " occurs " + nb + " times");
+        }
+    }
+
 
     @Override
     public boolean onSearchRequested() {
@@ -154,7 +212,7 @@ public class DictionaryActivity extends ListActivity {
     }
 
     public void onListItemClick(ListView l, View v, int position, long id) {
-        String search =  (String) getListAdapter().getItem(position);
+        /*String search =  (String) getListAdapter().getItem(position);
         Log.d("onListItemClick", search);
         Set<EntryAbstr> result = new TreeSet<>();
         for(EntryAbstr ea : all) {
@@ -170,9 +228,6 @@ public class DictionaryActivity extends ListActivity {
         for(EntryAbstr ea : result) {
             Log.d("FOUND: ", ea.toString());
 
-        /*if(fromJapanese)
-             ea = allSortedByJap.get(position);
-        else  ea = allSortedByTransl.get(position);*/
 
             if (ea instanceof VocabularyEntry) {
                 VocabularyEntry ve = (VocabularyEntry) ea;
@@ -201,7 +256,10 @@ public class DictionaryActivity extends ListActivity {
                 intent.putExtra("entry", cw);
                 startActivity(intent);
             }
-        }
+        }*/
+        Intent intent = new Intent(this, EntryDictionaryDetail.class);
+        //intent.putExtra("entry", cw);
+        startActivity(intent);
     }
 
     private void search(String query) {

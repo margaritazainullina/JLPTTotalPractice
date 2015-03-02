@@ -51,6 +51,6 @@ public class AllGrammarExamples extends ListActivity {
 		TextView textPart3 = (TextView) v1.findViewById(R.id.textPart3);
 		phrase = (String) textPart1.getText() + textPart2.getText()
 				+ textPart3.getText();
-		twmp.play(phrase);
+		twmp.loadAndPlay(phrase, App.speechVolume,App.speechSpeed);
 	}	
 }

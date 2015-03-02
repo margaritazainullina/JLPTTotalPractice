@@ -319,7 +319,7 @@ public class WordIntroductionActivity extends FragmentActivity {
     }
 
     private void speakOut(final VocabularyEntry entry) {
-        twmp.play(entry.getTranscription());
+        twmp.loadAndPlay(entry.getTranscription(), App.speechVolume,App.speechSpeed);
     }
 
     public void onPlayClick(View v) {

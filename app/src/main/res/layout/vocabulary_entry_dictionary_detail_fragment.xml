@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="top"
+    android:orientation="vertical"
+    tools:context="ua.hneu.languagetrainer.pages.dictionary.EntryDictionaryDetail$PlaceholderFragment1" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="JLPT level: N3"
+        android:id="@+id/voc_levelTv"
+        android:layout_gravity="center_horizontal" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/voc_linearLayout1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/voc_wordTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="能力"
+                    android:textSize="@dimen/xlargeText" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingLeft="@dimen/activity_horizontal_margin" >
+
+                    <TextView
+                        android:id="@+id/voc_transcriptionTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="[のうりょく]"
+                        android:textSize="@dimen/largeText"
+                        />
+
+                    <TextView
+                        android:id="@+id/voc_romajiTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="@dimen/largeText" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/voc_translationTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="to long for; to yearn after; to admire"
+                android:textSize="@dimen/largeText" />
+
+            <Button
+                android:id="@+id/voc_soundButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                android:drawableTop="@drawable/sound"
+                android:gravity="left|center_vertical"
+                android:onClick="onPlayClick" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <ListView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/voc_examplesListView"
+        android:layout_gravity="center_horizontal" />
+
+
+</LinearLayout>

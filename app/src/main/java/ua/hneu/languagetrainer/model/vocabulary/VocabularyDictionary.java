@@ -42,7 +42,16 @@ public class VocabularyDictionary extends DictionaryAbstr {
 		return kanji;
 	}
 
-	// returns ArrayList of all ids in dictionary (without empty ones)
+    public ArrayList<String> getAllKanjiOrHiragana() {
+        ArrayList<String> kanji = new ArrayList<String>();
+        for (VocabularyEntry e : entries) {
+                kanji.add(e.getKanjiOrHiragana());
+        }
+        return kanji;
+    }
+
+
+    // returns ArrayList of all ids in dictionary (without empty ones)
 	public ArrayList<Integer> getAllIds() {
 		ArrayList<Integer> ids = new ArrayList<Integer>();
 		for (VocabularyEntry e : entries) {

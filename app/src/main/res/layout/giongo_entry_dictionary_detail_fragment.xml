@@ -1,0 +1,55 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:scrollbars="vertical"
+    android:orientation="vertical"
+    tools:context="ua.hneu.languagetrainer.pages.giongo.GiongoIntroductionActivity" >
+
+    <LinearLayout
+        android:id="@+id/giongo_linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/activity_horizontal_margin" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/activity_vertical_margin" >
+
+                <TextView
+                    android:id="@+id/giongo_giongoTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="面	"
+                    android:textSize="@dimen/xlargeText" />
+
+                <TextView
+                    android:id="@+id/giongo_translationTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:text="men"
+                    android:textSize="@dimen/largeText" />
+
+                <ListView
+                    android:id="@+id/giongo_giongoExamplesListView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                </ListView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:scrollbars="vertical"
+    tools:context="ua.hneu.languagetrainer.pages.dictionary.EntryDictionaryDetail"
+    tools:ignore="MergeRootFrame">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+    <fragment
+        android:name="ua.hneu.languagetrainer.pages.dictionary.EntryDictionaryDetail$PlaceholderFragment1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/VocFragment" />
+    <fragment
+        android:name="ua.hneu.languagetrainer.pages.dictionary.EntryDictionaryDetail$PlaceholderFragment2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/GrammarFragment"/>
+    <fragment
+        android:name="ua.hneu.languagetrainer.pages.dictionary.EntryDictionaryDetail$PlaceholderFragment3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/GiongoFragment" />
+    <fragment
+        android:name="ua.hneu.languagetrainer.pages.dictionary.EntryDictionaryDetail$PlaceholderFragment4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/CWFragment" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

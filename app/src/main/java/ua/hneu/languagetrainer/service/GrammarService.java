@@ -105,6 +105,7 @@ public class GrammarService {
 		c.moveToFirst();
 		int id = 0;
 		String rule = "";
+        int level1 = 0;
 		String eng = "";
 		String rus = "";
 		double percentage = 0;
@@ -114,6 +115,7 @@ public class GrammarService {
 		while (!c.isAfterLast()) {
 			id = c.getInt(0);
 			rule = c.getString(1);
+            level1 = c.getInt(2);
 			eng = c.getString(3);
 			rus = c.getString(4);
 			percentage = c.getDouble(5);
@@ -122,7 +124,7 @@ public class GrammarService {
 			color = c.getString(8);
 			c.moveToNext();
 
-			GrammarRule gr = new GrammarRule(rule, level, eng, rus, percentage,
+			GrammarRule gr = new GrammarRule(rule, level1, eng, rus, percentage,
 					lastview, shownTimes, color, ges.getExamplesByRuleId(id,
 							contentResolver));
 			gd.add(gr);

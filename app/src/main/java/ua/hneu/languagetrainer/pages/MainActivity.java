@@ -29,6 +29,7 @@ import android.app.ActionBar;
 import android.app.ActionBar.Tab;
 import android.app.FragmentTransaction;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.AsyncTask;
@@ -40,6 +41,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import java.io.File;
+import java.io.FileOutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashSet;
