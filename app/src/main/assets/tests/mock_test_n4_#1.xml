@@ -1,829 +1,685 @@
-<test level="4" name="Test N4 #1">
+<test level="5" name="Test N4 #1">
 <section name="文字・語彙">
-<task caption="問題Ⅰ＿＿＿のことばはどうよみますか。１２３４からいちばんいいものをひとつえらびなさい。">
-<question weight="1" title="問（1）+私は北区にある学校に通っています。" text="北区 ">
-<answer isCorrect="1">きたく</answer>
-<answer isCorrect="0">きたぐ</answer>
-<answer isCorrect="0">きたくん</answer>
-<answer isCorrect="0">きたぐん</answer>
+<task caption="問題I______の ことばは どう よみますか。１２３４から いちばん いい ものを えらびなさい。">
+<question weight="1" title="問1・ それを戻しなさい。" text="戻しなさい">
+<answer isCorrect="0">おとしなさい</answer>
+<answer isCorrect="0">かえりしなさい</answer>
+<answer isCorrect="1">もどしなさい</answer>
+<answer isCorrect="0">もどりしなさい</answer>
 </question>
-<question weight="1" title="問（1）+私は北区にある学校に通っています。" text="通って ">
-<answer isCorrect="0">かゆって</answer>
-<answer isCorrect="1">かよって</answer>
-<answer isCorrect="0">とうって</answer>
-<answer isCorrect="0">とおって</answer>
+<question weight="1" title="問2・ 幸せがドアをノックしますように。" text="幸">
+<answer isCorrect="1">しあわせ</answer>
+<answer isCorrect="0">さいわい</answer>
+<answer isCorrect="0">しら</answer>
+<answer isCorrect="0">たつ</answer>
 </question>
-<question weight="1" title="問（2）+妹の代わりに 手紙を書きました。" text="妹 ">
-<answer isCorrect="0">いもと</answer>
-<answer isCorrect="0">むすめ</answer>
-<answer isCorrect="1">いもうと</answer>
-<answer isCorrect="0">むすうめ</answer>
+<question weight="1" title="問3・ スープが温まるまで待ちなさい。" text="温まる">
+<answer isCorrect="0">ひやまる</answer>
+<answer isCorrect="0">さまる</answer>
+<answer isCorrect="1">あたたまる</answer>
+<answer isCorrect="0">あたかまる</answer>
 </question>
-<question weight="1" title="問（2）+妹の代わりに 手紙を書きました。" text="代わり ">
-<answer isCorrect="0">おわり</answer>
-<answer isCorrect="1">かわり</answer>
-<answer isCorrect="0">おかわり</answer>
-<answer isCorrect="0">かかわり</answer>
+<question weight="1" title="問4・ スープが温まるまで待ちなさい。" text="待ちなさい">
+<answer isCorrect="0">まってなさい</answer>
+<answer isCorrect="0">もってなさい</answer>
+<answer isCorrect="0">もたせなさい</answer>
+<answer isCorrect="1">まちなさい</answer>
 </question>
-<question weight="1" title="問（2）+妹の代わりに 手紙を書きました。" text="手紙 ">
-<answer isCorrect="0">てかみ</answer>
-<answer isCorrect="1">てがみ</answer>
-<answer isCorrect="0">でかみ</answer>
-<answer isCorrect="0">でがみ</answer>
+<question weight="1" title="問5・ 我々はよく魚を生で食べる" text="生">
+<answer isCorrect="0">いき</answer>
+<answer isCorrect="0">うまれ</answer>
+<answer isCorrect="0">せい</answer>
+<answer isCorrect="1">なま</answer>
 </question>
-<question weight="1" title="問（3）スポーツをして頭も体もすっきりしました。" text="頭 ">
-<answer isCorrect="0">あし</answer>
-<answer isCorrect="0">くび</answer>
-<answer isCorrect="1">あたま</answer>
-<answer isCorrect="0">て</answer>
+<question weight="1" title="問6・ 近所の人たちは彼をばかにした。" text="近所">
+<answer isCorrect="0">きんじょう</answer>
+<answer isCorrect="0">ぎんじょう</answer>
+<answer isCorrect="1">きんじょ</answer>
+<answer isCorrect="0">ぎんじょ</answer>
 </question>
-<question weight="1" title="問（3）スポーツをして頭も体もすっきりしました。" text="体 ">
-<answer isCorrect="0">からた</answer>
-<answer isCorrect="0">かだら</answer>
-<answer isCorrect="0">からた</answer>
-<answer isCorrect="1">からだ</answer>
+<question weight="1" title="問7・ 子供って泣いてるときが一番かわいいよね。" text="泣いてる">
+<answer isCorrect="0">なみてる</answer>
+<answer isCorrect="0">ないてる</answer>
+<answer isCorrect="0">なみている</answer>
+<answer isCorrect="1">ないている</answer>
 </question>
-<question weight="1" title="問（4）+世界の歴史をあまり知らないのでもっと勉強したい。" text="世界 ">
-<answer isCorrect="0">せか</answer>
-<answer isCorrect="0">せいか</answer>
-<answer isCorrect="1">せかい</answer>
-<answer isCorrect="0">せいかい</answer>
+<question weight="1" title="問8・ 子供って泣いてるときが一番かわいいよね。" text="一番">
+<answer isCorrect="0">いちばい</answer>
+<answer isCorrect="0">いっばい</answer>
+<answer isCorrect="1">いちばん</answer>
+<answer isCorrect="0">いっばん</answer>
 </question>
-<question weight="1" title="問（4）+世界の歴史をあまり知らないのでもっと勉強したい。" text="知らない ">
-<answer isCorrect="1">しらない</answer>
-<answer isCorrect="0">ちらない</answer>
-<answer isCorrect="0">きまらない</answer>
-<answer isCorrect="0">わからない</answer>
-</question>
-<question weight="1" title="問（4）+世界の歴史をあまり知らないのでもっと勉強したい。" text="勉強 ">
-<answer isCorrect="0">べんきゆ</answer>
-<answer isCorrect="0">べんきよ</answer>
-<answer isCorrect="0">べんきゅう</answer>
-<answer isCorrect="1">べんきょう</answer>
-</question>
-<question weight="1" title="問（5）+昨日はとなりの村から歩いて 帰ってきた。" text="村 ">
-<answer isCorrect="0">うち</answer>
-<answer isCorrect="0">えき</answer>
-<answer isCorrect="0">まち</answer>
-<answer isCorrect="1">むら</answer>
-</question>
-<question weight="1" title="問（5）+昨日はとなりの村から歩いて 帰ってきた。" text="歩いて ">
-<answer isCorrect="0">ないて</answer>
-<answer isCorrect="0">はいて</answer>
-<answer isCorrect="1">あるいて</answer>
-<answer isCorrect="0">つづいて</answer>
-</question>
-<question weight="1" title="問（5）+昨日はとなりの村から歩いて 帰ってきた。" text="帰って ">
-<answer isCorrect="1">かえって</answer>
-<answer isCorrect="0">とまって</answer>
-<answer isCorrect="0">まいって</answer>
-<answer isCorrect="0">もどって</answer>
-</question>
-<question weight="1" title="問（6）+このスーツケースは重くて 不便です。" text="重くて ">
-<answer isCorrect="0">あつくて</answer>
-<answer isCorrect="1">おもくて</answer>
-<answer isCorrect="0">ふかくて</answer>
-<answer isCorrect="0">まずくて</answer>
-</question>
-<question weight="1" title="問（6）+このスーツケースは重くて 不便です。" text="不便 ">
-<answer isCorrect="0">ふびん</answer>
-<answer isCorrect="1">ふべん</answer>
-<answer isCorrect="0">ふうびん</answer>
-<answer isCorrect="0">ふうべん</answer>
-</question>
-<question weight="1" title="問（7）+この門は子どもの力では開けられません。" text="門 ">
-<answer isCorrect="0">と</answer>
-<answer isCorrect="0">はこ</answer>
-<answer isCorrect="0">まど</answer>
-<answer isCorrect="1">もん</answer>
-</question>
-<question weight="1" title="問（7）+この門は子どもの力では開けられません。" text="力 ">
-<answer isCorrect="1">ちから</answer>
-<answer isCorrect="0">ちがら</answer>
-<answer isCorrect="0">つから</answer>
-<answer isCorrect="0">つがら</answer>
-</question>
-<question weight="1" title="問（7）+この門は子どもの力では開けられません。" text="開けられません ">
-<answer isCorrect="1">あけられません</answer>
-<answer isCorrect="0">うけられません</answer>
-<answer isCorrect="0">かけられません</answer>
-<answer isCorrect="0">つけられません</answer>
-</question>
-<question weight="1" title="問（8）+よく考えてから質問に答えてください。" text="考えて ">
-<answer isCorrect="0">おぼえて</answer>
-<answer isCorrect="0">つたえて</answer>
-<answer isCorrect="1">かんがえて</answer>
-<answer isCorrect="0">まちがえて</answer>
-</question>
-<question weight="1" title="問（8）+よく考えてから質問に答えてください。" text="質問 ">
-<answer isCorrect="1">しつもん</answer>
-<answer isCorrect="0">せつめい</answer>
-<answer isCorrect="0">せんもん</answer>
-<answer isCorrect="0">しょうめい</answer>
+<question weight="1" title="問9・ 君すごい記憶力だね。" text="記憶力">
+<answer isCorrect="0">きおくりき</answer>
+<answer isCorrect="1">きおくりょく</answer>
+<answer isCorrect="0">きおくりうき</answer>
+<answer isCorrect="0">きおくりょうく</answer>
 </question>
 </task>
-<task caption="問題Ⅱ_______のことばは漢字をつかってどう書きますか。1・2・3・4からいちばんいいものを一つえらびなさい。">
-<question weight="2" title="問（1）この国はふゆでも２０ど いじょうになることがある。" text="ふゆ ">
-<answer isCorrect="0">春</answer>
-<answer isCorrect="1">冬</answer>
-<answer isCorrect="0">夏</answer>
-<answer isCorrect="0">秋</answer>
+<task caption="問題Ⅱ______の ことばは どう よみますか。１２３４から いちばん いい ものを えらびなさい。">
+<question weight="1" title="問11・ かれら　のことは　はなっておけよ。" text="はなっておけよ">
+<answer isCorrect="0">救っておけよ</answer>
+<answer isCorrect="0">牧っておけよ</answer>
+<answer isCorrect="0">改っておけよ</answer>
+<answer isCorrect="1">放っておけよ</answer>
 </question>
-<question weight="2" title="問（1）この国はふゆでも２０ど いじょうになることがある。" text="">
-<answer isCorrect="0">ど</answer>
-<answer isCorrect="1"></answer>
-<answer isCorrect="0">広</answer>
-<answer isCorrect="0"></answer>
+<question weight="1" title="問12・ ここで　あさごはん　を　たべる。" text="あさごはん">
+<answer isCorrect="1">朝ごはん</answer>
+<answer isCorrect="0">昼ごはん</answer>
+<answer isCorrect="0">朝ごはん</answer>
+<answer isCorrect="0">夜ごはん</answer>
 </question>
-<question weight="2" title="問（1）この国はふゆでも２０ど いじょうになることがある。" text="いじょう ">
-<answer isCorrect="0">比上</answer>
-<answer isCorrect="1">以上</answer>
-<answer isCorrect="0">似上</answer>
-<answer isCorrect="0">批上</answer>
+<question weight="1" title="問13・　こどもたち　の　たのしそうな　こえ　が　きこえた。" text="たのしそうな">
+<answer isCorrect="1">楽しそうな</answer>
+<answer isCorrect="0">楽そうな</answer>
+<answer isCorrect="0">薬しそうな</answer>
+<answer isCorrect="0">薬そうな</answer>
 </question>
-<question weight="2" title="問（2） あのえいがかんはおとがいいです。" text="えいがかん ">
-<answer isCorrect="0">眩写館</answer>
-<answer isCorrect="0">映写館</answer>
-<answer isCorrect="1">映画館</answer>
-<answer isCorrect="0">眩画館</answer>
+<question weight="1" title="問14・　こどもたち　の　たのしそうな　こえ　が　きこえた。" text="こえ">
+<answer isCorrect="0">目</answer>
+<answer isCorrect="0">息</answer>
+<answer isCorrect="1">声</answer>
+<answer isCorrect="0">意</answer>
 </question>
-<question weight="2" title="問（2） あのえいがかんはおとがいいです。" text="おと ">
-<answer isCorrect="0">芭</answer>
-<answer isCorrect="0">声</answer>
-<answer isCorrect="0">咅</answer>
-<answer isCorrect="1">音</answer>
-</question>
-<question weight="2" title="問（3） このへやはくらくて さむい。" text="くらくて ">
-<answer isCorrect="0">黒くて</answer>
-<answer isCorrect="0">晩くて</answer>
-<answer isCorrect="1">暗くて</answer>
-<answer isCorrect="0">暮くて</answer>
-</question>
-<question weight="2" title="問（3） このへやはくらくて さむい。" text="さむい ">
-<answer isCorrect="0">氷い</answer>
-<answer isCorrect="0">冷い</answer>
-<answer isCorrect="0">凍い</answer>
-<answer isCorrect="1">寒い</answer>
-</question>
-<question weight="2" title="問（4）きのうはゆうはんにぎゅうにくをたべた。" text="ゆうはん ">
-<answer isCorrect="0">夕飲</answer>
-<answer isCorrect="1">夕飯</answer>
-<answer isCorrect="0">夜飲</answer>
-<answer isCorrect="0">夜飯</answer>
-</question>
-<question weight="2" title="問（4）きのうはゆうはんにぎゅうにくをたべた。" text="ぎゅうにく ">
-<answer isCorrect="0">牛内</answer>
-<answer isCorrect="0">午内</answer>
-<answer isCorrect="1">牛肉</answer>
-<answer isCorrect="0">午肉</answer>
-</question>
-<question weight="2" title="問（5） きかいはただしく つかってください。" text="ただしく ">
-<answer isCorrect="0">止しく</answer>
-<answer isCorrect="0">丘して</answer>
-<answer isCorrect="1">正しく</answer>
-<answer isCorrect="0">疋しく</answer>
-</question>
-<question weight="2" title="問（5） きかいはただしく つかってください。" text="つかって ">
-<answer isCorrect="1">使って</answer>
-<answer isCorrect="0">動って</answer>
-<answer isCorrect="0">便って</answer>
-<answer isCorrect="0">働って</answer>
-</question>
-<question weight="2" title="問（6）+ふくがよごれたから、あらった。" text="ふく ">
-<answer isCorrect="1">服</answer>
-<answer isCorrect="0">脉</answer>
-<answer isCorrect="0">肢</answer>
-<answer isCorrect="0">昄</answer>
-</question>
-<question weight="2" title="問（6）+ふくがよごれたから、あらった。" text="あらった ">
-<answer isCorrect="0">沈った</answer>
-<answer isCorrect="1">洗った</answer>
-<answer isCorrect="0">浴びった</answer>
-<answer isCorrect="0">流れった</answer>
-</question>
-<question weight="2" title="問（7）+このぶんをえいごにしてください。" text="ぶん ">
-<answer isCorrect="1">文</answer>
-<answer isCorrect="0">言</answer>
-<answer isCorrect="0">詞</answer>
-<answer isCorrect="0">歌</answer>
-</question>
-<question weight="2" title="問（7）+このぶんをえいごにしてください。" text="えいご ">
-<answer isCorrect="0">芙語</answer>
-<answer isCorrect="0">荼語</answer>
-<answer isCorrect="0">竺語</answer>
-<answer isCorrect="1">英語</answer>
+<question weight="1" title="問15・　かのじょ　は　だれ　に　たいしても　とても　しんせつ　だった。" text="しんせつ">
+<answer isCorrect="0">切大</answer>
+<answer isCorrect="0">切親</answer>
+<answer isCorrect="0">大切</answer>
+<answer isCorrect="1">親切</answer>
 </question>
 </task>
-<task caption="﻿問題Ⅲ________のところに何を入れますか。1・2・3・4からいちばんいいものを一つえらびなさい。">
-<question weight="2" title="" text="にわにきれいな花を＿＿＿。">
-<answer isCorrect="1">うえましょう</answer>
+<task caption="問題Ⅲ ______の ところに なにを いれますか。１２３４から いちばん いい ものを ひとつ えらびなさい。">
+<question weight="2" title="問16・　にわ　に　きれいな　花　を＿＿＿。" text="">
 <answer isCorrect="0">かえましょう</answer>
-<answer isCorrect="0">きりましょう</answer>
+<answer isCorrect="1">うえましょう</answer>
 <answer isCorrect="0">とりましょう</answer>
+<answer isCorrect="0">きりましょう</answer>
 </question>
-<question weight="2" title="" text="友だちににっきを見られてとても＿＿＿。">
-<answer isCorrect="0">にがかった</answer>
-<answer isCorrect="0">ねむかった</answer>
-<answer isCorrect="1">はずかしかった</answer>
-<answer isCorrect="0">よろしかった</answer>
+<question weight="2" title="問17・　本　や　雑誌　は＿＿＿しておきなさい。" text="">
+<answer isCorrect="0">そのまえに</answer>
+<answer isCorrect="1">そのままに</answer>
+<answer isCorrect="0">そのまえで</answer>
+<answer isCorrect="0">そのままで</answer>
 </question>
-<question weight="2" title="" text="_____、へんだなあ。コンビューターがうごかない。">
-<answer isCorrect="0">あの</answer>
-<answer isCorrect="1">おや</answer>
-<answer isCorrect="0">そう</answer>
+<question weight="2" title="問18・ _____、へんだなあ。コンビューターがうごかない。" text="">
+<answer isCorrect="0">この</answer>
 <answer isCorrect="0">はい</answer>
+<answer isCorrect="1">そう</answer>
+<answer isCorrect="0">おや</answer>
 </question>
-<question weight="2" title="" text="つよいかせで大きな木のえだが＿＿＿しまった。">
-<answer isCorrect="1">おれて</answer>
+<question weight="2" title="問19・ その ふたご の 兄弟 は_____だ。" text="">
+<answer isCorrect="0">ひっそり</answer>
+<answer isCorrect="1">そっくり</answer>
+<answer isCorrect="0">しっくり</answer>
+<answer isCorrect="0">はっきり</answer>
+</question>
+<question weight="2" title="問20・　______は　何時　から　何時　まで　開いていますか。" text="">
+<answer isCorrect="0">バス</answer>
+<answer isCorrect="0">箱</answer>
+<answer isCorrect="1">銀行</answer>
+<answer isCorrect="0">窓</answer>
+</question>
+<question weight="2" title="問21・　つよい　かぜで　大きな　木のえ　だが＿＿＿しまった。" text="">
+<answer isCorrect="0">われて</answer>
 <answer isCorrect="0">こわれて</answer>
-<answer isCorrect="0">たおれて</answer>
+<answer isCorrect="1">たおれて</answer>
 <answer isCorrect="0">やぶれて</answer>
 </question>
-<question weight="2" title="" text="パーディーの＿＿＿はこのビルの５かいです。">
-<answer isCorrect="0">かいがん</answer>
-<answer isCorrect="0">こうどう</answer>
-<answer isCorrect="1">かいじょう</answer>
-<answer isCorrect="0">こうじょう</answer>
+<question weight="2" title="問22・　______店を紹介してください。" text="">
+<answer isCorrect="0">遠い</answer>
+<answer isCorrect="0">高い</answer>
+<answer isCorrect="1">安い</answer>
+<answer isCorrect="0">長い</answer>
 </question>
-<question weight="2" title="" text="こちらにいらっしゃる＿＿＿があったら、せひおよりください。">
-<answer isCorrect="1">きかい</answer>
-<answer isCorrect="0">きそく</answer>
-<answer isCorrect="0">きぶん</answer>
-<answer isCorrect="0">きんじょ</answer>
+<question weight="2" title="問23・　______で　約　１５０　ドル　です。" text="">
+<answer isCorrect="0">全然</answer>
+<answer isCorrect="0">全集</answer>
+<answer isCorrect="0">全身</answer>
+<answer isCorrect="1">全部</answer>
 </question>
-<question weight="2" title="" text="新しいじしょをつかってみたけれｄ、あまり＿＿＿。">
-<answer isCorrect="0">かたづけなかった</answer>
-<answer isCorrect="0">とりかえなかった</answer>
-<answer isCorrect="0">きをつけなかった</answer>
-<answer isCorrect="1">やくにたたなかった</answer>
-</question>
-<question weight="2" title="" text="ほんやの＿＿＿で">
-<answer isCorrect="0">スクリーン</answer>
-<answer isCorrect="0">ワープロ</answer>
-<answer isCorrect="0">レポート</answer>
-<answer isCorrect="1">レジ</answer>
-</question>
-<question weight="2" title="" text="＿＿＿でんわがありましたよ。">
-<answer isCorrect="1">さっき</answer>
-<answer isCorrect="0">ちっとも</answer>
-<answer isCorrect="0">もうすぐ</answer>
-<answer isCorrect="0">ほとんど</answer>
-</question>
-<question weight="2" title="" text="一ヶ月">
-<answer isCorrect="1">いか</answer>
-<answer isCorrect="0">いがい</answer>
-<answer isCorrect="0">いせん</answer>
-<answer isCorrect="0">いっばい</answer>
+<question weight="2" title="問24・　私は犬を______飼ってます。" text="">
+<answer isCorrect="1">一匹</answer>
+<answer isCorrect="0">一杯</answer>
+<answer isCorrect="0">一枚</answer>
+<answer isCorrect="0">一頭</answer>
 </question>
 </task>
-<task caption="問題Ⅳつぎの_______の文とだいたい同じいみの文はどれですか。1・2・3・4からいちばんいいものを一つえらびなさい。">
-<question weight="2" title="" text="こどもはおとうさんにしかられました。">
-<answer isCorrect="0">１．こどもはおとうさんにわらわれました。</answer>
-<answer isCorrect="0">２．こどもはおとうさんにほめられました。</answer>
-<answer isCorrect="0">３．こどもはおとうさんにそだてられました。</answer>
-<answer isCorrect="1">４．こどもはおとうさんにおこられました。</answer>
+<task caption="問題Ⅳ ______の ところに なにを いれますか。１２３４から いちばん いい ものを ひとつ えらびなさい。">
+<question weight="2" title="問25・　こども は おかあさんに ほめられました。" text="">
+<answer isCorrect="0">こどもは　おかあさんに　そだてられました。</answer>
+<answer isCorrect="0">こどもは　おかあさんに　ほめられました。</answer>
+<answer isCorrect="1">こどもは　おかあさんに　すすめれました。</answer>
+<answer isCorrect="0">こどもは　おかあさんに　わらわれました。</answer>
 </question>
-<question weight="2" title="" text="わたしはやまださんにおれいをいいました。">
-<answer isCorrect="0">１．わたしはやまださんに「おめでとうございます」といいました。</answer>
-<answer isCorrect="1">２．わたしはやまださんに「ありがとうございます」といいました。</answer>
-<answer isCorrect="0">３．わたしはやまださんに「おまたせしました」といいました。</answer>
-<answer isCorrect="0">４．わたしはやまださんに「ごめんください。」といいました。</answer>
+<question weight="2" title="問26・ その　金　は　私の　いとなみ　に　役に立つ　だろう。" text="">
+<answer isCorrect="0">その　金　は　私の　いとなみ　に　ひつようがない　だろう。</answer>
+<answer isCorrect="0">その　金　は　私の　いとなみ　に　はらわない　だろう。</answer>
+<answer isCorrect="0">その　金　は　私の　いとなみ　に　大切　だろう。</answer>
+<answer isCorrect="1">その　金　は　私の　いとなみ　に　むだにならない　だろう。</answer>
 </question>
-<question weight="2" title="" text="びょういんにいきました。">
-<answer isCorrect="0">１．えを見に行きました。</answer>
-<answer isCorrect="0">２．くるまをかりに行きました。</answer>
-<answer isCorrect="0">３．くすりをとりに行きました</answer>
-<answer isCorrect="1">４．かみのけをきりに行きました。</answer>
+<question weight="2" title="問27・ 彼　は　風邪　を　ひきやすい。" text="">
+<answer isCorrect="0">彼　は　ぜんぜん　病気しない。</answer>
+<answer isCorrect="0">彼　は　ときどき　病気する。</answer>
+<answer isCorrect="1">彼　は　しばしば　病気する。</answer>
+<answer isCorrect="0">彼　は　実際に　病気する。</answer>
 </question>
-<question weight="2" title="" text="ぼくはのりものがだいすきです。">
-<answer isCorrect="0">１．まんがやしゅせつがだいすきです。</answer>
-<answer isCorrect="0">２．デパートやスーパーがだいすきです。</answer>
-<answer isCorrect="0">３．テニスやサッカーがだいすきです。</answer>
-<answer isCorrect="1">４．こうきやふねがだいすきです。</answer>
+<question weight="2" title="問28・　ぼくは のりものが だいすき です。" text="">
+<answer isCorrect="0">まんが や しゅせつ が だいすき です。</answer>
+<answer isCorrect="1">こうき や ふね が だいすき です。</answer>
+<answer isCorrect="0">デパート や スーパーが だいすき です。</answer>
+<answer isCorrect="0">テニス や サッカーが だいすき です。</answer>
 </question>
-<question weight="2" title="" text="こおみちはよるきけんです。">
-<answer isCorrect="0">１．このみちはよるべんりです。</answer>
-<answer isCorrect="1">２．このみちはよるあぶないです。</answer>
-<answer isCorrect="0">３．このみちはよるさびしいです。</answer>
-<answer isCorrect="0">４．このみちはよるにぎやかです。</answer>
+<question weight="2" title="問29・　私　は　あなた　を　驚かせた。" text="">
+<answer isCorrect="0">私　は　ひっそるした。</answer>
+<answer isCorrect="1">私　は　びっくりした。</answer>
+<answer isCorrect="0">私　は　ぼにゃりした。</answer>
+<answer isCorrect="0">私　は　ひっくりした。</answer>
 </question>
 </task>
-<task caption="問題Ⅴつぎの（1）から(5)のことばのつかいかたでいちばんいいものをしたの">
-<question weight="1" title="" text="わかす">
-<answer isCorrect="0">１．あついシャワーをわかしています。</answer>
-<answer isCorrect="0">２．このにくはよくわかしてからたべてください。</answer>
-<answer isCorrect="1">３．おゆをわかしてコーヒーを、のみましょう。</answer>
-<answer isCorrect="0">４．へやがひえてきたので、ストーブをわかしてください。</answer>
+<task caption="問題Ⅴ ______の ところに なにを いれますか。１２３４から いちばん いい ものを ひとつ えらびなさい。">
+<question weight="2" title="問30・　やぶる" text="">
+<answer isCorrect="0">その　皿　を　やぶられて　しまった。</answer>
+<answer isCorrect="1">彼女　は　約束を　やぶれた。</answer>
+<answer isCorrect="0">その　音は　せいじゃく　を　やぶられた。</answer>
+<answer isCorrect="0">その　紙　を　やぶって　ください。</answer>
 </question>
-<question weight="1" title="" text="とうとう">
-<answer isCorrect="0">１．しょくじのあとでとうとうをちゃをおねがいします。</answer>
-<answer isCorrect="0">２．新聞のじはとうとうこまかいです。</answer>
-<answer isCorrect="1">３．とうとうしけんの日が来ました。</answer>
-<answer isCorrect="0">４．わからなかったら、とうとうじしょを見てください。</answer>
+<question weight="2" title="問31・ かぶる" text="">
+<answer isCorrect="1">彼女は　ぼうしを　かぶるの　好きだ。</answer>
+<answer isCorrect="0">彼女は　ゆびわを　かぶるの　好きだ。</answer>
+<answer isCorrect="0">彼女は　きものを　かぶるの　好きだ。</answer>
+<answer isCorrect="0">彼女は　スカートを　かぶるの　好きだ。</answer>
 </question>
-<question weight="1" title="" text="プレゼント">
-<answer isCorrect="0">１．あねがけっこんしたので、しんせつをプレゼントした。</answer>
-<answer isCorrect="1">２．おっとのたんじょうびにとけいをプレゼントした。</answer>
-<answer isCorrect="0">３．そつぎょうしきの日に先生にあいさつをプレゼントした。</answer>
-<answer isCorrect="0">４．入院している友達にあんせんをプレゼントした。</answer>
+<question weight="2" title="問32・ 彼　は　風邪　を　ひきやすい。" text="">
+<answer isCorrect="0">彼　は　ぜんぜん　病気しない。</answer>
+<answer isCorrect="0">彼　は　ときどき　病気する。</answer>
+<answer isCorrect="1">彼　は　しばしば　病気する。</answer>
+<answer isCorrect="0">彼　は　実際に　病気する。</answer>
 </question>
-<question weight="1" title="" text="おどろく">
-<answer isCorrect="1">１．うけつけに大きないぬがいたので、おどろいてしまいました。</answer>
-<answer isCorrect="0">２．日本のけいざいがおどろいてもののねだんが高くなります。</answer>
-<answer isCorrect="0">３．空がおどろいて雨がふりました。</answer>
-<answer isCorrect="0">４．わたしにはおどろいているしゅみがあります。</answer>
+<question weight="2" title="問33・　とる" text="">
+<answer isCorrect="1">彼女と　写真　を　とった。</answer>
+<answer isCorrect="0">あの　プリンター　で　コピーを　とるのは　だめだ。</answer>
+<answer isCorrect="0">その　本　の　プリンター　で　いんさつ　をとって　ください</answer>
+<answer isCorrect="0">そこで　きめい　を　とってください。</answer>
 </question>
-<question weight="1" title="" text="へんじ">
-<answer isCorrect="0">１．テレビのへんじがきこえません。</answer>
-<answer isCorrect="0">２．へんじをだれにかりますか。</answer>
-<answer isCorrect="0">３．へんじをすぐにおこなってしまいました。</answer>
-<answer isCorrect="1">４．名前をよびましたがへんじがありませんでした。</answer>
+<question weight="2" title="問29・　まぜあわさせる" text="">
+<answer isCorrect="0">明日　は　友達　と　混ぜち合わせよう</answer>
+<answer isCorrect="1">水　と　油　を　混ぜ合させる　ことはできない</answer>
+<answer isCorrect="0">その　本　は　とても　混ぜ合わせただ</answer>
+<answer isCorrect="0">手　を　混ぜ合わせてください</answer>
+</question>
+</task>
+</section>
+<section name="読解・文法">
+<task caption="問題Ⅰ ______の ところに なにを いれますか。１２３４から いちばん いい ものを ひとつ えらびなさい。">
+<question weight="2" title="問1・　試合が始まる＿＿＿雨が降り始めた" text="">
+<answer isCorrect="0">とたんに</answer>
+<answer isCorrect="0">とした</answer>
+<answer isCorrect="0">とともに</answer>
+<answer isCorrect="1">とすぐ</answer>
+</question>
+<question weight="2" title="問2・　" text="帽子がふき＿＿＿。">
+<answer isCorrect="0">とばした</answer>
+<answer isCorrect="1">とばされた</answer>
+<answer isCorrect="0">とばさせた</answer>
+<answer isCorrect="0">とばさせられた</answer>
+</question>
+<question weight="2" title="問3・　" text="彼は若そうだ、私より年上＿＿＿。">
+<answer isCorrect="1">のはずはない</answer>
+<answer isCorrect="0">はずはない</answer>
+<answer isCorrect="0">のはずだ</answer>
+<answer isCorrect="0">はずだ</answer>
+</question>
+<question weight="2" title="問4・　" text="彼は若い＿＿＿とても聡明です。">
+<answer isCorrect="0">し</answer>
+<answer isCorrect="1">けれど</answer>
+<answer isCorrect="0">って</answer>
+<answer isCorrect="0">ので</answer>
+</question>
+<question weight="2" title="問5・　" text="そのリンゴはすっぱい味が＿＿＿。">
+<answer isCorrect="0">きます</answer>
+<answer isCorrect="0">あります</answer>
+<answer isCorrect="0">います</answer>
+<answer isCorrect="1">します</answer>
+</question>
+<question weight="2" title="問6・　君は車の運転ができる＿＿＿になるだろう。" text="">
+<answer isCorrect="0">だけ</answer>
+<answer isCorrect="1">よう</answer>
+<answer isCorrect="0">とても</answer>
+<answer isCorrect="0">として</answer>
+</question>
+<question weight="2" title="問7・　" text="その３人の女のこの中＿＿＿エミが一番うつくしいです。">
+<answer isCorrect="0">に</answer>
+<answer isCorrect="0">が</answer>
+<answer isCorrect="1">で</answer>
+<answer isCorrect="0">や</answer>
+</question>
+<question weight="2" title="問8・　僕たちは、その車＿＿＿おした。" text="">
+<answer isCorrect="1">を</answer>
+<answer isCorrect="0">で</answer>
+<answer isCorrect="0">を</answer>
+<answer isCorrect="0">や</answer>
+</question>
+<question weight="2" title="問9・　" text="彼はビールをもう一杯くれ＿＿＿言った。">
+<answer isCorrect="0">しても</answer>
+<answer isCorrect="0">のに</answer>
+<answer isCorrect="0">のは</answer>
+<answer isCorrect="1">と</answer>
+</question>
+<question weight="2" title="問10・　" text="図書館＿＿＿たくさんの英語の本がある。">
+<answer isCorrect="0">では</answer>
+<answer isCorrect="0">のに</answer>
+<answer isCorrect="1">には</answer>
+<answer isCorrect="0">ので</answer>
+</question>
+<question weight="2" title="問11・　悪い＿＿＿、むり。" text="">
+<answer isCorrect="1">けど</answer>
+<answer isCorrect="0">して</answer>
+<answer isCorrect="0">と</answer>
+<answer isCorrect="0">する</answer>
+</question><question weight="2" title="問9・　彼はたより＿＿＿男ですよ" text="">
+<answer isCorrect="0">と</answer>
+<answer isCorrect="1">にできる</answer>
+<answer isCorrect="0">は</answer>
+<answer isCorrect="0">むり</answer>
+</question>
+<question weight="2" title="問12・　今度の仕事は前の仕事＿＿＿もやるべきことだ。" text="">
+<answer isCorrect="0">が</answer>
+<answer isCorrect="0">から</answer>
+<answer isCorrect="1">より</answer>
+<answer isCorrect="0">の</answer>
+</question>
+<question weight="2" title="問13・　寒い＿＿＿あったかいもの食べたい。" text="">
+<answer isCorrect="0">のに</answer>
+<answer isCorrect="0">けど</answer>
+<answer isCorrect="1">から</answer>
+<answer isCorrect="0">しか</answer>
+</question>
+<question weight="2" title="問14・　彼女がいつ戻ってくるかは＿＿＿。" text="">
+<answer isCorrect="0">分かれる</answer>
+<answer isCorrect="0">分かりされた</answer>
+<answer isCorrect="0">分かりしている</answer>
+<answer isCorrect="1">分かりません</answer>
+</question>
+<question weight="2" title="問15・　涼しくなって＿＿＿" text="">
+<answer isCorrect="0">した</answer>
+<answer isCorrect="1">きた</answer>
+<answer isCorrect="0">いった</answer>
+<answer isCorrect="0">あった</answer>
+</question>
+</task>
+<task caption="問題Ⅱ ✭　に入るものはどれですか。1・2・3・4からいちばんいいものを　ひとつ　えらん　で　ください。">
+<question weight="2" title="問16・ この件＿＿ ＿＿ ＿✭＿ ＿＿　しれない。 " text="">
+<answer isCorrect="0">しばらく</answer>
+<answer isCorrect="0">かも</answer>
+<answer isCorrect="1">解決しない</answer>
+<answer isCorrect="0">は</answer>
+</question>
+<question weight="2" title="問17・彼　＿＿ ＿＿ ＿✭＿ ＿＿ あきらめた。" text="">
+<answer isCorrect="1">を</answer>
+<answer isCorrect="0">海外</answer>
+<answer isCorrect="0">は</answer>
+<answer isCorrect="0">旅行</answer>
+</question>
+<question weight="2" title="問18・ 行動 ＿＿ ＿＿ ＿✭＿ ＿＿　せいきんはない。" text="">
+<answer isCorrect="1">君に</answer>
+<answer isCorrect="0">について</answer>
+<answer isCorrect="0">対して</answer>
+<answer isCorrect="0">私は</answer>
+</question>
+<question weight="2" title="問19・ 彼女 ＿＿ ＿＿ ＿✭＿ ＿＿　もらいます。" text="">
+<answer isCorrect="0">は</answer>
+<answer isCorrect="0">友達に</answer>
+<answer isCorrect="0">持って</answer>
+<answer isCorrect="1">好意を</answer>
+</question>
+<question weight="2" title="問20・ 大使は ＿＿ ＿＿ ＿✭＿ ＿＿です。" text="">
+<answer isCorrect="0">日本を</answer>
+<answer isCorrect="0">たつ</answer>
+<answer isCorrect="1">予定</answer>
+<answer isCorrect="0">今夜</answer>
+</question>
+</task>
+<task caption="問題Ⅲ つぎの ぶんを 読んで しつもんに こたえなさい。こたえは 1・2・3・4から いちばん いい ものを 一つ えらびなさい。">
+<question weight="3" title="問1・　スミスさんとキムさんが、スポーツ教室の前で話しています。
+スミス「あ、キムサン。どの教室に入るかもうきめましたか。」
+キム「いいえ、まだ（ 22 ）。すいえい教室はむずかしいでしょうか。」
+スミス「すいえいはたいへんですよ。はじめてなら テニスのほうがいいかもしれません。私
+は去年仕事が終ってから テニス教室に通っていました。」
+キム「テニスは少しやったことがあります。去年のテスト教室では（ 23 ）。」
+スミス「正しいうちかたを習ったり、４にんで試合をしたりしました。楽しかったですよ。」
+キム「テニスがうまくなりそうですね。」
+スミス「ええ。でも、始まる時間に（ 24 ）、ねんしゅうのやりかたがわからなくてこまります
+よ。」
+キム「だいじょうぶです。私の仕事はいつも５時に終わりますから。」
+スミス「（ 25 ）。じゃあ、時間に間に合いますね。 " text="(22)">
+<answer isCorrect="0">きめなかったんです</answer>
+<answer isCorrect="0">きめないんです</answer>
+<answer isCorrect="1">きめていないんです</answer>
+<answer isCorrect="0">きめないと思うんです</answer>
+</question>
+<question weight="3" title="問1・　スミスさんとキムさんが、スポーツ教室の前で話しています。
+スミス「あ、キムサン。どの教室に入るかもうきめましたか。」
+キム「いいえ、まだ（ 22 ）。すいえい教室はむずかしいでしょうか。」
+スミス「すいえいはたいへんですよ。はじめてなら テニスのほうがいいかもしれません。私
+は去年仕事が終ってから テニス教室に通っていました。」
+キム「テニスは少しやったことがあります。去年のテスト教室では（ 23 ）。」
+スミス「正しいうちかたを習ったり、４にんで試合をしたりしました。楽しかったですよ。」
+キム「テニスがうまくなりそうですね。」
+スミス「ええ。でも、始まる時間に（ 24 ）、ねんしゅうのやりかたがわからなくてこまります
+よ。」
+キム「だいじょうぶです。私の仕事はいつも５時に終わりますから。」
+スミス「（ 25 ）。じゃあ、時間に間に合いますね。 " text="(23)">
+<answer isCorrect="0">何をしたことがありますか</answer>
+<answer isCorrect="0">どんなことをするでしょう</answer>
+<answer isCorrect="1">どんなことをしましたか</answer>
+<answer isCorrect="0">何をすると思いますか</answer>
+</question>
+<question weight="3" title="問1・　スミスさんとキムさんが、スポーツ教室の前で話しています。
+スミス「あ、キムサン。どの教室に入るかもうきめましたか。」
+キム「いいえ、まだ（ 22 ）。すいえい教室はむずかしいでしょうか。」
+スミス「すいえいはたいへんですよ。はじめてなら テニスのほうがいいかもしれません。私
+は去年仕事が終ってから テニス教室に通っていました。」
+キム「テニスは少しやったことがあります。去年のテスト教室では（ 23 ）。」
+スミス「正しいうちかたを習ったり、４にんで試合をしたりしました。楽しかったですよ。」
+キム「テニスがうまくなりそうですね。」
+スミス「ええ。でも、始まる時間に（ 24 ）、ねんしゅうのやりかたがわからなくてこまります
+よ。」
+キム「だいじょうぶです。私の仕事はいつも５時に終わりますから。」
+スミス「（ 25 ）。じゃあ、時間に間に合いますね。 " text="(24)">
+<answer isCorrect="0">おくれても</answer>
+<answer isCorrect="0">おくれないで</answer>
+<answer isCorrect="0">おくれるように</answer>
+<answer isCorrect="1">おくれると</answer>
+</question>
+<question weight="3" title="問1・　スミスさんとキムさんが、スポーツ教室の前で話しています。
+スミス「あ、キムサン。どの教室に入るかもうきめましたか。」
+キム「いいえ、まだ（ 22 ）。すいえい教室はむずかしいでしょうか。」
+スミス「すいえいはたいへんですよ。はじめてなら テニスのほうがいいかもしれません。私
+は去年仕事が終ってから テニス教室に通っていました。」
+キム「テニスは少しやったことがあります。去年のテスト教室では（ 23 ）。」
+スミス「正しいうちかたを習ったり、４にんで試合をしたりしました。楽しかったですよ。」
+キム「テニスがうまくなりそうですね。」
+スミス「ええ。でも、始まる時間に（ 24 ）、ねんしゅうのやりかたがわからなくてこまります
+よ。」
+キム「だいじょうぶです。私の仕事はいつも５時に終わりますから。」
+スミス「（ 25 ）。じゃあ、時間に間に合いますね。 " text="(25)">
+<answer isCorrect="1">それはいいですね</answer>
+<answer isCorrect="0">あれがいいですね</answer>
+<answer isCorrect="0">それはたいへんですね</answer>
+<answer isCorrect="0">あれがたいへんですね</answer>
 </question>
 </task>
 </section>
 <section name="聴解">
 <task caption="問題Ⅰ">
-<question weight="1" title="" text="" imgRef="4_1\2005_03_listen_quiz1.jpg" audioRef="n4_2005 (4).mp3">
+<question weight="1" title="問1・" text="" imgRef="4_1\2005_03_listen_quiz4.jpg" audioRef="男の人と女の人が話しています。ふたりはいつ映画に行きますか男の人：今週の金曜日か土曜日、映画に行かない 女の人：今週か、三日か四日ね？ 男の人：僕は土曜日より金曜日の方がいいな 女の人：じゃ、三日、ちょっと手帳を見てみる。あっ、ごめん、今週はだめだな。 男の人：来週は。 女の人：来週はいいよ。じゃ、金曜日ね。 男の人：楽しみにしているよ。">
+<answer isCorrect="0">1</answer>
+<answer isCorrect="0">2</answer>
+<answer isCorrect="1">3</answer>
+<answer isCorrect="0">4</answer>
+</question>
+<question weight="1" title="問2・" text="" imgRef="4_1\2005_03_listen_quiz2.jpg" audioRef="
+女の人と男の人がホテルで話しています。
+男の人はこれからどうしますか。
+女の人：そろそろ夕飯の時間だね。 
+男の人：そうだね。僕は先にお風呂に入ろうかな。まだそんなにおなかがすいていないし。 
+女の人：わたしは散歩でもしてくるわ。 男の人：お、散歩もいいね。ぼくも一緒に行くよ。
+女の人：そう、 男の人：お風呂は夕食の後にするよ。
+">
+<answer isCorrect="0">1</answer>
+<answer isCorrect="0">2</answer>
+<answer isCorrect="1">3</answer>
+<answer isCorrect="0">4</answer>
+</question>
+<question weight="1" title="問3・" text="" imgRef="4_1\2005_03_listen_quiz8.jpg" audioRef="男の学生と女の学生が駅で話しています。男の学生は今日どうやって駅まで行きましたか。男の人：おはよう、すごい雨だね、今日は 女の人：うん、山田君、バスできた？男の人：うーん、車。母に駅まで送ってもらったんだ。 女の人：いいな。いつも車。 男の人：今日は特別。いつもは自転車かバスなんだ。本当は歩きたいんだけど、時間がなくて。女の人：うん、私は毎日歩くんだ。 男の人：歩くのは気持ちがいいね。 女の人：ええ、でも、こんな天気の日はね。">
+<answer isCorrect="1">1</answer>
+<answer isCorrect="0">2</answer>
+<answer isCorrect="0">3</answer>
+<answer isCorrect="0">4</answer>
+</question>
+<question weight="1" title="問4・" text="" imgRef="4_1\2005_03_listen_quiz1.jpg" audioRef="
+学生が先生に漢字のテストについて聞いています。
+学生が書いた漢字はどれですか。
+学生：先生、先週の漢字のテストですけど、これですね。 
+先生：これですね。 
+学生：はい。いぬっていう漢字を書いたんですが、どこがまちがっているんでしょう。 
+先生：点はここで正しいですか。 
+学生：あのう、点は横の線の下じゃなくて、上につけましたが、あっ、ひだりにつけてしまいました。 ">
 <answer isCorrect="0">1</answer>
 <answer isCorrect="1">2</answer>
 <answer isCorrect="0">3</answer>
 <answer isCorrect="0">4</answer>
 </question>
-<question weight="1" title="" text="" imgRef="4_1\2005_03_listen_quiz2.jpg" audioRef="n4_2005 (5).mp3">
-<answer isCorrect="0">1</answer>
-<answer isCorrect="0">2</answer>
-<answer isCorrect="1">3</answer>
-<answer isCorrect="0">4</answer>
-</question>
-<question weight="1" title="" text="" imgRef="4_1\2005_03_listen_quiz3.jpg" audioRef="n4_2005 (6).mp3">
-<answer isCorrect="1">1</answer>
-<answer isCorrect="0">2</answer>
-<answer isCorrect="0">3</answer>
-<answer isCorrect="0">4</answer>
-</question>
-<question weight="1" title="" text="" imgRef="4_1\2005_03_listen_quiz4.jpg" audioRef="n4_2005 (7).mp3">
-<answer isCorrect="0">1</answer>
-<answer isCorrect="0">2</answer>
-<answer isCorrect="1">3</answer>
-<answer isCorrect="0">4</answer>
-</question>
-<question weight="1" title="" text="" imgRef="4_1\2005_03_listen_quiz5.jpg" audioRef="n4_2005 (8).mp3">
+<question weight="1" title="問5・" text="" imgRef="4_1\2005_03_listen_quiz5.jpg" audioRef="女の人と男の人が話しています。女の人はどのかばんを買うことにしましたか。女の人：ねえ、このかばん、外側にポケットがたくさんあって、便利そうね。 男の人：どこに何を入れたか忘れてしまうよ。外側のポケットはひとつか二つあればいいんだよ。 女の人：そうね、じゃ、これかこれね。このポケットは大きいから、たくさん入るわね。男の人：でも、入れすぎて、中のものが見つけにくいかもしれない。 女の人：そうね、決めた、こっちにする。 ">
 <answer isCorrect="0">1</answer>
 <answer isCorrect="0">2</answer>
 <answer isCorrect="0">3</answer>
 <answer isCorrect="1">4</answer>
 </question>
-<question weight="1" title="" text="" imgRef="4_1\2005_03_listen_quiz6.jpg" audioRef="n4_2005 (9).mp3">
+<question weight="1" title="問6・" text="" imgRef="4_1\2005_03_listen_quiz6.jpg" audioRef="男の人と店の人が話しています。男の人はどれにするといっていますか。男の人：あのう、友達が結婚するので、プレゼントを探しているんですけど、 女の人：では、こちらはいかがでしょうか。 男の人：割れたり、こわれたりしにくいものがいいんです。女の人：じゃ、こちらのほうはいかがでしょうか。この葉が部屋をきれいにするそうです。 男の人：緑が部屋にあるのはいいですね。じゃ、これにします。">
 <answer isCorrect="1">1</answer>
 <answer isCorrect="0">2</answer>
 <answer isCorrect="0">3</answer>
 <answer isCorrect="0">4</answer>
 </question>
-<question weight="1" title="" text="" imgRef="4_1\2005_03_listen_quiz7.jpg" audioRef="n4_2005 (10).mp3">
+<question weight="1" title="問7・" text="" imgRef="4_1\2005_03_listen_quiz3.jpg" audioRef="男の人が外国にいる女の人と電話で話しています。女の人の国は今何時ですか。 男の人：今、そっちは何時です？ 女の人：8 時50 分。 男の人：へえ、日本も今8 時50 分だよ。 女の人：へっ、同じ。 男の人：でも、こっちは夜だよ。夜の8 時50 分。 女の人：へえ。">
+<answer isCorrect="1">1</answer>
+<answer isCorrect="0">2</answer>
+<answer isCorrect="0">3</answer>
+<answer isCorrect="0">4</answer>
+</question>
+<question weight="1" title="問8・" text="" imgRef="4_1\2005_03_listen_quiz7.jpg" audioRef="男の人と女の人が昨日の散歩について話しています。女の人の話について正しい絵はどれですか。女の人：昨日、山へ行ったの、とても楽しかった。 男の人：よかったね、お天気もよかったし。 女の人：いいえ、山は雨だったの。でも、私の犬は雨が好きだから、いっしょに散歩したの。男の人：友達も一緒？ 女の人：うーん、友達は行かなかった。 男の人：あっ、そう。 ">
 <answer isCorrect="0">1</answer>
 <answer isCorrect="1">2</answer>
 <answer isCorrect="0">3</answer>
 <answer isCorrect="0">4</answer>
 </question>
-<question weight="1" title="" text="" imgRef="4_1\2005_03_listen_quiz8.jpg" audioRef="n4_2005 (11).mp3">
-<answer isCorrect="1">1</answer>
-<answer isCorrect="0">2</answer>
-<answer isCorrect="0">3</answer>
-<answer isCorrect="0">4</answer>
-</question>
-<question weight="1" title="" text="" imgRef="4_1\2005_03_listen_quiz9.jpg" audioRef="n4_2005 (12).mp3">
-<answer isCorrect="0">1</answer>
-<answer isCorrect="0">2</answer>
-<answer isCorrect="0">3</answer>
-<answer isCorrect="1">4</answer>
-</question>
-<question weight="1" title="" text="" imgRef="4_1\2005_03_listen_quiz10.jpg" audioRef="n4_2005 (13).mp3">
-<answer isCorrect="1">1</answer>
-<answer isCorrect="0">2</answer>
-<answer isCorrect="0">3</answer>
-<answer isCorrect="0">4</answer>
-</question>
-<question weight="1" title="" text="" imgRef="4_1\2005_03_listen_quiz11.jpg" audioRef="n4_2005 (14).mp3">
-<answer isCorrect="0">1</answer>
-<answer isCorrect="0">2</answer>
-<answer isCorrect="0">3</answer>
-<answer isCorrect="1">4</answer>
-</question>
-<question weight="1" title="" text="" imgRef="4_1\2005_03_listen_quiz12.jpg" audioRef="n4_2005 (15).mp3">
-<answer isCorrect="0">1</answer>
-<answer isCorrect="0">2</answer>
-<answer isCorrect="1">3</answer>
-<answer isCorrect="0">4</answer>
-</question>
+
 </task>
 <task caption="問題Ⅱ">
-<question weight="1" title="" text="" imgRef="" audioRef="n4_2005 (19).mp3">
+<question weight="1" title="問1・" text="" imgRef="" audioRef="会かい社しゃで 男の人と 女の人が話なしています。 女の人は、このあと何をしますか。
+女の人：ちょっと、明日の会議の資料ですね。
+男の人：うん。それから、会議室の準備しなければならない
+女の人：いすを並べるだけか？
+男の人：いいえ、今日は会議のせきを準備して、明日会議間を掃除してください。
+女の人：はい。でも、会議のせきはもう準備された。
+男の人：そうか。じゃあ、それだけしてください。
+女の人は、このあと何をしますか。
+">
+<answer isCorrect="0">会議を開く</answer>
+<answer isCorrect="1">いすを並べる</answer>
+<answer isCorrect="0">会議のせきを準備する</answer>
+<answer isCorrect="0">会議館の掃除する</answer>
+</question>
+<question weight="1" title="問2・" text="" imgRef="" audioRef="おとこの人と女の人が話なしています。 
+男の人は、何で喫茶店へ行きますか。
+男の人：喫茶店に行きたいんですけど、何で行くのが便利ですか。
+女の人： 歩いて 25　分ですよ。
+男の人：そうですか。電車かバスでも行いけますか。
+女の人：うーん、行いけますけど、時間がかかりますよ。自転車は持っていますか。
+男の人：いいえ。
+女の人：じゃあ、バスよりでしゃで便利です。
+男の人：そうですか。分わかりました。
+男の人は、何で喫茶店へ行きますか。">
+<answer isCorrect="0">あるいて</answer>
+<answer isCorrect="0">バスで</answer>
+<answer isCorrect="1">でしゃで</answer>
+<answer isCorrect="0">じてんしゃで</answer>
+</question>
+<question weight="1" title="問3・" text="" imgRef="" audioRef="おとこの人が 女の人に電話をしています。 男の人は、何を買って帰りますか。
+男の人：これから帰るけど、何か買って帰ろうか。
+女の人：あ、ありがとう。えっとね、 ジュースを買ってください。
+男の人：ちょっと待って、 ジュースは１本ぽんでいいの？
+女の人：はい。それから、肉。
+男の人：あれ、肉はまだたくさんあったよね。　
+女の人：ごめん、今日のお昼に全部食べたの。
+男の人：分わかった。じゃ、買って帰るね。
+男の人は、何を買って帰りますか。 ">
+<answer isCorrect="0">ジュース　１本　だけ</answer>
+<answer isCorrect="0">ジュース　１本　と　にく</answer>
+<answer isCorrect="0">ジュース　２本　だけ</answer>
+<answer isCorrect="1">ジュース　２本　と　にく</answer>
+</question>
+<question weight="1" title="問4・" text="" imgRef="" audioRef="男の人：来週、佐藤さんの誕生日だね。もうプレゼント、買った？
+女の人：うん。コーヒーのセット、買った。
+男の人：そうか。僕はまだ決められなくて困まっているんだ。
+女の人：そう。じゃあ、カップはどう？佐藤さん、読むのが好すき。
+男の人：うーん、でも、からは本をたくさん持っていますけど。
+女の人：じゃあ、チョコレートどう？みんなはチョコレートをすきだ。
+男の人：そうだね。ああ、私が彼に絵を描けるよ。
+女の人：それは素晴らしいです。
+男の学がく生せいは、何を買いますか。
+">
+
+<answer isCorrect="0">コーヒーのセット</answer>
+<answer isCorrect="0">チョコレート</answer>
+<answer isCorrect="0">本</answer>
+<answer isCorrect="1">じぶんに　かいた　え</answer>
+</question>
+<question weight="1" title="問5・" text="" imgRef="" audioRef="おんなの人と 男の人が写真について話なしています。 女の人は、どの写真を印刷するか。
+女の人：すみません、写真を印刷したいんです？
+男の人：はい、どのししんか？
+女の人：この山の前に写真。
+男の人：うん、そんれでけか？
+女の人：ああ、その、東京の写真とう温泉の写真、2枚。
+男の人：各写真の二倍？
+女の人：はい、そうです。　　　　　　　　　　　　　
+女の人は、いくつの写真を印刷したいか？　">
 <answer isCorrect="0">1</answer>
 <answer isCorrect="0">2</answer>
-<answer isCorrect="0">3</answer>
-<answer isCorrect="1">4</answer>
+<answer isCorrect="0">4</answer>
+<answer isCorrect="1">5</answer>
 </question>
-<question weight="1" title="" text="" imgRef="" audioRef="n4_2005 (20).mp3">
+<question weight="1" title="問6・" text="" imgRef="" audioRef="おとこの 留学生と 女の人が話なしています。 男の 留学生は、何を持っていきますか。
+男の人：友達ちがけがをして、 入にゅう院しているんです。お見舞に行きたいんですが、日本では何を持っていきますか。
+女の人：そうですね。よく花や果物を持っていきます。 病院では時間がたくさんあるから、本もいいと思もいますよ。
+男の人：ああ、いいですね。本読よむのが好だから、そうします。
+女の人：あ、それから、音楽を聞くもいいと思もいますよ。
+男の人：うーん、彼は携帯電話を持っていますから退屈しないかも。
+男の 留学生は、何を持っていきますか。
+">
+<answer isCorrect="1">花やくだ物</answer>
+<answer isCorrect="0">音楽のCD</answer>
+<answer isCorrect="0">本</answer>
+<answer isCorrect="0">けいたいでんわ</answer>
+</question>
+<question weight="1" title="問7・" text="" imgRef="" audioRef="おとこの人と 女の人が話なしています。 女の人は、チケットを何枚予約しますか。
+男の人：来月のコンサートのチケット、予約してくれる？
+女の人：うん、いいよ。何枚？
+男の人：僕ぼくたち二人と、友達ち三人。
+女の人：じゃあ、5 枚ね。
+男の人：あ、そうだ、ごめん。妹のこと忘れちゃった、じゃあ、もう一枚。
+女の人：あ、そう。分わかった。
+男の人：ありがとう。
+女の人は、チケットを何枚予約しますか。">
+<answer isCorrect="0">2</answer>
+<answer isCorrect="0">3</answer>
+<answer isCorrect="0">5</answer>
+<answer isCorrect="1">6</answer>
+</question>
+</task>
+<task caption="問題Ⅲ">
+<question weight="1" title="" text="" imgRef="4_1\2005_03_listen_quiz10.jpg" audioRef=" 医者と男の人が話しています。体によくないやり方はどれですか。よくないやり方です。男の人：先生、ちょっと聞きたいですけど。泳いだり、走ったり、テニ スをしたり、一日続けてやってもいいですか。 女の人：そうですね、走ったり、テニスをしたりしてから、泳ぐのは危ないですよ。男の人：あっ、そうですか、水泳をしてから、ほかの運動をするのは 女の人：それなら、いいですよ。とにかく、たくさん運動をした後で、水泳をするのはやめたほうがいいです。">
 <answer isCorrect="1">1</answer>
 <answer isCorrect="0">2</answer>
 <answer isCorrect="0">3</answer>
 <answer isCorrect="0">4</answer>
 </question>
-<question weight="1" title="" text="" imgRef="" audioRef="n4_2005 (21).mp3">
+<question weight="2" title="" text="" imgRef="4_1\2005_03_listen_quiz12.jpg" audioRef="番 お母さんと娘がデパートで話しています。二人は今何を見ていますか。娘：ねえ、父の日のプレゼント、これ、どう？ 母：お父さんは、こんな色のは、しないと思うよ。 娘：でも、茶色の背広をよく着るでしょう？白いの上にこれを締めて、その上に茶色の背広を着ると、いいと思うよ。 母：そうね、いいかもしれないわね。">
 <answer isCorrect="0">1</answer>
 <answer isCorrect="0">2</answer>
 <answer isCorrect="1">3</answer>
 <answer isCorrect="0">4</answer>
 </question>
-<question weight="1" title="" text="" imgRef="" audioRef="n4_2005 (22).mp3">
-<answer isCorrect="0">1</answer>
-<answer isCorrect="1">2</answer>
-<answer isCorrect="0">3</answer>
-<answer isCorrect="0">4</answer>
-</question>
-<question weight="1" title="" text="" imgRef="" audioRef="n4_2005 (23).mp3">
+<question weight="3" title="" text="" imgRef="4_1\2005_03_listen_quiz11.jpg" audioRef="学校で、男の人と女の人が話しています。二人はいつ映画を見に行きますか。男の人：あした、映画にいかない？毎月一日は安いんだよ。 女の人：明日はちょっと、再来週の月曜日に大切なテストがあるんで。 男の人：再来週なら、まだいいんじゃない？女の人：でも 男の人：テストの後の週末、土曜日ならいい？ 女の人：いいけど、安くないでしょう。 男の人：大丈夫。僕が払うから、行こう。女の人：ほんとう、じゃ。 ">
 <answer isCorrect="0">1</answer>
 <answer isCorrect="0">2</answer>
 <answer isCorrect="0">3</answer>
 <answer isCorrect="1">4</answer>
 </question>
-<question weight="1" title="" text="" imgRef="" audioRef="n4_2005 (24).mp3">
-<answer isCorrect="0">1</answer>
-<answer isCorrect="1">2</answer>
-<answer isCorrect="0">3</answer>
-<answer isCorrect="0">4</answer>
-</question>
-<question weight="1" title="" text="" imgRef="" audioRef="n4_2005 (26).mp3">
+<question weight="4" title="" text="" imgRef="4_1\2005_03_listen_quiz9.jpg" audioRef="女の人と男の人が話しています。男の人はどんな写真を撮りますか。女の人：テーブルに物を並べて、何するんですか。 男の人：写真を撮ろうと思っているんです。なんか、変だな 女の人：じゃ、船を車に変えたらどうですか。 男の人：ですね、車の方がカッコウいいかもしれない。 女の人：そうですね。 男の人：ここに人形を座らせると、どうかな？女の人：ええ、それより、立たせたほうがいいですよ。 男の人：あっ、そうですね、いいですね。これだ。 ">
 <answer isCorrect="0">1</answer>
 <answer isCorrect="0">2</answer>
 <answer isCorrect="0">3</answer>
 <answer isCorrect="1">4</answer>
 </question>
-<question weight="1" title="" text="" imgRef="" audioRef="n4_2005 (27).mp3">
-<answer isCorrect="1">1</answer>
+
+</task>
+<task caption="問題Ⅳ">
+<question weight="1" title="問1・" text="" imgRef="" audioRef="女の人と 男の人が話しています。の人は、どのぐらい専門の本を読んでいますか。
+男の人です。女の人：山田さんは、よく本を読みますか。
+男の人：うーん、子供のときは月つきに 8 冊以上読んでいましたが、最近は全然読んでいませんね。
+女の人：そうですか。
+男の人：ええ、仕事が 忙しいんです。田中さんはどうですか。
+女の人：最近は、本3ぐらい読んでいますし、専門の本を月5冊ぐらいだ。
+男の人：そうですか。 私も月つきに2冊ぐらいは読みたいんですが。
+女の人は、どのぐらい専門の本を読んでいますか。
+1。2冊。2。3冊。3。5冊。4。8冊。">
+<answer isCorrect="0">1</answer>
 <answer isCorrect="0">2</answer>
+<answer isCorrect="1">3</answer>
+<answer isCorrect="0">4</answer>
+</question>
+<question weight="1" title="問2・" text="" imgRef="" audioRef="きょう室で、先生が話なしています。学生は明日、何時にどこに集まらなければなりませんか。
+男の人：えー、これから、明日のでんしゃ旅行について連絡します。明日は、朝9時までに来てください。
+いつもは９時15分からですが、15分早いので、間違えないでくださいね。学校の図書館の前に集まってください。いいですか。 学校かと体育館の前じゃなくて、図書館の前ですよ。
+学生は明日、どこです集あつまらなければなりませんか。
+1。電車の　中で。」
+2。学校の　まえで。
+3。としょかんの　まえで。
+4。たいいくかんの　まえで。
+">
+<answer isCorrect="0">1</answer>
+<answer isCorrect="0">2</answer>
+<answer isCorrect="1">3</answer>
+<answer isCorrect="0">4</answer>
+</question>
+<question weight="1" title="問3・" text="" imgRef="" audioRef="天気予報を聞きいています。
+水曜日の午後どんな天気ですか。
+京都の月曜日から１ 週間の天気予報です。
+月曜日と火曜日は晴れえるでしょう。
+水曜日は、午前中は晴れますが、午後から曇もって、夜にはちいさな雨になるでしょう。
+木もく曜日は一日にちずっと雨になるでしょう。
+週間の終わりまで曇ってるです。
+1。晴れた天気。2。曇もった天気。3。ちいさな雨を降る。4。一日にちずっと雨を降る。
+">
+<answer isCorrect="0">1</answer>
+<answer isCorrect="1">2</answer>
 <answer isCorrect="0">3</answer>
 <answer isCorrect="0">4</answer>
 </question>
-<question weight="1" title="" text="" imgRef="" audioRef="n4_2005 (28).mp3">
+<question weight="1" title="問4・" text="" imgRef="" audioRef="女の学生が 男の学生と話しています。 女の学生は、いつ、 男の学生に相談しますか。
+女の人：山田君、相談したいことがあるんですが、今、いいですか。
+男の人：ごめん。今から仕事があるんだ。
+女の人：そうですか。じゃ、あしたはどうですか。
+男の人：3時から約束があるけど、1時頃なら大丈夫ぶだよ。
+女の人：1時じですね。
+男の人：あ、今日の夕方でもいいよ。
+女の人：すみません。今日の夜までは授業じがあるんです。
+男の人：そう。じゃあ、やっぱり明日にしよう。
+女の人：はい。お願ねがいします。じゃ、また明日。
+1。今日の　ゆうがた。2。明日の1時。3。明日の3時。4。明日の　ゆうがた。
+">
+<answer isCorrect="0">1</answer>
+<answer isCorrect="1">2</answer>
+<answer isCorrect="0">3</answer>
+<answer isCorrect="0">4</answer>
+</question>
+<question weight="1" title="問5・" text="" imgRef="" audioRef="おんなの人と 男の人が話しています。 女の人は、どうして引越しをしますか。
+女の人：来週の日曜日、引越しを手伝だってくれない？
+男の人：いいけど、また引ひっ越こすんだね。部屋が狭いの？
+女の人：ううん。部屋の大きさも場所問題ないし、建物が新しい、けれど部屋がとても明るくないんだ。
+男の人：そうなんだ。
+女の人は、どうして引越しをしますか。
+1。へやが　せまい　から。
+2。ばしょ　が　ふべんな　から。
+3。たてものが　古い　から。
+4。へやが　くらい　から。
+">
 <answer isCorrect="0">1</answer>
 <answer isCorrect="0">2</answer>
 <answer isCorrect="0">3</answer>
 <answer isCorrect="1">4</answer>
-</question>
-<question weight="1" title="" text="" imgRef="" audioRef="n4_2005 (29).mp3">
-<answer isCorrect="0">1</answer>
-<answer isCorrect="1">2</answer>
-<answer isCorrect="0">3</answer>
-<answer isCorrect="0">4</answer>
-</question>
-<question weight="1" title="" text="" imgRef="" audioRef="n4_2005 (30).mp3">
-<answer isCorrect="0">1</answer>
-<answer isCorrect="1">2</answer>
-<answer isCorrect="0">3</answer>
-<answer isCorrect="0">4</answer>
-</question>
-</task>
-</section>
-<section name="読解・文法">
-<task caption="﻿問題Ⅰ______の ところに 何を いれますか。１、２、３、４ から いちばん いい ものを 一つ えらびなさい。">
-<question weight="2" title="" text="田中さんは かいぎに おくれて、社長＿＿＿注意された。">
-<answer isCorrect="1">に</answer>
-<answer isCorrect="0">の</answer>
-<answer isCorrect="0">で</answer>
-<answer isCorrect="0">を</answer>
-</question>
-<question weight="2" title="" text="小林さんはどこへ行った＿＿＿＿わかりません。">
-<answer isCorrect="0">が</answer>
-<answer isCorrect="0">の</answer>
-<answer isCorrect="1">か</answer>
-<answer isCorrect="0">を</answer>
-</question>
-<question weight="2" title="" text="日本人の友達もできて、やっと日本のせいかつ＿＿＿なれました。">
-<answer isCorrect="0">と</answer>
-<answer isCorrect="1">に</answer>
-<answer isCorrect="0">を</answer>
-<answer isCorrect="0">や</answer>
-</question>
-<question weight="2" title="" text="レポートはペン＿＿＿書いてください。">
-<answer isCorrect="0">か</answer>
-<answer isCorrect="0">の</answer>
-<answer isCorrect="0">が</answer>
-<answer isCorrect="1">で</answer>
-</question>
-<question weight="2" title="" text="テレビを見て＿＿＿いると、目が悪くなりますよ。">
-<answer isCorrect="0">でも</answer>
-<answer isCorrect="1">ばかり</answer>
-<answer isCorrect="0">しか</answer>
-<answer isCorrect="0">ぐらい</answer>
-</question>
-<question weight="2" title="" text="図書館の前＿＿＿通るバスはどれですか。">
-<answer isCorrect="0">へ</answer>
-<answer isCorrect="0">で</answer>
-<answer isCorrect="0">に</answer>
-<answer isCorrect="1">を</answer>
-</question>
-<question weight="2" title="" text="きのう買ったカメラ＿＿＿ぬすまれてしまいました。">
-<answer isCorrect="0">で</answer>
-<answer isCorrect="0">に</answer>
-<answer isCorrect="1">を</answer>
-<answer isCorrect="0">へ</answer>
-</question>
-<question weight="2" title="" text="ゆうべはビールを">
-<answer isCorrect="0">だけ</answer>
-<answer isCorrect="1">も</answer>
-<answer isCorrect="0">しか</answer>
-<answer isCorrect="0">でも</answer>
-</question>
-<question weight="2" title="" text="この本はあさって＿＿＿＿かえしてください。">
-<answer isCorrect="0">ばかり</answer>
-<answer isCorrect="0">まで</answer>
-<answer isCorrect="0">ばかりに</answer>
-<answer isCorrect="1">までに</answer>
-</question>
-<question weight="2" title="" text="そのことばは発音がむずかしいので、アウアンサー＿＿＿よくまちがえます。">
-<answer isCorrect="1">でも</answer>
-<answer isCorrect="0">にも</answer>
-<answer isCorrect="0">がも</answer>
-<answer isCorrect="0">からも</answer>
-</question>
-<question weight="2" title="" text="かれらはアジア＿＿＿＿りゅうがくせいです。">
-<answer isCorrect="0">にの</answer>
-<answer isCorrect="0">から</answer>
-<answer isCorrect="1">からの</answer>
-<answer isCorrect="0">に</answer>
-</question>
-<question weight="2" title="" text="たくさんの料理があった＿＿＿、せんぶ 食べる 時間がなかった。">
-<answer isCorrect="1">のに</answer>
-<answer isCorrect="0">でも</answer>
-<answer isCorrect="0">ながら</answer>
-<answer isCorrect="0">と</answer>
-</question>
-<question weight="2" title="" text="おなかがいたいから半分＿＿＿＿食べます。">
-<answer isCorrect="1">だけ</answer>
-<answer isCorrect="0">しか</answer>
-<answer isCorrect="0">も</answer>
-<answer isCorrect="0">と</answer>
-</question>
-<question weight="2" title="" text="キムさん、田中さん＿＿＿＿あした">
-<answer isCorrect="0">を</answer>
-<answer isCorrect="1">に</answer>
-<answer isCorrect="0">や</answer>
-<answer isCorrect="0">の</answer>
-</question>
-<question weight="2" title="" text="先生は今度の土曜日はずっと研究室＿＿＿＿いらっしゃるそうです。">
-<answer isCorrect="0">は</answer>
-<answer isCorrect="0">が</answer>
-<answer isCorrect="0">を</answer>
-<answer isCorrect="1">に</answer>
-</question>
-</task>
-<task caption="問題Ⅱ______の ところに 何を いれますか。１、２、３、４ から いちばん いい ものを 一つ えらびなさい。">
-<question weight="2" title="" text="このへやに＿＿＿＿いけません。">
-<answer isCorrect="0">入るは</answer>
-<answer isCorrect="1">入っては</answer>
-<answer isCorrect="0">入りますは</answer>
-<answer isCorrect="0">入らないは</answer>
-</question>
-<question weight="2" title="" text="前の人につづいてまっすぐ＿＿＿＿なさい。">
-<answer isCorrect="0">歩いた</answer>
-<answer isCorrect="0">歩く</answer>
-<answer isCorrect="1">歩き</answer>
-<answer isCorrect="0">歩け</answer>
-</question>
-<question weight="2" title="" text="その映画はとても おもしろいので、一度＿＿＿＿見てください。">
-<answer isCorrect="0">見た</answer>
-<answer isCorrect="1">見て</answer>
-<answer isCorrect="0">見ていて</answer>
-<answer isCorrect="0">見る</answer>
-</question>
-<question weight="2" title="" text="山田さんのアパートは＿＿＿し、広いし、駅からも近い。">
-<answer isCorrect="0">きれいな</answer>
-<answer isCorrect="0">きれい</answer>
-<answer isCorrect="1">きれいだ</answer>
-<answer isCorrect="0">きれいの</answer>
-</question>
-<question weight="2" title="" text="あの人は３０分ずっと＿＿＿つづけている。">
-<answer isCorrect="1">話し</answer>
-<answer isCorrect="0">話そう</answer>
-<answer isCorrect="0">話す</answer>
-<answer isCorrect="0">話さ</answer>
-</question>
-<question weight="2" title="" text="夏休みは旅行に＿＿＿＿と思います。">
-<answer isCorrect="0">行きましょう</answer>
-<answer isCorrect="0">行きます</answer>
-<answer isCorrect="0">行って</answer>
-<answer isCorrect="1">行こう</answer>
-</question>
-<question weight="2" title="" text="このきせつはたくさんの人が病院に＿＿＿＿やすい。">
-<answer isCorrect="1">なり</answer>
-<answer isCorrect="0">なった</answer>
-<answer isCorrect="0">なって</answer>
-<answer isCorrect="0">なる</answer>
-</question>
-<question weight="2" title="" text="兄がけがをしたので、あしたはアルバイトを＿＿＿＿ください。">
-<answer isCorrect="0">休めさせて</answer>
-<answer isCorrect="0">休むさせて</answer>
-<answer isCorrect="0">休みさせて</answer>
-<answer isCorrect="1">休ませて</answer>
-</question>
-<question weight="2" title="" text="食事の前にはかならず 手を＿＿＿＿なければなりません。">
-<answer isCorrect="0">洗う</answer>
-<answer isCorrect="0">洗い</answer>
-<answer isCorrect="1">洗わ</answer>
-<answer isCorrect="0">洗おう</answer>
-</question>
-<question weight="2" title="" text="ここに車を ＿＿＿。 じゃまだ。">
-<answer isCorrect="0">止まるな</answer>
-<answer isCorrect="1">止めるな</answer>
-<answer isCorrect="0">止めろな</answer>
-<answer isCorrect="0">止まれな</answer>
-</question>
-<question weight="2" title="" text="あの人は入院しているので、あしたの旅行に＿＿＿＿はずがない。">
-<answer isCorrect="1">来る</answer>
-<answer isCorrect="0">来ます</answer>
-<answer isCorrect="0">来て</answer>
-<answer isCorrect="0">来た</answer>
-</question>
-<question weight="2" title="" text="急に大きな音がしたので、その子どもは＿＿＿＿ないてしまった。">
-<answer isCorrect="0">こわかったがって</answer>
-<answer isCorrect="0">こわいがって</answer>
-<answer isCorrect="0">こわくがって</answer>
-<answer isCorrect="1">こわがって</answer>
-</question>
-<question weight="2" title="" text="あ、たいへん。急いで来たからさいふを＿＿＿＿。">
-<answer isCorrect="0">わすれなくちゃ</answer>
-<answer isCorrect="0">わすれといて</answer>
-<answer isCorrect="0">わすれなきゃ</answer>
-<answer isCorrect="1">わすれちゃった</answer>
-</question>
-<question weight="2" title="" text="ときどき日本の歌を＿＿＿＿ことがあります。">
-<answer isCorrect="0">歌うの</answer>
-<answer isCorrect="0">歌い</answer>
-<answer isCorrect="1">歌う</answer>
-<answer isCorrect="0">歌います</answer>
-</question>
-<question weight="2" title="" text="あ、お金が＿＿＿＿。">
-<answer isCorrect="1">おちています</answer>
-<answer isCorrect="0">おちてあります</answer>
-<answer isCorrect="0">おとしています</answer>
-<answer isCorrect="0">おとしてあります</answer>
-</question>
-</task>
-<task caption="問題Ⅲ________のところに何を入れますか。1･2･3･4からいちばんいいものを一つえらびなさい。">
-<question weight="2" title="" text="今日は運動を＿＿＿＿にしてください。">
-<answer isCorrect="0">しないで</answer>
-<answer isCorrect="0">しない</answer>
-<answer isCorrect="0">しなさそう</answer>
-<answer isCorrect="1">しないよう</answer>
-</question>
-<question weight="2" title="" text="学校をそつぎょうしても、日本語の勉強をつづけて＿＿＿＿つもりだ。">
-<answer isCorrect="0">くる</answer>
-<answer isCorrect="1">いく</answer>
-<answer isCorrect="0">いこう</answer>
-<answer isCorrect="0">こよう</answer>
-</question>
-<question weight="2" title="" text="にもつは私が来週の月曜日におとどけ＿＿＿＿。">
-<answer isCorrect="0">くださいます</answer>
-<answer isCorrect="0">なさいます</answer>
-<answer isCorrect="0">ございます</answer>
-<answer isCorrect="1">いたします</answer>
-</question>
-<question weight="2" title="" text="学生＿＿＿もっと勉強しなさい。">
-<answer isCorrect="0">みたい</answer>
-<answer isCorrect="0">みたいな</answer>
-<answer isCorrect="1">らしく</answer>
-<answer isCorrect="0">らしい</answer>
-</question>
-<question weight="2" title="" text="いろいろ しらべて、その駅がいちばん べんりだ＿＿＿＿がわかった。">
-<answer isCorrect="0">というもの</answer>
-<answer isCorrect="1">ということ</answer>
-<answer isCorrect="0">こと</answer>
-<answer isCorrect="0">もの</answer>
-</question>
-<question weight="2" title="" text="小林さんが＿＿＿＿、かならず 私に知らせて下さい。">
-<answer isCorrect="1">来たら</answer>
-<answer isCorrect="0">来ると</answer>
-<answer isCorrect="0">来たり</answer>
-<answer isCorrect="0">来るまま</answer>
-</question>
-<question weight="2" title="" text="私は先生に作文を＿＿＿＿。">
-<answer isCorrect="0">おなおしになりました</answer>
-<answer isCorrect="0">おなおししました</answer>
-<answer isCorrect="1">なおしていただきました</answer>
-<answer isCorrect="0">なおしていらっしゃいました</answer>
-</question>
-<question weight="2" title="" text="みんなが子どもの＿＿＿＿元気に歌いはじめた。">
-<answer isCorrect="1">ように</answer>
-<answer isCorrect="0">ぐらいに</answer>
-<answer isCorrect="0">ほどに</answer>
-<answer isCorrect="0">そうに</answer>
-</question>
-</task>
-<task caption="問題Ⅳつぎの会話の________には、どんなことばを入れたらいいですか。1･2･3･4からいちばんいいものを一つえらびなさい。">
-<question weight="1" title="" text="先生「上山君、先週のレポートは終わったかい。」 上山「ぼくは、今やっている＿＿＿＿が、田中君はおわったそうです。">
-<answer isCorrect="0">ようです</answer>
-<answer isCorrect="0">はずです</answer>
-<answer isCorrect="1">ところです</answer>
-<answer isCorrect="0">らしいです</answer>
-</question>
-<question weight="1" title="" text="①「このテストは、ひらがなで 書いてもいいですか。」②「ええ、＿＿＿＿。」">
-<answer isCorrect="0">だめですよ</answer>
-<answer isCorrect="1">かまいませんよ</answer>
-<answer isCorrect="0">書きますよ</answer>
-<answer isCorrect="0">書きませんよ</answer>
-</question>
-<question weight="1" title="" text="①「あした、いっしょに出かけませんか。」②「あしたは友達がうちに来るよてい＿＿＿＿。">
-<answer isCorrect="1">なんです</answer>
-<answer isCorrect="0">なんですから</answer>
-<answer isCorrect="0">ので</answer>
-<answer isCorrect="0">からです</answer>
-</question>
-<question weight="1" title="" text="①「ゆうびんきょくの でんわばんごうを知っていますか。」②「いいえ、＿＿＿＿。」">
-<answer isCorrect="0">知っていません</answer>
-<answer isCorrect="1">知りません</answer>
-<answer isCorrect="0">知りないです</answer>
-<answer isCorrect="0">知っていないです</answer>
-</question>
-<question weight="1" title="" text="木田「それ、林さんの じしょですか。いい じしょですね。」 林「ええ。兄が私に＿＿＿＿んです。」">
-<answer isCorrect="0">いただいた</answer>
-<answer isCorrect="0">もらった</answer>
-<answer isCorrect="0">あげた</answer>
-<answer isCorrect="1">くれた</answer>
-</question>
-</task>
-<task caption="問題Ⅴつぎの 会話を 読んで 質問に 答えなさい。答えは1．２．３．４からいちばんいいものを一つえらびなさい。">
-<question weight="4" title="スミスさんとキムさんが、スポーツ教室の前で話しています。
-スミス「あ、キムサン。どの教室に入るかもうきめましたか。」
-キム「いいえ、まだ（ 44 ）。すいえい教室はむずかしいでしょうか。」
-スミス「すいえいはたいへんですよ。はじめてなら テニスのほうがいいかもしれません。私
-は去年仕事が終ってから テニス教室に通っていました。」
-キム「テニスは少しやったことがあります。去年のテスト教室では（ 45 ）。」
-スミス「正しいうちかたを習ったり、４にんで試合をしたりしました。楽しかったですよ。」
-キム「テニスがうまくなりそうですね。」
-スミス「ええ。でも、始まる時間に（ 46 ）、ねんしゅうのやりかたがわからなくてこまります
-よ。」
-キム「だいじょうぶです。私の仕事はいつも５時に終わりますから。」
-スミス「（ 47 ）。じゃあ、時間に間に合いますね。
-" text="問（44）">
-<answer isCorrect="0">１．きめなかったんです</answer>
-<answer isCorrect="0">２．きめないんです</answer>
-<answer isCorrect="1">３．きめていないんです</answer>
-<answer isCorrect="0">４．きめないと思うんです</answer>
-</question>
-<question weight="4" title="スミスさんとキムさんが、スポーツ教室の前で話しています。
-スミス「あ、キムサン。どの教室に入るかもうきめましたか。」
-キム「いいえ、まだ（ 44 ）。すいえい教室はむずかしいでしょうか。」
-スミス「すいえいはたいへんですよ。はじめてなら テニスのほうがいいかもしれません。私
-は去年仕事が終ってから テニス教室に通っていました。」
-キム「テニスは少しやったことがあります。去年のテスト教室では（ 45 ）。」
-スミス「正しいうちかたを習ったり、４にんで試合をしたりしました。楽しかったですよ。」
-キム「テニスがうまくなりそうですね。」
-スミス「ええ。でも、始まる時間に（ 46 ）、ねんしゅうのやりかたがわからなくてこまります
-よ。」
-キム「だいじょうぶです。私の仕事はいつも５時に終わりますから。」
-スミス「（ 47 ）。じゃあ、時間に間に合いますね。
-" text="問（45）">
-<answer isCorrect="0">１．何をしたことがありますか</answer>
-<answer isCorrect="0">２．どんなことをするでしょう</answer>
-<answer isCorrect="1">３．どんなことをしましたか</answer>
-<answer isCorrect="0">４．何をすると思いますか</answer>
-</question>
-<question weight="4" title="スミスさんとキムさんが、スポーツ教室の前で話しています。
-スミス「あ、キムサン。どの教室に入るかもうきめましたか。」
-キム「いいえ、まだ（ 44 ）。すいえい教室はむずかしいでしょうか。」
-スミス「すいえいはたいへんですよ。はじめてなら テニスのほうがいいかもしれません。私
-は去年仕事が終ってから テニス教室に通っていました。」
-キム「テニスは少しやったことがあります。去年のテスト教室では（ 45 ）。」
-スミス「正しいうちかたを習ったり、４にんで試合をしたりしました。楽しかったですよ。」
-キム「テニスがうまくなりそうですね。」
-スミス「ええ。でも、始まる時間に（ 46 ）、ねんしゅうのやりかたがわからなくてこまります
-よ。」
-キム「だいじょうぶです。私の仕事はいつも５時に終わりますから。」
-スミス「（ 47 ）。じゃあ、時間に間に合いますね。
-" text="問（46）">
-<answer isCorrect="0">１．おくれても</answer>
-<answer isCorrect="0">２．おくれないで</answer>
-<answer isCorrect="0">３．おくれるように</answer>
-<answer isCorrect="1">４．おくれると</answer>
-</question>
-<question weight="4" title="スミスさんとキムさんが、スポーツ教室の前で話しています。
-スミス「あ、キムサン。どの教室に入るかもうきめましたか。」
-キム「いいえ、まだ（ 44 ）。すいえい教室はむずかしいでしょうか。」
-スミス「すいえいはたいへんですよ。はじめてなら テニスのほうがいいかもしれません。私
-は去年仕事が終ってから テニス教室に通っていました。」
-キム「テニスは少しやったことがあります。去年のテスト教室では（ 45 ）。」
-スミス「正しいうちかたを習ったり、４にんで試合をしたりしました。楽しかったですよ。」
-キム「テニスがうまくなりそうですね。」
-スミス「ええ。でも、始まる時間に（ 46 ）、ねんしゅうのやりかたがわからなくてこまります
-よ。」
-キム「だいじょうぶです。私の仕事はいつも５時に終わりますから。」
-スミス「（ 47 ）。じゃあ、時間に間に合いますね。
-" text="問（47）">
-<answer isCorrect="1">１．それはいいですね</answer>
-<answer isCorrect="0">２．あれがいいですね</answer>
-<answer isCorrect="0">３．それはたいへんですね</answer>
-<answer isCorrect="0">４．あれがたいへんですね</answer>
 </question>
 </task>
 </section>
