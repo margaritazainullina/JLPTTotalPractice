@@ -17,26 +17,29 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-    <fragment
-        android:name="ua.hneu.languagetrainer.pages.dictionary.EntryDictionaryDetail$PlaceholderFragment1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/VocFragment" />
-    <fragment
-        android:name="ua.hneu.languagetrainer.pages.dictionary.EntryDictionaryDetail$PlaceholderFragment2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/GrammarFragment"/>
-    <fragment
-        android:name="ua.hneu.languagetrainer.pages.dictionary.EntryDictionaryDetail$PlaceholderFragment3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/GiongoFragment" />
-    <fragment
-        android:name="ua.hneu.languagetrainer.pages.dictionary.EntryDictionaryDetail$PlaceholderFragment4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/CWFragment" />
+            <fragment
+                android:id="@+id/VocFragment"
+                android:name="ua.hneu.languagetrainer.pages.dictionary.EntryDictionaryDetail$PlaceholderFragment1"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" />
+
+            <fragment
+                android:id="@+id/GrammarFragment"
+                android:name="ua.hneu.languagetrainer.pages.dictionary.EntryDictionaryDetail$PlaceholderFragment2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <fragment
+                android:id="@+id/GiongoFragment"
+                android:name="ua.hneu.languagetrainer.pages.dictionary.EntryDictionaryDetail$PlaceholderFragment3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <fragment
+                android:id="@+id/CWFragment"
+                android:name="ua.hneu.languagetrainer.pages.dictionary.EntryDictionaryDetail$PlaceholderFragment4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

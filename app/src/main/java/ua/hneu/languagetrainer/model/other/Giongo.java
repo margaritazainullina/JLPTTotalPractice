@@ -1,5 +1,6 @@
 package ua.hneu.languagetrainer.model.other;
 
+import java.net.InetSocketAddress;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -247,6 +248,7 @@ public class Giongo extends EntryAbstr implements ExampleInterface, Parcelable {
         out.writeString(lastview);
         out.writeString(color);
         out.writeTypedList(examples);
+
     }
 
     // this is used to regenerate your object. All Parcelables must have a CREATOR that implements these two methods
@@ -272,12 +274,19 @@ public class Giongo extends EntryAbstr implements ExampleInterface, Parcelable {
         shownTimes= in.readInt();
         lastview= in.readString();
         color= in.readString();
-        color= in.readString();
         in.readTypedList((List<GiongoExample>)examples, GiongoExample.CREATOR);
     }
 
     @Override
     public int compareTo(Object another) {
         return this.toString().compareTo(another.toString());
+    }
+
+    public String getTranslation() {
+            if (App.lang == Languages.RUS)
+                return translRus;
+            else
+                return translEng;
+
     }
 }

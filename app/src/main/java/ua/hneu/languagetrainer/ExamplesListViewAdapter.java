@@ -17,6 +17,9 @@ public class ExamplesListViewAdapter extends ArrayAdapter<String> {
 	private final ArrayList<String> romaji;
 	private final ArrayList<String> translations;
 
+    static TextToVoiceMediaPlayer twmp;
+    String text1;
+
 	TextView textPart1;
 	TextView textPart2;
 	TextView textPart3;
@@ -32,6 +35,7 @@ public class ExamplesListViewAdapter extends ArrayAdapter<String> {
 		this.romaji = romaji;
 		this.translations = translations;
         if(App.isColored) this.color = color;
+        twmp = new TextToVoiceMediaPlayer();
 	}
 
 	@Override
@@ -46,8 +50,8 @@ public class ExamplesListViewAdapter extends ArrayAdapter<String> {
 		romajiTv = (TextView) rowView.findViewById(R.id.romaji);
 		translationTv = (TextView) rowView.findViewById(R.id.translation);
 		// split text to 3 parts to change color of item to whom belongs example
-		String s = text.get(position);
-		String[] parts = s.split("\\\\t");
+        text1 = text.get(position);
+		String[] parts = text1.split("\\\\t");
 		textPart1.setText(parts[0]);
 		textPart2.setText(parts[1]);
 		textPart3.setText(parts[2]);

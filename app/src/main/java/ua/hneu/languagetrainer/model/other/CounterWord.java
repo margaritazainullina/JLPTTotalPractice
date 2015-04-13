@@ -268,7 +268,6 @@ public class CounterWord extends EntryAbstr implements Parcelable {
         color= in.readString();
     }
 
-
     @Override
     public int compareTo(Object another) {
         return this.toString().compareTo(another.toString());

@@ -18,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -62,7 +63,7 @@ public class EntryDictionaryDetail extends FragmentActivity {
     static TextView translationTextView;
     static ListView giongoExamplesListView;
     static ArrayList<ExampleAbstr> giongoExamples;
-    static ExamplesListViewAdapter giongoAdapter1;
+    static ExamplesListViewAdapter giongoAdapter;
     public static Giongo giongo;
 
     //counter words fragment
@@ -71,7 +72,13 @@ public class EntryDictionaryDetail extends FragmentActivity {
     static TextView cwRomajiTextView;
     static TextView cwTranslationTextView;
     static ListView cwExamplesListView;
+    static ExamplesListViewAdapter cwAdapter;
+    static ArrayList<ExampleAbstr> cwExamples;
+    static ExamplesListViewAdapter cwAdapter1;
     public static CounterWord cw;
+
+    static Button vocButton;
+    static Button cwButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,19 +86,19 @@ public class EntryDictionaryDetail extends FragmentActivity {
         setContentView(R.layout.entry_dictionary_detail);
 
         //initialise fragment elements
-        vocWordTextView = (TextView)findViewById(R.id.voc_wordTextView);
+        vocWordTextView = (TextView) findViewById(R.id.voc_wordTextView);
         vocTranscriptionTextView = (TextView) findViewById(R.id.voc_transcriptionTextView);
         vocRomajiTextView = (TextView) findViewById(R.id.voc_romajiTextView);
         vocTranslationTextView = (TextView) findViewById(R.id.voc_translationTextView);
         vocExamplesListView = (ListView) findViewById(R.id.voc_examplesListView);
         vocLevelTv = (TextView) findViewById(R.id.voc_levelTv);
 
-        ruleTextView = (TextView)findViewById(R.id.grammar_ruleTextView);
+        ruleTextView = (TextView) findViewById(R.id.grammar_ruleTextView);
         descriptionTextView = (TextView) findViewById(R.id.grammar_descriptionTextView);
         levelTv = (TextView) findViewById(R.id.grammar_levelTv);
         grammarExamplesListView = (ListView) findViewById(R.id.grammar_grammarExamplesListView);
 
-        giongoTextView = (TextView)findViewById(R.id.giongo_giongoTextView);
+        giongoTextView = (TextView) findViewById(R.id.giongo_giongoTextView);
         translationTextView = (TextView) findViewById(R.id.giongo_translationTextView);
         giongoExamplesListView = (ListView) findViewById(R.id.giongo_giongoExamplesListView);
 
@@ -99,87 +106,112 @@ public class EntryDictionaryDetail extends FragmentActivity {
         cwHiraganaTextView = (TextView) findViewById(R.id.cw_hiraganaTextView);
         cwRomajiTextView = (TextView) findViewById(R.id.cw_romajiTextView);
         cwTranslationTextView = (TextView) findViewById(R.id.cw_translationTextView);
-        cwExamplesListView= (ListView) findViewById(R.id.cw_examplesListView);
+        cwExamplesListView = (ListView) findViewById(R.id.cw_examplesListView);
 
+        //buttons
+        vocButton = (Button) findViewById(R.id.voc_soundButton);
+        cwButton = (Button) findViewById(R.id.cw_soundButton);
 
-        showEntry(App.allVocabularyDictionary.get(23));
-        showEntry(App.allGrammarDictionary.get(5));
+        Intent intent = getIntent();
+        vocEntry = intent.getParcelableExtra("entry1");
+        rule = intent.getParcelableExtra("entry2");
+        giongo = intent.getParcelableExtra("entry3");
+        cw = intent.getParcelableExtra("entry4");
+
+        showEntry();
 
         vocWordTextView.setTypeface(App.kanjiFont, Typeface.NORMAL);
         vocTranscriptionTextView.setTypeface(App.kanjiFont, Typeface.NORMAL);
+
+        twmp = new TextToVoiceMediaPlayer();
     }
 
     @SuppressLint("SimpleDateFormat")
-    private void showEntry(VocabularyEntry vocEntry) {
+    private void showEntry() {
+        vocButton.setVisibility(View.INVISIBLE);
+        cwButton.setVisibility(View.INVISIBLE);
+        if (vocEntry != null) {
+            vocButton.setVisibility(View.VISIBLE);
 
-        vocLevelTv.setText(getResources().getString(R.string.jlpt_level)+" "+vocEntry.getLevel());
+            vocWordTextView.setText(vocEntry.getKanji());
+            vocTranscriptionTextView.setText(vocEntry.getTranscription());
+            vocRomajiTextView.setText(vocEntry.getRomaji());
+            vocTranslationTextView.setText(vocEntry.translationsToString());
+            vocLevelTv.setText(getResources().getString(R.string.jlpt_level) + " " + vocEntry.getLevel());
 
-        // set word info to the texViews
-        vocWordTextView.setText(vocEntry.getKanji());
-        vocTranscriptionTextView.setText("["+vocEntry.getTranscription()+"]");
-        if (App.isShowRomaji)
-            vocRomajiTextView.setText("- ["+vocEntry.getRomaji()+"]");
-        vocTranslationTextView.setText(vocEntry.translationsToString());
+            vocExamples = new ArrayList<ExampleAbstr>();
+            vocExamples.addAll(App.gres.getAllExamplesWithWord(vocEntry.getKanjiOrHiragana(), App.cr));
+            vocExamples.addAll(App.ges.getAllExamplesWithWord(vocEntry.getKanjiOrHiragana(), App.cr));
 
-       /* if(App.isAutoplayed&&isNetworkAvailable()) {
-            try {
-                speakOut(entry);
-            } catch (Exception e) {
-                Log.e("Text to speech error", "Text to speech error");
+            ArrayList<String> text = new ArrayList<String>();
+            ArrayList<String> romaji = new ArrayList<String>();
+            ArrayList<String> translation = new ArrayList<String>();
+            for (ExampleAbstr ge : vocExamples) {
+                text.add(ge.getText());
+                romaji.add(ge.getRomaji());
+                if (App.lang == App.Languages.ENG)
+                    translation.add(ge.getTranslationEng());
+                else
+                    translation.add(ge.getTranslationRus());
             }
-        }*/
 
-        vocExamples = new  ArrayList<ExampleAbstr>();
-        vocExamples.addAll(App.gres.getAllExamplesWithWord(vocEntry.getKanjiOrHiragana(), App.cr));
-        vocExamples.addAll(App.ges.getAllExamplesWithWord(vocEntry.getKanjiOrHiragana(), App.cr));
-
-        ArrayList<String> text = new ArrayList<String>();
-        ArrayList<String> romaji = new ArrayList<String>();
-        ArrayList<String> translation = new ArrayList<String>();
-        for (ExampleAbstr ge : vocExamples) {
-            text.add(ge.getText());
-            romaji.add(ge.getRomaji());
-            if (App.lang == App.Languages.ENG)
-                translation.add(ge.getTranslationEng());
-            else
-                translation.add(ge.getTranslationRus());
+            vocAdapter1 = new ExamplesListViewAdapter(this, text, romaji, translation, 0);
+            vocExamplesListView.setAdapter(vocAdapter1);
         }
 
-        vocAdapter1 = new ExamplesListViewAdapter(this,text,romaji,translation, 0);
-        vocExamplesListView.setAdapter(vocAdapter1);
-    }
+        if (rule != null) {
+            ruleTextView.setText(rule.getRule());
+            descriptionTextView.setText(rule.getDescription());
+            levelTv.setText(getResources().getString(R.string.jlpt_level) + " " + rule.getLevel());
 
-    @SuppressLint("SimpleDateFormat")
-    private void showEntry(GrammarRule currentRule) {
-        ruleTextView = (TextView) findViewById(R.id.ruleTextView);
-        descriptionTextView = (TextView) findViewById(R.id.descriptionTextView);
-        grammarExamplesListView = (ListView) findViewById(R.id.grammarExamplesListView);
-        // set grammar info to the texViews
-        ruleTextView.setText(currentRule.getRule());
-        descriptionTextView.setText(currentRule.getDescription());
-        levelTv = (TextView) findViewById(R.id.levelTv);
-
-        rule = App.allGrammarDictionary.get(9);
-
-        levelTv.setText(getResources().getString(R.string.jlpt_level)+" "+rule.getLevel());
-
-        // set color of entry
-        if(App.isColored) {
-            ruleTextView.setTextColor(rule.getIntColor());
+            grammarAdapter = new ExamplesListViewAdapter(this,
+                    rule.getAllExamplesText(), rule.getAllExamplesRomaji(),
+                    rule.getAllTranslations(), rule.getIntColor());
+            grammarExamplesListView.setAdapter(grammarAdapter);
         }
-        else
-            ruleTextView.setTextColor(Color.WHITE);
+        if (giongo != null) {
+            giongoTextView.setText(giongo.getWord());
+            translationTextView.setText(giongo.getTranslEng());
 
-        // and write information to db
-        currentRule.setLastView();
-        currentRule.incrementShowntimes();
-        App.grs.update(currentRule, getContentResolver());
+            // set color of entry
+            if (App.isColored) {
+                giongoTextView.setTextColor(giongo.getIntColor());
+            } else
+                giongoTextView.setTextColor(Color.WHITE);
 
-        grammarAdapter = new ExamplesListViewAdapter(this,
-                rule.getAllExamplesText(), rule.getAllExamplesRomaji(),
-                rule.getAllTranslations(), rule.getIntColor());
-        grammarExamplesListView.setAdapter(grammarAdapter);
+            giongoAdapter = new ExamplesListViewAdapter(this,
+                    giongo.getAllExamplesText(), giongo.getAllExamplesRomaji(),
+                    giongo.getAllTranslations(), giongo.getIntColor());
+            giongoExamplesListView.setAdapter(giongoAdapter);
+        }
+        if (cw != null) {
 
+            cwButton.setVisibility(View.VISIBLE);
+
+            cwWordTextView.setText(cw.getWord());
+            cwHiraganaTextView.setText(cw.getHiragana());
+            cwRomajiTextView.setText(cw.getRomaji());
+            cwTranslationTextView.setText(cw.getTranslation());
+
+            ArrayList<String> text = new ArrayList<String>();
+            ArrayList<String> romaji = new ArrayList<String>();
+            ArrayList<String> translation = new ArrayList<String>();
+
+            cwExamples = new ArrayList<ExampleAbstr>();
+            cwExamples.addAll(App.gres.getAllExamplesWithWord(cw.getWord(), App.cr));
+            cwExamples.addAll(App.ges.getAllExamplesWithWord(cw.getWord(), App.cr));
+
+            for (ExampleAbstr ge : cwExamples) {
+                text.add(ge.getText());
+                romaji.add(ge.getRomaji());
+                if (App.lang == App.Languages.ENG)
+                    translation.add(ge.getTranslationEng());
+                else
+                    translation.add(ge.getTranslationRus());
+            }
+            cwAdapter1 = new ExamplesListViewAdapter(this, text, romaji, translation, 0);
+            cwExamplesListView.setAdapter(cwAdapter1);
+        }
     }
 
     @Override
@@ -198,6 +230,25 @@ public class EntryDictionaryDetail extends FragmentActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    public void vocOnPlayClick(View v) {
+        twmp.loadAndPlay(vocEntry.getTranscription(), App.speechVolume, App.speechSpeed);
+    }
+
+    public void cwOnPlayClick(View v) {
+        twmp.loadAndPlay(cw.getTranscription(), App.speechVolume, App.speechSpeed);
+    }
+
+    public void onPlayClick1(View v) {
+        // getting layout with text
+        View v1 = (View) v.getParent();
+        TextView textPart1 = (TextView) v1.findViewById(R.id.textPart1);
+        TextView textPart2 = (TextView) v1.findViewById(R.id.textPart2);
+        TextView textPart3 = (TextView) v1.findViewById(R.id.textPart3);
+        String phrase = (String) textPart1.getText() + textPart2.getText()
+                + textPart3.getText();
+        twmp.loadAndPlay(phrase, App.speechVolume, App.speechSpeed);
+    }
+
     public static class PlaceholderFragment1 extends Fragment {
 
         public PlaceholderFragment1() {
@@ -207,26 +258,8 @@ public class EntryDictionaryDetail extends FragmentActivity {
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
             View rootView = inflater.inflate(R.layout.vocabulary_entry_dictionary_detail_fragment, container, false);
-
-            /*Bundle extras = getIntent().getExtras();
-            if (extras != null) {
-                entry=(VocabularyEntry)extras.get("entry");
-            }*/
-
-
-
-            //actionBar.setDisplayHomeAsUpEnabled(true);
             return rootView;
         }
-        private void speakOut(final VocabularyEntry entry) {
-            twmp.loadAndPlay(entry.getTranscription(),  App.speechVolume,App.speechSpeed);
-        }
-
-        public void onPlayClick(View v) {
-           // speakOut(vocEentry);
-        }
-
-
 
         private boolean isNetworkAvailable() {
             ConnectivityManager connectivityManager
@@ -234,7 +267,9 @@ public class EntryDictionaryDetail extends FragmentActivity {
             NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
             return activeNetworkInfo != null && activeNetworkInfo.isConnected();
         }
+
     }
+
     public static class PlaceholderFragment2 extends Fragment {
 
         public PlaceholderFragment2() {
@@ -247,6 +282,7 @@ public class EntryDictionaryDetail extends FragmentActivity {
             return rootView;
         }
     }
+
     public static class PlaceholderFragment3 extends Fragment {
 
         public PlaceholderFragment3() {
@@ -259,6 +295,7 @@ public class EntryDictionaryDetail extends FragmentActivity {
             return rootView;
         }
     }
+
     public static class PlaceholderFragment4 extends Fragment {
 
         public PlaceholderFragment4() {

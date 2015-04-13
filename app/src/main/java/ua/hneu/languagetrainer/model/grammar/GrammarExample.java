@@ -26,9 +26,10 @@ public class GrammarExample extends ExampleAbstr implements Parcelable {
 	}
 
     @Override
-    public int describeContents() {
+      public int describeContents() {
         return 0;
     }
+
     public String getText() {
         return text;
     }
@@ -75,6 +76,7 @@ public class GrammarExample extends ExampleAbstr implements Parcelable {
         String[] parts = text.split("\\\\t");
         return parts[2];
     }
+
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(text);

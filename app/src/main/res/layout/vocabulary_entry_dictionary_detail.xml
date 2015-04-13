@@ -15,7 +15,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="JLPT level: N3"
         android:id="@+id/levelTv"
         android:layout_gravity="center_horizontal" />
 
@@ -46,7 +45,6 @@
                     android:id="@+id/wordTextView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="能力"
                     android:textSize="@dimen/xlargeText" />
 
                 <LinearLayout
@@ -60,7 +58,6 @@
                         android:id="@+id/transcriptionTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="[のうりょく]"
                         android:textSize="@dimen/largeText"
                         />
 
@@ -79,7 +76,6 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:paddingTop="@dimen/activity_vertical_margin"
-                android:text="to long for; to yearn after; to admire"
                 android:textSize="@dimen/largeText" />
 
             <Button

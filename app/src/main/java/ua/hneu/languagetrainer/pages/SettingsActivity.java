@@ -35,7 +35,7 @@ public class SettingsActivity extends PreferenceActivity implements
         App.isColored = App.settings.getBoolean("color", true);
         App.isAutoplayed = App.settings.getBoolean("autoplay", true);
 
-        if(key.equals("language")){
+        if(equals("language")){
             Toast.makeText(getApplicationContext(), getResources().getString(R.string.after_reload),
                     Toast.LENGTH_LONG).show();
             Locale locale = new Locale(key);
@@ -44,6 +44,8 @@ public class SettingsActivity extends PreferenceActivity implements
             config.locale = locale;
             getBaseContext().getResources().updateConfiguration(config,
                     getBaseContext().getResources().getDisplayMetrics());
+            if(sharedPreferences.getString("language", "en").equals("ru")) App.lang= App.Languages.RUS;
+            else App.lang= App.Languages.ENG;
         }
         if(key.equals("level")){
             App.goToLevel(Integer.parseInt(sharedPreferences.getString(key, "5")));

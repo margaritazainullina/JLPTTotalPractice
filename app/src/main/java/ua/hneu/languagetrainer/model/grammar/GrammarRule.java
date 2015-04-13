@@ -170,7 +170,6 @@ public class GrammarRule extends EntryAbstr implements ExampleInterface, Parcela
             for(String ss : s) {
                 ss=ss.toLowerCase();
                 ss = ss.replaceAll("\\[(.*?)\\]", "");
-                //ss=ss.replaceAll("\\d+[\\)|\\.]","");
                 ss=ss.trim();
                 ss = ss.replaceAll("^((an|a|the|to)(\\s))+", "");
                 ss = ss.replaceAll("^((be|become|being)(\\s))+", "");
@@ -271,7 +270,7 @@ public class GrammarRule extends EntryAbstr implements ExampleInterface, Parcela
         }
         //all can be
         catch(Exception e){
-            return 0;
+            return -1;
         }
     }
 

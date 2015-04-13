@@ -31,15 +31,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="面	"
-                    android:textSize="@dimen/xlargeText" />
+                android:textSize="@dimen/xlargeText" />
 
-                <TextView
-                    android:id="@+id/cw_hiraganaTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="めん"
+            <TextView
+                android:id="@+id/cw_hiraganaTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
                     android:textSize="@dimen/largeText" />
 
                 <TextView
@@ -47,7 +45,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text="men"
                     android:textSize="@dimen/largeText" />
             </LinearLayout>
 
@@ -59,7 +56,7 @@
                 android:background="@color/transparent"
                 android:drawableBottom="@drawable/sound"
                 android:gravity="left|center_vertical"
-                android:onClick="onPlayClick3" />
+                android:onClick="cwOnPlayClick" />
         </LinearLayout>
 
         <TextView
@@ -67,7 +64,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="Mirrors, boards for board games (chess, igo, shogi), stages of computer games, walls of a room, tennis courts	"
             android:textSize="@dimen/largeText" />
     </LinearLayout>
     <ListView
