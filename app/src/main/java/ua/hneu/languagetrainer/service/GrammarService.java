@@ -124,10 +124,9 @@ public class GrammarService {
 			color = c.getString(8);
 			c.moveToNext();
 
-			GrammarRule gr = new GrammarRule(rule, level1, eng, rus, percentage,
+            gd.add(new GrammarRule(rule, level1, eng, rus, percentage,
 					lastview, shownTimes, color, ges.getExamplesByRuleId(id,
-							contentResolver));
-			gd.add(gr);
+							contentResolver)));
 		}
 		c.close();
 		return gd;

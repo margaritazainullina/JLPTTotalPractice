@@ -1,11 +1,11 @@
 package ua.hneu.languagetrainer.pages.dictionary;
 
 import android.app.ListActivity;
+import android.app.ProgressDialog;
 import android.app.SearchManager;
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Parcelable;
-import android.provider.SyncStateContract;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -14,21 +14,15 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.SearchView.OnCloseListener;
 
-import com.google.android.gms.internal.en;
-
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashSet;
+import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.TreeSet;
 
 import ua.hneu.edu.languagetrainer.R;
-import ua.hneu.languagetrainer.AllVocabularyListViewAdapter;
 import ua.hneu.languagetrainer.App;
 import ua.hneu.languagetrainer.DictionaryListViewAdapter;
-import ua.hneu.languagetrainer.model.DictionaryAbstr;
 import ua.hneu.languagetrainer.model.EntryAbstr;
 import ua.hneu.languagetrainer.model.grammar.GrammarDictionary;
 import ua.hneu.languagetrainer.model.grammar.GrammarRule;
@@ -43,64 +37,18 @@ public class DictionaryActivity extends ListActivity {
     DictionaryListViewAdapter adapter1;
 
     //entries to show in list
-    ArrayList<String> entriesToShow = new ArrayList<>();
-    ArrayList<String> allJapToShow = new ArrayList<>();
-    ArrayList<String> allTranslToShow = new ArrayList<>();
+    public static ArrayList<String> entriesToShow = new ArrayList<>();
+    public static  ArrayList<String> allJapToShow = new ArrayList<>();
+    public static ArrayList<String> allTranslToShow = new ArrayList<>();
+    public static TreeSet<String> temp = new TreeSet<>();
 
     //all real entries
-    Set<EntryAbstr> all = new TreeSet<>();
+    public static Set<EntryAbstr> all = new TreeSet<>();
 
     boolean fromJapanese = true;
     int counter = 0;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dictionary);
-        handleIntent(getIntent());
-
-        VocabularyDictionary vd = VocabularyService.allEntriesDictionary(App.cr);
-        GrammarDictionary gd = GrammarService.allEntriesDictionary(App.cr);
-        all.addAll(vd.getEntries());
-        all.addAll(gd.getEntries());
-        all.addAll(App.allGiongoDictionary.getEntries());
-        all.addAll(App.allCounterWordsDictionary.getEntries());
-        /*for (int i = 0; i < 10; i++) {
-            all.add(App.allVocabularyDictionary.get(i));
-            all.add(App.allGrammarDictionary.get(i));
-            all.add(App.allGiongoDictionary.get(i));
-            all.add(App.allCounterWordsDictionary.get(i));
-        }*/
-
-
-        TreeSet<String> temp = new TreeSet<>();
-        for (EntryAbstr ea : all) {
-            if (ea instanceof VocabularyEntry) {
-                VocabularyEntry ve = (VocabularyEntry) ea;
-                temp.addAll(ve.getTranslations());
-                allJapToShow.add(ve.getKanjiOrHiragana());
-            }
-            if (ea instanceof GrammarRule) {
-                GrammarRule ve = (GrammarRule) ea;
-                temp.addAll(ve.getSplittedDescriptions());
-                allJapToShow.add(ea.toString());
-            }
-            if (ea instanceof Giongo) {
-                Giongo ve = (Giongo) ea;
-                temp.addAll(ve.getSplittedDescriptions());
-                allJapToShow.add(ea.toString());
-            }
-            if (ea instanceof CounterWord) {
-                CounterWord ve = (CounterWord) ea;
-                temp.addAll(ve.getSplittedDescriptions());
-                allJapToShow.addAll(ve.getSplittedWord());
-            }
-        }
-        Log.d("TOTAL jap ", allJapToShow.size() + "");
-        Log.d("TOTAL eng ", allTranslToShow.size() + "");
-        allTranslToShow = new ArrayList(temp);
-        showAll();
-    }
+    //A ProgressDialog object
+    private ProgressDialog progressDialog;
 
     static void displayDuplicate(Object[] ar) {
         boolean[] done = new boolean[ar.length];
@@ -118,6 +66,39 @@ public class DictionaryActivity extends ListActivity {
             }
             System.out.println(ar[i] + " occurs " + nb + " times");
         }
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_dictionary);
+        handleIntent(getIntent());
+
+        new LoadViewTask().execute();
+        /*long startTime= System.nanoTime();
+
+        loadVocabulary();
+        loadGrammar();
+        loadGiongo();
+        loadCV();
+
+        createTreeSets(all);
+        Log.d("TOTAL jap ", allJapToShow.size() + "");
+        Log.d("TOTAL eng ", allTranslToShow.size() + "");
+        allTranslToShow = new ArrayList(temp);
+
+        long endTime= System.nanoTime();
+        Log.d("Load time","time for loading "+(endTime-startTime)+" nanoseconds.");*/
+
+        //TODO: remove, just for test
+        /*for (int i = 0; i < 10; i++) {
+            all.add(App.allVocabularyDictionary.get(i));
+            all.add(App.allGrammarDictionary.get(i));
+            all.add(App.allGiongoDictionary.get(i));
+            all.add(App.allCounterWordsDictionary.get(i));
+        }*/
+
+        showAll();
     }
 
     @Override
@@ -174,8 +155,7 @@ public class DictionaryActivity extends ListActivity {
                 } else {
                     if (ea.toString().equals(search)) result.add(ea);
                 }
-            }
-            else{
+            } else {
                 if (ea instanceof VocabularyEntry) {
                     VocabularyEntry ve = (VocabularyEntry) ea;
                     if (ve.getTranslations().contains(search)) result.add(ea);
@@ -189,8 +169,8 @@ public class DictionaryActivity extends ListActivity {
                     if (ve.getAllTranslations().contains(search)) result.add(ea);
                 }
                 if (ea instanceof CounterWord) {
-                    VocabularyEntry ve = (VocabularyEntry) ea;
-                    if (ve.getTranslations().contains(search)) result.add(ea);
+                    CounterWord ve = (CounterWord) ea;
+                    if (ve.getTranslation().contains(search)) result.add(ea);
                 }
             }
         }
@@ -280,6 +260,150 @@ public class DictionaryActivity extends ListActivity {
         if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
             String query = intent.getStringExtra(SearchManager.QUERY);
             search(query);
+        }
+    }
+
+    public static void loadVocabulary() {
+        VocabularyDictionary vd = VocabularyService.allEntriesDictionary(App.cr);
+        all.addAll(vd.getEntries());
+    }
+
+    public static void loadGrammar() {
+        GrammarDictionary gd = GrammarService.allEntriesDictionary(App.cr);
+        all.addAll(gd.getEntries());
+    }
+
+    public static void loadGiongo() { all.addAll(App.allGiongoDictionary.getEntries());}
+    public static void loadCV() { all.addAll(App.allCounterWordsDictionary.getEntries());}
+
+    public static void createTreeSets(Set<EntryAbstr> all1)
+    {
+        for (EntryAbstr ea : all1) {
+            if (ea instanceof VocabularyEntry) {
+                VocabularyEntry ve = (VocabularyEntry) ea;
+                temp.addAll(ve.getTranslations());
+                allJapToShow.add(ve.getKanjiOrHiragana());
+            }
+            if (ea instanceof GrammarRule) {
+                GrammarRule ve = (GrammarRule) ea;
+                temp.addAll(ve.getSplittedDescriptions());
+                allJapToShow.add(ea.toString());
+            }
+            if (ea instanceof Giongo) {
+                Giongo ve = (Giongo) ea;
+                temp.addAll(ve.getSplittedDescriptions());
+                allJapToShow.add(ea.toString());
+            }
+            if (ea instanceof CounterWord) {
+                CounterWord ve = (CounterWord) ea;
+                temp.addAll(ve.getSplittedDescriptions());
+                allJapToShow.addAll(ve.getSplittedWord());
+            }
+        }
+    }
+
+    private class LoadViewTask extends AsyncTask<Void, Integer, Void> {
+
+        //Before running code in separate thread
+        @Override
+        protected void onPreExecute() { //Create a new progress dialog
+            progressDialog = new ProgressDialog(DictionaryActivity.this);
+            progressDialog.setTitle(getResources().getString(R.string.loading));
+            progressDialog.setMessage(getResources().getString(R.string.loading_wait));
+            progressDialog.setProgressStyle(progressDialog.STYLE_HORIZONTAL);
+            progressDialog.setProgress(0);
+            progressDialog.setMax(100);
+            progressDialog.show();
+        }
+
+        @Override
+        protected Void doInBackground(Void... params) {
+            try {
+                //load dictionary to show asynchronously
+                synchronized (this) {
+                    long startTime= System.nanoTime();
+                    publishProgress(0);
+
+                    //multithreading
+                    Thread[] threads = new Thread[4];
+
+                    threads[0]= new Thread(new Runnable() {
+                        public void run() {
+                            DictionaryActivity.loadVocabulary();
+                        }
+                    });
+
+                    threads[1] = new Thread(new Runnable() {
+                        public void run() {
+                            DictionaryActivity.loadGrammar();
+                        }
+                    });
+
+                    threads[2] = new Thread(new Runnable() {
+                        public void run() {
+                            DictionaryActivity.loadGiongo();
+                        }
+                    });
+
+                    threads[3] = new Thread(new Runnable() {
+                        public void run() {
+                            DictionaryActivity.loadCV();
+                        }
+                    });
+
+                    for(int i = 0; i < 4; i++)
+                        threads[i].start();
+
+                    for(int i = 0; i < 4; i++){
+                        publishProgress(25*i);
+                        threads[i].join();
+                    }
+
+
+                    Thread[] threadsForLoad = new Thread[10];
+
+                    int number = all.size()/10;
+
+                    for(int i = 0; i < 10; i++) {
+
+                        publishProgress(50+i*10);
+
+                        List<EntryAbstr> list = new ArrayList<>(all);
+                        final Set<EntryAbstr> subSet = new LinkedHashSet<>(list.subList(number * i, number * (i + 1)));
+
+                        threadsForLoad[i] = new Thread(new Runnable() {
+                            public void run() {
+                                createTreeSets(subSet);
+                            }
+                        });
+                        threadsForLoad[i].start();
+                        threadsForLoad[i].join();
+                    }
+
+                    Log.d("TOTAL jap ", allJapToShow.size() + "");
+                    Log.d("TOTAL eng ", allTranslToShow.size() + "");
+                    allTranslToShow = new ArrayList(temp);
+
+                    long endTime= System.nanoTime();
+                    Log.d("Load time","time for loading "+(endTime-startTime)+" nanoseconds.");
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
+
+        //Update the progress
+        @Override
+        protected void onProgressUpdate(Integer... values) {
+            //set the current progress of the progress dialog
+            progressDialog.setProgress(values[0]);
+        }
+
+        @Override
+        protected void onPostExecute(Void result) {
+            showAll();
+            progressDialog.dismiss();
         }
     }
 }

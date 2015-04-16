@@ -1,8 +1,6 @@
 package ua.hneu.languagetrainer.pages.dictionary;
 
 import android.annotation.SuppressLint;
-import android.app.ActionBar;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
@@ -12,9 +10,7 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
-import android.util.Log;
 import android.view.LayoutInflater;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +33,10 @@ import ua.hneu.languagetrainer.model.vocabulary.VocabularyEntry;
 import ua.hneu.languagetrainer.pages.SettingsActivity;
 
 public class EntryDictionaryDetail extends FragmentActivity {
+    public static VocabularyEntry vocEntry;
+    public static GrammarRule rule;
+    public static Giongo giongo;
+    public static CounterWord cw;
     //vocabulary fragment
     static TextView vocWordTextView;
     static TextView vocTranscriptionTextView;
@@ -47,8 +47,6 @@ public class EntryDictionaryDetail extends FragmentActivity {
     static ListView vocExamplesListView;
     static ArrayList<ExampleAbstr> vocExamples;
     static ExamplesListViewAdapter vocAdapter1;
-    public static VocabularyEntry vocEntry;
-
     //grammar fragment
     static TextView ruleTextView;
     static TextView descriptionTextView;
@@ -56,16 +54,12 @@ public class EntryDictionaryDetail extends FragmentActivity {
     static TextView levelTv;
     static ListView grammarExamplesListView;
     static ExamplesListViewAdapter grammarAdapter;
-    public static GrammarRule rule;
-
     //giongo fragment
     static TextView giongoTextView;
     static TextView translationTextView;
     static ListView giongoExamplesListView;
     static ArrayList<ExampleAbstr> giongoExamples;
     static ExamplesListViewAdapter giongoAdapter;
-    public static Giongo giongo;
-
     //counter words fragment
     static TextView cwWordTextView;
     static TextView cwHiraganaTextView;
@@ -75,8 +69,6 @@ public class EntryDictionaryDetail extends FragmentActivity {
     static ExamplesListViewAdapter cwAdapter;
     static ArrayList<ExampleAbstr> cwExamples;
     static ExamplesListViewAdapter cwAdapter1;
-    public static CounterWord cw;
-
     static Button vocButton;
     static Button cwButton;
 

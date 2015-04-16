@@ -165,16 +165,14 @@ public class GrammarRule extends EntryAbstr implements ExampleInterface, Parcela
     public ArrayList<String> getSplittedDescriptions() {
         ArrayList<String> d = new ArrayList<String>();
         if (App.lang == Languages.ENG){
-            descEng=descEng.replaceAll("\\((.*?)\\)","");
-            String[] s = descEng.split("[;,./]");
+            //descEng=descEng.replaceAll("\\((.*?)\\)","");
+            String[] s = descEng.replaceAll("\\((.*?)\\)","").split("[;,./]");
             for(String ss : s) {
                 ss=ss.toLowerCase();
-                ss = ss.replaceAll("\\[(.*?)\\]", "");
-                ss=ss.trim();
-                ss = ss.replaceAll("^((an|a|the|to)(\\s))+", "");
-                ss = ss.replaceAll("^((be|become|being)(\\s))+", "");
+                ss = ss.replaceAll("\\[(.*?)\\]", "").trim();
+                ss = ss.replaceAll("^((an|a|the|to)(\\s+))+", "");
+                ss = ss.replaceAll("^((be|become|being)(\\s+))+", "");
                 ss=ss.replaceAll("[?.!。]+$","");
-                ss=ss.trim();
                 if(!ss.isEmpty())d.add(ss);
             }
         }

@@ -1,38 +1,29 @@
 package ua.hneu.languagetrainer.pages.dictionary;
 
 import android.annotation.SuppressLint;
-import android.app.ActionBar;
 import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
-import java.util.List;
+
 import ua.hneu.edu.languagetrainer.R;
 import ua.hneu.languagetrainer.App;
 import ua.hneu.languagetrainer.ExamplesListViewAdapter;
 import ua.hneu.languagetrainer.LearningStatistics;
 import ua.hneu.languagetrainer.TextToVoiceMediaPlayer;
 import ua.hneu.languagetrainer.model.other.Giongo;
-import ua.hneu.languagetrainer.model.vocabulary.VocabularyEntry;
 import ua.hneu.languagetrainer.pages.SettingsActivity;
-import ua.hneu.languagetrainer.pages.giongo.GiongoTestActivity;
 
 public class GiongoEntryDictionaryDetail extends Activity {
-    ExamplesListViewAdapter adapter;
     public static Giongo curWord;
     public static int idx = -1;
+    ExamplesListViewAdapter adapter;
     TextView giongoTextView;
     TextView translationTextView;
     ListView giongoExamplesListView;
@@ -46,7 +37,7 @@ public class GiongoEntryDictionaryDetail extends Activity {
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            curWord=(Giongo)extras.get("entry");
+            curWord = (Giongo) extras.get("entry");
         }
 
 
@@ -72,6 +63,7 @@ public class GiongoEntryDictionaryDetail extends Activity {
         getMenuInflater().inflate(R.menu.settings, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
@@ -95,10 +87,9 @@ public class GiongoEntryDictionaryDetail extends Activity {
         translationTextView.setText(currentWord.translationsToString());
 
         // set color of entry
-        if(App.isColored) {
+        if (App.isColored) {
             giongoTextView.setTextColor(currentWord.getIntColor());
-        }
-        else
+        } else
             giongoTextView.setTextColor(Color.WHITE);
 
         // and write information to db
@@ -121,6 +112,6 @@ public class GiongoEntryDictionaryDetail extends Activity {
         TextView textPart3 = (TextView) v1.findViewById(R.id.textPart3);
         phrase = (String) textPart1.getText() + textPart2.getText()
                 + textPart3.getText();
-        twmp.loadAndPlay(phrase,   App.speechVolume,App.speechSpeed);
+        twmp.loadAndPlay(phrase, App.speechVolume, App.speechSpeed);
     }
 }

@@ -160,18 +160,16 @@ public class MainActivity extends FragmentActivity implements
     }
 	
 	private class LoadViewTask extends AsyncTask<Void, Integer, Void>  
-	    {  
+	    {
 	        //Before running code in separate thread  
-	        @Override  
+	        @Override
 	        protected void onPreExecute()  
-	        {  
-	            //Create a new progress dialog  
-	            progressDialog = new ProgressDialog(MainActivity.this);  
-	            //Set the progress dialog to display a horizontal progress bar  
-	            progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);  
-	            //Set the dialog title to 'Loading...'  
+	        {
+	            //Create a new progress dialog
+	            progressDialog = new ProgressDialog(MainActivity.this);
+	            //Set the dialog title to 'Loading...'
 	            progressDialog.setTitle(getResources().getString(R.string.loading));
-	            //Set the dialog message to 'Loading application View, please wait...'  
+	            //Set the dialog message to 'Loading application View, please wait...'
 	            progressDialog = ProgressDialog.show(MainActivity.this,getResources().getString(R.string.loading),
                         getResources().getString(R.string.loading_wait), false, false);
 	        }

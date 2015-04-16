@@ -366,28 +366,17 @@ public class VocabularyService {
             HashSet<String> translations2 = new HashSet<String>();
 
             for(String s:translationsStr.split(";")){
-                s = s.trim();
-                s = s.replaceAll("\\(\\d\\)", "");
-                s = s.replaceAll("^(a||the||to)\\s", "");
-                s = s.replaceAll("^(be||become||being)\\s", "");
-                s = s.replaceAll("\\((.*?)\\)", "");
-                s = s.replaceAll("\\d(\\.\\s*)\\w", "");
-                s = s.trim();
-                translations1.add(s);
+               // s = s.trim().replaceAll("\\(\\d\\)", "").replaceAll("^(a||the||to||be||become||being)\\s", "").replaceAll("\\((.*?)\\)", "").replaceAll("\\d(\\.\\s*)\\w", "");
+                translations1.add(s.replaceAll("^\\s*(a||the||to||be||become||being)\\s+", "").replaceAll("\\((.*?)\\)", "").trim());
             }
             for(String s:translationsStrRus.split(";")){
-                s = s.trim();
-                s = s.replaceAll("\\(\\d\\)", "");
-                s = s.replaceAll("\\d(\\.\\s*)\\w", "");
-                s = s.trim();
-                translations2.add(s);
+                s = s.replaceAll("\\(\\d\\)", "").replaceAll("\\d(\\.\\s*)\\w", "");
+                translations2.add(s.trim());
             }
 
-            VocabularyEntry de = new VocabularyEntry(id, kanji, level1,
-                    transcription, romaji, new ArrayList<String>(translations1), new ArrayList<String>(translations1), translationsStr, translationsStrRus,
-                    percentage, lastview, showntimes, color);
-
-            wd.add(de);
+            wd.add( new VocabularyEntry(id, kanji, level1,
+                    transcription, romaji, new ArrayList<String>(translations1), new ArrayList<String>(translations2), translationsStr, translationsStrRus,
+                    percentage, lastview, showntimes, color));
         }
         c.close();
         return wd;

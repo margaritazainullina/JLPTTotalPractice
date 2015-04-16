@@ -1,9 +1,14 @@
 package ua.hneu.languagetrainer;
 
-import java.io.*;
-import java.net.*;
-import java.util.*;
 import org.apache.http.conn.util.InetAddressUtils;
+
+import java.io.BufferedInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.FileInputStream;
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.util.Collections;
+import java.util.List;
 
 public class Utils {
 

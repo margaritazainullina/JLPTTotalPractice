@@ -1,74 +1,31 @@
 package ua.hneu.languagetrainer.pages.dictionary;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.BufferedReader;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URI;
-import java.net.URL;
-import java.net.URLConnection;
-import java.net.URLDecoder;
-import java.net.URLEncoder;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
-import ua.hneu.edu.languagetrainer.R;
-import com.google.android.gms.ads.*;
-import ua.hneu.languagetrainer.App;
-import ua.hneu.languagetrainer.ExamplesListViewAdapter;
-import ua.hneu.languagetrainer.LearningStatistics;
-import ua.hneu.languagetrainer.TextToVoiceMediaPlayer;
-import ua.hneu.languagetrainer.Utils;
-import ua.hneu.languagetrainer.model.ExampleAbstr;
-import ua.hneu.languagetrainer.model.grammar.GrammarExample;
-import ua.hneu.languagetrainer.model.other.GiongoExample;
-import ua.hneu.languagetrainer.model.vocabulary.VocabularyEntry;
-import ua.hneu.languagetrainer.pages.SettingsActivity;
-
 import android.annotation.SuppressLint;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.graphics.Typeface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Debug;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.NavUtils;
-import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.ListView;
-import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.view.MotionEvent;
-import 	android.support.v4.app.FragmentActivity;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import java.util.ArrayList;
+
+import ua.hneu.edu.languagetrainer.R;
+import ua.hneu.languagetrainer.App;
+import ua.hneu.languagetrainer.ExamplesListViewAdapter;
+import ua.hneu.languagetrainer.LearningStatistics;
+import ua.hneu.languagetrainer.TextToVoiceMediaPlayer;
+import ua.hneu.languagetrainer.model.ExampleAbstr;
+import ua.hneu.languagetrainer.model.vocabulary.VocabularyEntry;
+import ua.hneu.languagetrainer.pages.SettingsActivity;
 
 public class VocabularyEntryDictionaryDetail extends Activity {
     public static VocabularyEntry entry;
@@ -92,7 +49,7 @@ public class VocabularyEntryDictionaryDetail extends Activity {
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            entry=(VocabularyEntry)extras.get("entry");
+            entry = (VocabularyEntry) extras.get("entry");
         }
 
         showEntry();
@@ -121,7 +78,7 @@ public class VocabularyEntryDictionaryDetail extends Activity {
     }
 
     private void speakOut(final VocabularyEntry entry) {
-        twmp.loadAndPlay(entry.getTranscription(),  App.speechVolume,App.speechSpeed);
+        twmp.loadAndPlay(entry.getTranscription(), App.speechVolume, App.speechSpeed);
     }
 
     public void onPlayClick(View v) {
@@ -146,16 +103,16 @@ public class VocabularyEntryDictionaryDetail extends Activity {
         examplesListView = (ListView) findViewById(R.id.examplesListView);
         levelTv = (TextView) findViewById(R.id.levelTv);
 
-        levelTv.setText(getResources().getString(R.string.jlpt_level)+" "+entry.getLevel());
+        levelTv.setText(getResources().getString(R.string.jlpt_level) + " " + entry.getLevel());
 
         // set word info to the texViews
         wordTextView.setText(entry.getKanji());
-        transcriptionTextView.setText("["+entry.getTranscription()+"]");
+        transcriptionTextView.setText("[" + entry.getTranscription() + "]");
         if (App.isShowRomaji)
-            romajiTextView.setText("- ["+entry.getRomaji()+"]");
+            romajiTextView.setText("- [" + entry.getRomaji() + "]");
         translationTextView.setText(entry.translationsToString());
 
-        if(App.isAutoplayed&&isNetworkAvailable()) {
+        if (App.isAutoplayed && isNetworkAvailable()) {
             try {
                 speakOut(entry);
             } catch (Exception e) {
@@ -163,23 +120,23 @@ public class VocabularyEntryDictionaryDetail extends Activity {
             }
         }
 
-        examples = new  ArrayList<ExampleAbstr>();
+        examples = new ArrayList<ExampleAbstr>();
         examples.addAll(App.gres.getAllExamplesWithWord(entry.getKanjiOrHiragana(), App.cr));
         examples.addAll(App.ges.getAllExamplesWithWord(entry.getKanjiOrHiragana(), App.cr));
 
         ArrayList<String> text = new ArrayList<String>();
         ArrayList<String> romaji = new ArrayList<String>();
         ArrayList<String> translation = new ArrayList<String>();
-            for (ExampleAbstr ge : examples) {
-                text.add(ge.getText());
-                romaji.add(ge.getRomaji());
-                if (App.lang == App.Languages.ENG)
-                    translation.add(ge.getTranslationEng());
-                else
-                    translation.add(ge.getTranslationRus());
-            }
+        for (ExampleAbstr ge : examples) {
+            text.add(ge.getText());
+            romaji.add(ge.getRomaji());
+            if (App.lang == App.Languages.ENG)
+                translation.add(ge.getTranslationEng());
+            else
+                translation.add(ge.getTranslationRus());
+        }
 
-        adapter1 = new ExamplesListViewAdapter(this,text,romaji,translation, 0);
+        adapter1 = new ExamplesListViewAdapter(this, text, romaji, translation, 0);
         examplesListView.setAdapter(adapter1);
     }
 
