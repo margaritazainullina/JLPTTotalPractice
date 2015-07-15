@@ -365,14 +365,16 @@ public class VocabularyService {
             HashSet<String> translations1 = new HashSet<String>();
             HashSet<String> translations2 = new HashSet<String>();
 
-            for(String s:translationsStr.split(";")){
+
+
+            /*for(String s:translationsStr.split(";")){
                // s = s.trim().replaceAll("\\(\\d\\)", "").replaceAll("^(a||the||to||be||become||being)\\s", "").replaceAll("\\((.*?)\\)", "").replaceAll("\\d(\\.\\s*)\\w", "");
                 translations1.add(s.replaceAll("^\\s*(a||the||to||be||become||being)\\s+", "").replaceAll("\\((.*?)\\)", "").trim());
             }
             for(String s:translationsStrRus.split(";")){
                 s = s.replaceAll("\\(\\d\\)", "").replaceAll("\\d(\\.\\s*)\\w", "");
                 translations2.add(s.trim());
-            }
+            }*/
 
             wd.add( new VocabularyEntry(id, kanji, level1,
                     transcription, romaji, new ArrayList<String>(translations1), new ArrayList<String>(translations2), translationsStr, translationsStrRus,

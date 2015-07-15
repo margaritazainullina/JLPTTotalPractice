@@ -1,5 +1,6 @@
 package ua.hneu.languagetrainer.model.other;
 
+import java.io.Serializable;
 import java.net.InetSocketAddress;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -21,7 +22,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
 
-public class Giongo extends EntryAbstr implements ExampleInterface, Parcelable {
+public class Giongo extends EntryAbstr implements ExampleInterface, Parcelable, Serializable {
     private String word;
     private String romaji;
     private String translEng;

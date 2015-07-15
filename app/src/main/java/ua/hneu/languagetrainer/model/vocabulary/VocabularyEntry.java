@@ -1,5 +1,6 @@
 package ua.hneu.languagetrainer.model.vocabulary;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ import ua.hneu.languagetrainer.App;
 import ua.hneu.languagetrainer.App.Languages;
 import ua.hneu.languagetrainer.model.EntryAbstr;
 
-public class VocabularyEntry extends EntryAbstr implements Parcelable{
+public class VocabularyEntry extends EntryAbstr implements Parcelable, Serializable {
 
 	private int id;
 	private String kanji;

@@ -1,9 +1,17 @@
 package ua.hneu.languagetrainer;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 import java.util.Locale;
+import java.util.Set;
+import java.util.TreeSet;
 
 import ua.hneu.edu.languagetrainer.R;
 import ua.hneu.languagetrainer.masterdetailflow.MenuElements;
+import ua.hneu.languagetrainer.model.EntryAbstr;
 import ua.hneu.languagetrainer.model.User;
 import ua.hneu.languagetrainer.model.grammar.GrammarDictionary;
 import ua.hneu.languagetrainer.model.other.CounterWordsDictionary;
@@ -17,6 +25,7 @@ import ua.hneu.languagetrainer.passing.TestPassing;
 import ua.hneu.languagetrainer.passing.VocabularyPassing;
 import ua.hneu.languagetrainer.service.AnswerService;
 import ua.hneu.languagetrainer.service.CounterWordsService;
+import ua.hneu.languagetrainer.service.DictionaryService;
 import ua.hneu.languagetrainer.service.GiongoExampleService;
 import ua.hneu.languagetrainer.service.GiongoService;
 import ua.hneu.languagetrainer.service.GrammarExampleService;
@@ -54,6 +63,8 @@ public class App extends Application {
 
 	public static String testName;
 
+    public static  Set<EntryAbstr> all;
+
 	// user info
 	public static User userInfo;
 	// service for access to db
@@ -79,6 +90,7 @@ public class App extends Application {
 	public static GrammarService grs = new GrammarService();
 	public static GrammarExampleService gres = new GrammarExampleService();
 	public static CounterWordsService cws = new CounterWordsService();
+    public static DictionaryService ds = new DictionaryService();
 	public static Context context;
 	public static Languages lang;
 	public static boolean isShowRomaji;
@@ -132,7 +144,7 @@ public class App extends Application {
 
         // creating and inserting into whole database
         // vocabulary
-        /*vs.dropTable();
+      /*  vs.dropTable();
         vs.createTable();
         vs.bulkInsertFromCSV("vocabulary/N5.txt", getAssets(), 5,
                 getContentResolver());
@@ -152,7 +164,7 @@ public class App extends Application {
 
          // test
 
-        ts.dropTable();
+         /*ts.dropTable();
         qs.dropTable();
         as.dropTable();
         ts.createTable();
@@ -163,7 +175,7 @@ public class App extends Application {
         ts.insertFromXml("tests/level_def_test.xml",
                 getAssets(), getContentResolver());
         Log.d("App", "loaded tests/level_def_test.xml");
-       /* ts.insertFromXml("tests/mock_test_n1_#1.xml", getAssets(),
+       ts.insertFromXml("tests/mock_test_n1_#1.xml", getAssets(),
                 getContentResolver());
         Log.d("App", "loaded tests/mock_test_n1_#1.xml");
         ts.insertFromXml("tests/mock_test_n1_#2.xml",
@@ -232,8 +244,8 @@ public class App extends Application {
         ts.insertFromXml("tests/mock_test_n5_#5.xml",
                 getAssets(), getContentResolver());
         Log.d("App", "loaded tests/mock_test_n5_#5.xml");
-
-        GiongoService gs = new GiongoService();
+*/
+     /*   GiongoService gs = new GiongoService();
         gs.dropTable();
         gs.createTable();
         ges.dropTable();
@@ -281,7 +293,12 @@ public class App extends Application {
 
         us.dropTable();
         Log.d("App", "all users deleted");
-        us.createTable();*/
+        us.createTable();
+        ds.dropTable();
+        ds.createTable();
+        ds.bulkInsertFromCSV("dictionary_lists/eng.txt",  getAssets(),"ENG",  getContentResolver());
+        ds.bulkInsertFromCSV("dictionary_lists/rus.txt",  getAssets(),"RUS",  getContentResolver());
+*/
 
         // if it isn't first time when launching app - user exists in db
         userInfo = us.getUserWithCurrentLevel(App.cr);
@@ -310,17 +327,62 @@ public class App extends Application {
         titleFontItalic = Typeface.createFromAsset(context.getAssets(),
                 "fonts/mvboli.ttf");
 
-
+if(userInfo==null )speechSpeed=0.85f;
+        else{
         switch(userInfo.getLevel()){
             case(1):speechSpeed=0.98f; break;
             case(2):speechSpeed=0.95f; break;
             case(3):speechSpeed=0.92f; break;
             case(4):speechSpeed=0.89f; break;
             case(5):speechSpeed=0.85f; break;
-        }
+        }}
+
+        //Dictionary: load all dictionary to seralized file at first loading
+        //if file doesn't exist
+        File f = new File("dictionary.dat");
+        if(f.exists()&&f.length()!=0);
+        loadDicionaryAndSaveToFile();
     }
 
-	public static void updateUserData() {
+    private void loadDicionaryAndSaveToFile() {
+        all = new TreeSet<>();
+        loadVocabulary();
+        loadGrammar();
+        loadGiongo();
+        loadCV();
+
+        FileOutputStream fos = null;
+        try {
+            fos = context.openFileOutput("dictionary.dat", Context.MODE_PRIVATE);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        try {
+            ObjectOutputStream os = new ObjectOutputStream(fos);
+            os.writeObject(all);
+            os.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            fos.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+    }
+    public static void loadVocabulary() {
+        all.addAll(VocabularyService.allEntriesDictionary(App.cr).getEntries());
+    }
+
+    public static void loadGrammar() {
+        all.addAll(GrammarService.allEntriesDictionary(App.cr).getEntries());
+    }
+
+    public static void loadGiongo() { all.addAll(GiongoService.getAllGiongo(App.cr).getEntries());}
+    public static void loadCV() { all.addAll(CounterWordsService.getCounterwordsBySection("", App.cr).getEntries());}
+
+    public static void updateUserData() {
 		us.update(userInfo, cr);
 	}
 

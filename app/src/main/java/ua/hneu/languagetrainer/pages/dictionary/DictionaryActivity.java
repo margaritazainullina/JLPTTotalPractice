@@ -6,6 +6,7 @@ import android.app.SearchManager;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -24,49 +25,27 @@ import ua.hneu.edu.languagetrainer.R;
 import ua.hneu.languagetrainer.App;
 import ua.hneu.languagetrainer.DictionaryListViewAdapter;
 import ua.hneu.languagetrainer.model.EntryAbstr;
-import ua.hneu.languagetrainer.model.grammar.GrammarDictionary;
 import ua.hneu.languagetrainer.model.grammar.GrammarRule;
 import ua.hneu.languagetrainer.model.other.CounterWord;
 import ua.hneu.languagetrainer.model.other.Giongo;
-import ua.hneu.languagetrainer.model.vocabulary.VocabularyDictionary;
 import ua.hneu.languagetrainer.model.vocabulary.VocabularyEntry;
+import ua.hneu.languagetrainer.service.DictionaryService;
 import ua.hneu.languagetrainer.service.GrammarService;
 import ua.hneu.languagetrainer.service.VocabularyService;
 
 public class DictionaryActivity extends ListActivity {
     DictionaryListViewAdapter adapter1;
-
-    //entries to show in list
-    public static ArrayList<String> entriesToShow = new ArrayList<>();
-    public static  ArrayList<String> allJapToShow = new ArrayList<>();
-    public static ArrayList<String> allTranslToShow = new ArrayList<>();
-    public static TreeSet<String> temp = new TreeSet<>();
-
-    //all real entries
-    public static Set<EntryAbstr> all = new TreeSet<>();
-
     boolean fromJapanese = true;
+    //entries to show in list
+    public static TreeSet<EntryAbstr> all = new TreeSet<>(EntryAbstr.DictionaryEntryComparator.ALPH_JAP);
+    public static TreeSet<String> allJap = new TreeSet<>(String.CASE_INSENSITIVE_ORDER);
+    public static TreeSet<String> allTransl = new TreeSet<>(String.CASE_INSENSITIVE_ORDER);
+    public static List<String> entriesToShow = new ArrayList<>();
+    DictionaryService ds = new DictionaryService();
+
     int counter = 0;
     //A ProgressDialog object
     private ProgressDialog progressDialog;
-
-    static void displayDuplicate(Object[] ar) {
-        boolean[] done = new boolean[ar.length];
-        for (int i = 0; i < ar.length; i++) {
-            if (done[i])
-                continue;
-            int nb = 0;
-            for (int j = i; j < ar.length; j++) {
-                if (done[j])
-                    continue;
-                if (ar[j].equals(ar[i])) {
-                    done[j] = true;
-                    nb++;
-                }
-            }
-            System.out.println(ar[i] + " occurs " + nb + " times");
-        }
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,28 +54,26 @@ public class DictionaryActivity extends ListActivity {
         handleIntent(getIntent());
 
         new LoadViewTask().execute();
-        /*long startTime= System.nanoTime();
+        long startTime = System.nanoTime();
 
-        loadVocabulary();
-        loadGrammar();
-        loadGiongo();
-        loadCV();
+        all.addAll(VocabularyService.allEntriesDictionary(App.cr).getEntries());
+        all.addAll(GrammarService.allEntriesDictionary(App.cr).getEntries());
+        all.addAll(App.allGiongoDictionary.getEntries());
+        all.addAll(App.allCounterWordsDictionary.getEntries());
 
-        createTreeSets(all);
-        Log.d("TOTAL jap ", allJapToShow.size() + "");
-        Log.d("TOTAL eng ", allTranslToShow.size() + "");
-        allTranslToShow = new ArrayList(temp);
+        allJap.addAll(VocabularyService.allEntriesDictionary(App.cr).getAllKanjiOrHiragana());
+        allJap.addAll(GrammarService.allEntriesDictionary(App.cr).getAllRules());
+        allJap.addAll(App.allGiongoDictionary.getAllGiongo());
+        allJap.addAll(App.allCounterWordsDictionary.getAllWords());
 
-        long endTime= System.nanoTime();
-        Log.d("Load time","time for loading "+(endTime-startTime)+" nanoseconds.");*/
-
-        //TODO: remove, just for test
-        /*for (int i = 0; i < 10; i++) {
-            all.add(App.allVocabularyDictionary.get(i));
-            all.add(App.allGrammarDictionary.get(i));
-            all.add(App.allGiongoDictionary.get(i));
-            all.add(App.allCounterWordsDictionary.get(i));
-        }*/
+        Log.d("TOTAL jap ", allJap.size() + "");
+        if (App.lang == App.Languages.ENG)
+            allTransl = ds.getListByLang("ENG", App.cr);
+        if (App.lang == App.Languages.RUS)
+            allTransl = ds.getListByLang("RUS", App.cr);
+        Log.d("TOTAL translation ", allTransl.size() + "");
+        long endTime = System.nanoTime();
+        Log.d("Load time", "time for loading " + (endTime - startTime) + " nanoseconds.");
 
         showAll();
     }
@@ -158,19 +135,23 @@ public class DictionaryActivity extends ListActivity {
             } else {
                 if (ea instanceof VocabularyEntry) {
                     VocabularyEntry ve = (VocabularyEntry) ea;
-                    if (ve.getTranslations().contains(search)) result.add(ea);
+                    if (ve.translationsToString().contains(search)) result.add(ea);
+                    Log.d("VocabularyEntry", ve.translationsToString());
                 }
                 if (ea instanceof GrammarRule) {
                     GrammarRule ve = (GrammarRule) ea;
-                    if (ve.getDescription().contains(search)) result.add(ea);
+                    if (ve.translationsToString().contains(search)) result.add(ea);
+                    Log.d("GrammarRule", ve.translationsToString());
                 }
                 if (ea instanceof Giongo) {
                     Giongo ve = (Giongo) ea;
-                    if (ve.getAllTranslations().contains(search)) result.add(ea);
+                    if (ve.translationsToString().contains(search)) result.add(ea);
+                    Log.d("Giongo", ve.translationsToString());
                 }
                 if (ea instanceof CounterWord) {
                     CounterWord ve = (CounterWord) ea;
-                    if (ve.getTranslation().contains(search)) result.add(ea);
+                    if (ve.translationsToString().contains(search)) result.add(ea);
+                    Log.d("CounterWord", ve.translationsToString());
                 }
             }
         }
@@ -182,22 +163,22 @@ public class DictionaryActivity extends ListActivity {
 
             if (ea instanceof VocabularyEntry) {
                 VocabularyEntry ve = (VocabularyEntry) ea;
-                intent.putExtra("entry1", ve);
+                intent.putExtra("entry1", (Parcelable) ve);
                 Log.d("VocabularyEntryDictionaryDetail ", ve.getKanji() + " " + ve.getRomaji() +
                         " " + ve.getLevel() + " " + ve.getTranslationsEng() + " " + ve.getTranslationsRus() + " " + ve.getLastview() + " "
                         + ve.getLearnedPercentage() + " " + ve.getShownTimes() + " ");
             }
             if (ea instanceof GrammarRule) {
                 GrammarRule gr = (GrammarRule) ea;
-                intent.putExtra("entry2", gr);
+                intent.putExtra("entry2", (Parcelable) gr);
             }
             if (ea instanceof Giongo) {
                 Giongo g = (Giongo) ea;
-                intent.putExtra("entry3", g);
+                intent.putExtra("entry3", (Parcelable) g);
             }
             if (ea instanceof CounterWord) {
                 CounterWord cw = (CounterWord) ea;
-                intent.putExtra("entry4", cw);
+                intent.putExtra("entry4", (Parcelable) cw);
             }
         }
         startActivity(intent);
@@ -206,8 +187,8 @@ public class DictionaryActivity extends ListActivity {
     private void search(String query) {
         entriesToShow.clear();
         Log.d("query", query);
+        if (fromJapanese) {
         for (EntryAbstr entry : all) {
-            if (fromJapanese) {
                 if (entry instanceof VocabularyEntry) {
                     VocabularyEntry ve = (VocabularyEntry) entry;
                     if ((ve.getKanji().toLowerCase()).startsWith(query.toLowerCase())
@@ -231,22 +212,22 @@ public class DictionaryActivity extends ListActivity {
                             || (ve.getWord().toLowerCase()).startsWith(query.toLowerCase()))
                         entriesToShow.add(ve.toString());
                 }
-            } else {
-                if (entry.translationsToString().startsWith(query)) {
-                    entriesToShow.add(entry.translationsToString());
-                    Log.d("found", entry.toString());
+            }} else {
+                for (String transl:allTransl) {
+                    if(transl.startsWith(query))
+                    entriesToShow.add(transl);
+                    Log.d("found", transl);
                 }
-            }
-        }
 
+        }
         adapter1 = new DictionaryListViewAdapter(this, new ArrayList<String>(entriesToShow), fromJapanese);
         this.setListAdapter(adapter1);
     }
 
     private void showAll() {
         entriesToShow.clear();
-        if (fromJapanese) entriesToShow.addAll(allJapToShow);
-        else entriesToShow.addAll(allTranslToShow);
+        if (fromJapanese) entriesToShow.addAll(allJap);
+        else entriesToShow.addAll(allTransl);
         adapter1 = new DictionaryListViewAdapter(this, new ArrayList<String>(entriesToShow), fromJapanese);
         this.setListAdapter(adapter1);
     }
@@ -263,47 +244,8 @@ public class DictionaryActivity extends ListActivity {
         }
     }
 
-    public static void loadVocabulary() {
-        VocabularyDictionary vd = VocabularyService.allEntriesDictionary(App.cr);
-        all.addAll(vd.getEntries());
-    }
-
-    public static void loadGrammar() {
-        GrammarDictionary gd = GrammarService.allEntriesDictionary(App.cr);
-        all.addAll(gd.getEntries());
-    }
-
-    public static void loadGiongo() { all.addAll(App.allGiongoDictionary.getEntries());}
-    public static void loadCV() { all.addAll(App.allCounterWordsDictionary.getEntries());}
-
-    public static void createTreeSets(Set<EntryAbstr> all1)
-    {
-        for (EntryAbstr ea : all1) {
-            if (ea instanceof VocabularyEntry) {
-                VocabularyEntry ve = (VocabularyEntry) ea;
-                temp.addAll(ve.getTranslations());
-                allJapToShow.add(ve.getKanjiOrHiragana());
-            }
-            if (ea instanceof GrammarRule) {
-                GrammarRule ve = (GrammarRule) ea;
-                temp.addAll(ve.getSplittedDescriptions());
-                allJapToShow.add(ea.toString());
-            }
-            if (ea instanceof Giongo) {
-                Giongo ve = (Giongo) ea;
-                temp.addAll(ve.getSplittedDescriptions());
-                allJapToShow.add(ea.toString());
-            }
-            if (ea instanceof CounterWord) {
-                CounterWord ve = (CounterWord) ea;
-                temp.addAll(ve.getSplittedDescriptions());
-                allJapToShow.addAll(ve.getSplittedWord());
-            }
-        }
-    }
 
     private class LoadViewTask extends AsyncTask<Void, Integer, Void> {
-
         //Before running code in separate thread
         @Override
         protected void onPreExecute() { //Create a new progress dialog
@@ -319,15 +261,15 @@ public class DictionaryActivity extends ListActivity {
         @Override
         protected Void doInBackground(Void... params) {
             try {
-                //load dictionary to show asynchronously
+               /* //load dictionary to show asynchronously
                 synchronized (this) {
-                    long startTime= System.nanoTime();
+                    long startTime = System.nanoTime();
                     publishProgress(0);
 
                     //multithreading
                     Thread[] threads = new Thread[4];
 
-                    threads[0]= new Thread(new Runnable() {
+                    threads[0] = new Thread(new Runnable() {
                         public void run() {
                             DictionaryActivity.loadVocabulary();
                         }
@@ -351,22 +293,22 @@ public class DictionaryActivity extends ListActivity {
                         }
                     });
 
-                    for(int i = 0; i < 4; i++)
+                    for (int i = 0; i < 4; i++)
                         threads[i].start();
 
-                    for(int i = 0; i < 4; i++){
-                        publishProgress(25*i);
+                    for (int i = 0; i < 4; i++) {
+                        publishProgress(25 * i);
                         threads[i].join();
                     }
 
 
                     Thread[] threadsForLoad = new Thread[10];
 
-                    int number = all.size()/10;
+                    int number = all.size() / 10;
 
-                    for(int i = 0; i < 10; i++) {
+                    for (int i = 0; i < 10; i++) {
 
-                        publishProgress(50+i*10);
+                        publishProgress(50 + i * 10);
 
                         List<EntryAbstr> list = new ArrayList<>(all);
                         final Set<EntryAbstr> subSet = new LinkedHashSet<>(list.subList(number * i, number * (i + 1)));
@@ -384,9 +326,9 @@ public class DictionaryActivity extends ListActivity {
                     Log.d("TOTAL eng ", allTranslToShow.size() + "");
                     allTranslToShow = new ArrayList(temp);
 
-                    long endTime= System.nanoTime();
-                    Log.d("Load time","time for loading "+(endTime-startTime)+" nanoseconds.");
-                }
+                    long endTime = System.nanoTime();
+                    Log.d("Load time", "time for loading " + (endTime - startTime) + " nanoseconds.");
+                }*/
             } catch (Exception e) {
                 e.printStackTrace();
             }

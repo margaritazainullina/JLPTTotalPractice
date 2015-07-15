@@ -61,6 +61,10 @@
             android:name="ua.hneu.languagetrainer.db.dao.GrammarExamplesDAO"
             android:authorities="ua.edu.hneu.languagetrainer.db.grammarexamplesprovider" >
         </provider>
+        <provider
+        android:name="ua.hneu.languagetrainer.db.dao.DictionaryDAO"
+        android:authorities="ua.edu.hneu.languagetrainer.db.dictionaryprovider" >
+    </provider>
 
         <activity
             android:name="ua.hneu.languagetrainer.pages.MainActivity"

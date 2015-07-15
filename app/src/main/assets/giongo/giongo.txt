@@ -13,7 +13,7 @@
  彼は、	いやいや	すぐ近くのホテルで飲むことに同意した	kare ha, iyaiya sugu chikaku no hoteru de nomu koto ni doui shi ta	He grudgingly agreed to have a drink in a hotel close by 	Он неохотно согласился выпить в отеле рядом
 
 いらいら	iraira 	annoying	Раздражающий, расстраиваивающий
-彼は気が	いらいら	していた	kare wa ki ga iraira shi te i ta.	He was  on edge.	Он был на грани.
+彼は気が	いらいら	していた	kare wa ki ga iraira shi te i ta.	He was on edge.	Он был на грани.
 
 うきうき	ukiuki	cheerful	Веселый, беззаботный
 彼は成功して	うきうきし	ている	kare wa seikou shi te ukiuki shi te iru.	He's heady with success.	Он был опьянен успехом.
@@ -46,7 +46,7 @@
 	ぐずぐず	迷っていないで本かおもちゃか、どっちがいいのか決めなさい	guzuguzu mayotte i nai de, hon ka omocha ka, docchi ga ii no ka kimenasai.	Stop shilly‐shallying and decide whether you want the book or the toy!	Хватит сомневаться и реши, хочешь ли ты книгу или игрушку !
 
 くらくら	kurakura 	feel dizzy	Чувствовать головокружение
-私は頭が	くらくら	する	watashi wa atama ga  guragura suru	My head whirls.	Голова кружится.
+私は頭が	くらくら	する	watashi wa atama ga guragura suru	My head whirls.	Голова кружится.
 
 くるくる	kurukuru 	round and round	Снова и снова
 葉っぱが木から	くるくる	と回りながら落ちてきた	happa ga ki kara kurukuru to mawari nagara ochi te ki ta.	Leaves spiraled down from the tree.	Листья падают с дерева кружась.
@@ -62,7 +62,7 @@
 
 ごちゃごちゃ	gochagocha 	cluttered	Суматошный
 	ごちゃごちゃ	した絵	gochagocha shi ta e 	a busy painting	Наспех сделанная картина
-狭苦しい所に	ごちゃごちゃ	住む	semakurushii tokoro ni gochagocha sumu.	live in cramped [close] quarters  	Жить в густонаселенных кварталах
+狭苦しい所に	ごちゃごちゃ	住む	semakurushii tokoro ni gochagocha sumu.	live in cramped [close] quarters 	Жить в густонаселенных кварталах
 
 こそこそ	kosokoso 	secretly	Тайно, исподтишка
 	こそこそ	せずに堂々と批判して欲しい	kosokoso se zu ni doudou to hihan shi te hoshii	Please stop whispering.	If you disagree, speak your mind clearly	Пожалуйста, прекратите говорить шепотом. Если вы не согласны, четко выразите свое мнение .

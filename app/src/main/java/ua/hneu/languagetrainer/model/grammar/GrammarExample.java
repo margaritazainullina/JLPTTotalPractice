@@ -3,9 +3,11 @@ package ua.hneu.languagetrainer.model.grammar;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.io.Serializable;
+
 import ua.hneu.languagetrainer.model.ExampleAbstr;
 
-public class GrammarExample extends ExampleAbstr implements Parcelable {
+public class GrammarExample extends ExampleAbstr implements Parcelable, Serializable {
 
     private String text;
     private String romaji;

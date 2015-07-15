@@ -3,9 +3,11 @@ package ua.hneu.languagetrainer.model.other;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.io.Serializable;
+
 import ua.hneu.languagetrainer.model.ExampleAbstr;
 
-public class GiongoExample extends ExampleAbstr  implements Parcelable {
+public class GiongoExample extends ExampleAbstr  implements Parcelable, Serializable{
     private String text;
     private String romaji;
     private String translationEng;

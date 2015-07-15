@@ -1,5 +1,6 @@
 package ua.hneu.languagetrainer.model.grammar;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
 
-public class GrammarRule extends EntryAbstr implements ExampleInterface, Parcelable{
+public class GrammarRule extends EntryAbstr implements ExampleInterface, Parcelable, Serializable{
     private String rule;
     private int level;
     private String descEng;

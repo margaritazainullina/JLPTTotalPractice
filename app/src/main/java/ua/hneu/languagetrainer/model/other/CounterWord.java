@@ -1,5 +1,6 @@
 package ua.hneu.languagetrainer.model.other;
 
+import java.io.Serializable;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 import android.util.Log;
 
-public class CounterWord extends EntryAbstr implements Parcelable {
+public class CounterWord extends EntryAbstr implements Parcelable , Serializable {
     private String sectionEng;
     private String sectionRus;
     private String word;
