@@ -8,6 +8,7 @@ import java.util.Set;
 
 import ua.hneu.languagetrainer.App;
 import ua.hneu.languagetrainer.model.DictionaryAbstr;
+import ua.hneu.languagetrainer.model.EntryAbstr;
 import ua.hneu.languagetrainer.model.grammar.GrammarDictionary;
 import ua.hneu.languagetrainer.model.grammar.GrammarRule;
 import ua.hneu.languagetrainer.service.CounterWordsService;
@@ -60,6 +61,11 @@ public class CounterWordsDictionary extends DictionaryAbstr {
         return translation;
     }
 
+    public CounterWord fetchRandom() {
+        int a = new Random().nextInt(entries.size() - 1);
+        return entries.get(a);
+    }
+
     public ArrayList<String> getAllWords() {
         ArrayList<String> words = new ArrayList<String>();
         for (CounterWord e : entries) {
@@ -69,11 +75,11 @@ public class CounterWordsDictionary extends DictionaryAbstr {
     }
 
     public ArrayList<String> getAllTranscriptions() {
-        ArrayList<String> translation = new ArrayList<String>();
+        ArrayList<String> transcription = new ArrayList<String>();
         for (CounterWord e : entries) {
-            translation.add(e.translationsToString());
+            transcription.add(e.getTranscription());
         }
-        return translation;
+        return transcription;
     }
 
     public void addEntriesToDictionaryAndGet(int size) {

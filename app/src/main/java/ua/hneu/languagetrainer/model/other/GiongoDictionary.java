@@ -1,7 +1,6 @@
 package ua.hneu.languagetrainer.model.other;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Hashtable;
 import java.util.Random;
@@ -9,12 +8,6 @@ import java.util.Set;
 
 import ua.hneu.languagetrainer.App;
 import ua.hneu.languagetrainer.model.DictionaryAbstr;
-import ua.hneu.languagetrainer.model.grammar.GrammarRule;
-import ua.hneu.languagetrainer.model.vocabulary.VocabularyEntry;
-import ua.hneu.languagetrainer.service.GiongoService;
-import ua.hneu.languagetrainer.service.GrammarService;
-
-import android.util.Log;
 
 public class GiongoDictionary extends DictionaryAbstr {
     private ArrayList<Giongo> entries = new ArrayList<Giongo>();
@@ -136,5 +129,10 @@ public class GiongoDictionary extends DictionaryAbstr {
 
     public ArrayList<String> allToString() {
         return getAllGiongo();
+    }
+
+    public Giongo fetchRandom() {
+        int a = new Random().nextInt(entries.size() - 1);
+        return entries.get(a);
     }
 }

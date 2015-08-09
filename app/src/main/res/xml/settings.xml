@@ -9,7 +9,7 @@
             android:summary="@string/lang"
             android:title="@string/ui_lang"
             android:defaultValue="en"/>
-        <CheckBoxPreference
+        <SwitchPreference
             android:title="@string/gold_version"
             android:defaultValue="false"
             android:key="@string/gold_version" />
@@ -42,11 +42,11 @@
             android:key="numOfRepetations"
             android:defaultValue="7"
             android:title="@string/num_of_repetitions" />
-        <CheckBoxPreference
+        <SwitchPreference
             android:title="@string/color_words"
             android:defaultValue="true"
             android:key="color" />
-        <CheckBoxPreference
+        <SwitchPreference
             android:title="@string/play_auto"
             android:defaultValue="true"
             android:key="autoplay"

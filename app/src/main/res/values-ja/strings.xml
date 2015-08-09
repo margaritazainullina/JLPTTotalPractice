@@ -139,5 +139,7 @@
     <string name="interstitial_ad_unit_id">ca-app-pub-3940256099942544/1033173712</string>
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="title_activity_learning_statistics">進捗の統計</string>
+    <string name="random_word">今日の単語</string>
+    <string name="show_translation">翻訳を表示します</string>
 
 </resources>

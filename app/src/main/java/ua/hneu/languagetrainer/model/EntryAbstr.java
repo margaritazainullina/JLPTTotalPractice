@@ -9,6 +9,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.Date;
+import java.util.Random;
 
 import ua.hneu.languagetrainer.model.grammar.GrammarRule;
 import ua.hneu.languagetrainer.model.other.CounterWord;
@@ -102,4 +103,5 @@ public abstract class EntryAbstr implements Comparable{
             }
         };
     }
+
 }

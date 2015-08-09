@@ -173,11 +173,6 @@ public class VocabularyDictionary extends DictionaryAbstr {
 		return entries.get(idx);
 	}
 
-	public VocabularyEntry fetchRandom() {
-		int a = new Random().nextInt(entries.size() - 1);
-		return entries.get(a);
-	}
-
 	public ArrayList<String> getAllKanjiWithReadings() {
 		ArrayList<String> readings = new ArrayList<String>();
 		for (VocabularyEntry e : entries) {
@@ -244,5 +239,10 @@ public class VocabularyDictionary extends DictionaryAbstr {
 
     public void addAll(ArrayList<VocabularyEntry> newEntries){
         entries.addAll(newEntries);
+    }
+
+    public VocabularyEntry fetchRandom() {
+        int a = new Random().nextInt(entries.size() - 1);
+        return entries.get(a);
     }
 }

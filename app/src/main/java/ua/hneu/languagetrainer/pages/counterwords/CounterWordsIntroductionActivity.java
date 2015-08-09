@@ -20,9 +20,11 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
@@ -39,7 +41,16 @@ public class CounterWordsIntroductionActivity extends FragmentActivity {
 	TextView hiraganaTextView;
 	TextView romajiTextView;
 	TextView translationTextView;
-	Button prevButton;
+    ProgressBar progressBar;
+    private static final int ACTION_TYPE_DEFAULT = 0;
+    private static final int ACTION_TYPE_UP = 1;
+    private static final int ACTION_TYPE_RIGHT = 2;
+    private static final int ACTION_TYPE_DOWN = 3;
+    private static final int ACTION_TYPE_LEFT = 4;
+    private static final int SLIDE_RANGE = 100;
+    private float mTouchStartPointX;
+    private float mTouchStartPointY;
+    private int mActionType = ACTION_TYPE_DEFAULT;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -59,18 +70,74 @@ public class CounterWordsIntroductionActivity extends FragmentActivity {
 		hiraganaTextView = (TextView) findViewById(R.id.hiraganaTextView);
 		romajiTextView = (TextView) findViewById(R.id.romajiTextView);
 		translationTextView = (TextView) findViewById(R.id.translationTextView);
+        progressBar = (ProgressBar) findViewById(R.id.intro_progress);
 
 		// increment number of
 		App.vp.incrementNumberOfPassingsInARow();
-		prevButton = (Button) findViewById(R.id.buttonPrevious);
 		// show first entry
 		curWord = App.counterWordsDictionary.get(0);
 		idx = 0;
 		showEntry(curWord);
 		wordTextView.setTypeface(App.kanjiFont, Typeface.NORMAL);
 		hiraganaTextView.setTypeface(App.kanjiFont, Typeface.NORMAL);
-		prevButton.setEnabled(false);
 	}
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        int x = (int) event.getRawX();
+        int y = (int) event.getRawY();
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                mTouchStartPointX = event.getRawX();
+                mTouchStartPointY = event.getRawY();
+                break;
+            case MotionEvent.ACTION_MOVE:
+                if (mTouchStartPointX - x > SLIDE_RANGE) {
+                    mActionType = ACTION_TYPE_LEFT;
+                } else if (x - mTouchStartPointX > SLIDE_RANGE) {
+                    mActionType = ACTION_TYPE_RIGHT;
+                } else if (mTouchStartPointY - y > SLIDE_RANGE) {
+                    mActionType = ACTION_TYPE_UP;
+                } else if (y - mTouchStartPointY > SLIDE_RANGE) {
+                    mActionType = ACTION_TYPE_DOWN;
+                }
+                break;
+            case MotionEvent.ACTION_UP:
+                if (mActionType == ACTION_TYPE_UP) {}
+                else if (mActionType == ACTION_TYPE_RIGHT) {
+                    slideToLeft();
+                } else if (mActionType == ACTION_TYPE_DOWN) {}
+                else if (mActionType == ACTION_TYPE_LEFT) {
+                    slideToRight();
+                }
+                break;
+            default:
+                break;
+        }
+        return true;
+    }
+
+    protected void slideToRight() {
+        idx++;
+        if (idx >= App.vocabularyDictionary.size()) {
+            // if all words have been showed go to next activity
+            goToNextPassingActivity();
+        } else {
+            int progress = (int) Math
+                    .round(((double) idx / (double) App.vocabularyDictionary.size()) * 100);
+            progressBar.setProgress(progress);
+            showEntry(App.allCounterWordsDictionary.get(idx));
+        }
+    }
+
+    protected void slideToLeft() {
+        if (idx > 0) {
+            idx--;
+            int progress = (int) Math
+                    .round(((double) idx / (double) App.vocabularyDictionary.size()) * 100);
+            progressBar.setProgress(progress);
+            showEntry(App.counterWordsDictionary.get(idx));
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -94,18 +161,6 @@ public class CounterWordsIntroductionActivity extends FragmentActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void buttonNextOnClick(View v) {
-		idx++;
-		// if Next button was disabled
-		prevButton.setEnabled(true);
-		if (idx >= App.numberOfEntriesInCurrentDict) {
-			// if all words have been showed go to next activity
-			goToNextPassingActivity();
-		} else {
-			curWord = App.counterWordsDictionary.get(idx);
-			showEntry(curWord);
-		}
-	}
 
 	public void buttonSkipOnClick(View v) {
 		goToNextPassingActivity();
@@ -139,20 +194,11 @@ public class CounterWordsIntroductionActivity extends FragmentActivity {
             try {
                 speakOut(currentWord);
             } catch (Exception e) {
-                Log.e("Text to speecch error", "Text to speecch error");
+                Log.e("Text to speech error", "Text to speech error");
             }
         }
 	}
 
-	public void buttonPreviousOnClick(View v) {
-		if (idx > 0) {
-			idx--;
-			curWord = App.counterWordsDictionary.get(idx);
-			showEntry(curWord);
-		} else {
-			prevButton.setEnabled(false);
-		}
-	}
 	public void onPlayClick3(View v) {
 		// getting layout with text				
         speakOut(curWord);

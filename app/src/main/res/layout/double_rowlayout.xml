@@ -8,15 +8,17 @@
 
     <TextView
         android:id="@+id/label"
-        android:layout_width="70dp"
+        android:layout_width="0dp"
+        android:layout_weight=".45"
         android:layout_height="wrap_content"
         android:gravity="right"
         android:text="sdf"
         android:textSize="@dimen/buttonTextSize" >
     </TextView>
-     <TextView
+    <TextView
         android:id="@+id/reading"
-        android:layout_width="90dp"
+        android:layout_width="0dp"
+        android:layout_weight=".55"
         android:layout_height="wrap_content"
         android:gravity="left"
         android:text="sdf"

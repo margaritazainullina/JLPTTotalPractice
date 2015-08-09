@@ -1,13 +1,10 @@
 package ua.hneu.languagetrainer.pages.counterwords;
 
 import ua.hneu.edu.languagetrainer.R;
-import ua.hneu.languagetrainer.AllCVListViewAdapter;
-import ua.hneu.languagetrainer.AllGiongoListViewAdapter;
+import ua.hneu.languagetrainer.AllCWListViewAdapter;
 import ua.hneu.languagetrainer.App;
-import ua.hneu.languagetrainer.model.other.CounterWord;
 import ua.hneu.languagetrainer.model.other.CounterWordsDictionary;
-import ua.hneu.languagetrainer.model.other.GiongoDictionary;
-import android.app.Activity;
+
 import android.app.ListActivity;
 import android.app.SearchManager;
 import android.content.Intent;
@@ -23,7 +20,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 public class AllCounterWords extends ListActivity {
-	AllCVListViewAdapter adapter1;
+	AllCWListViewAdapter adapter1;
 	ListView kanjiListView;
 	CounterWordsDictionary entries;
 	
@@ -100,13 +97,13 @@ public class AllCounterWords extends ListActivity {
 
 	private void search(String query) {
 		entries = entries.search(query);
-		adapter1 = new AllCVListViewAdapter(this, entries);
+		adapter1 = new AllCWListViewAdapter(this, entries);
 		this.setListAdapter(adapter1);
 	}
 
 	private void showAll() {
 		entries = App.allCounterWordsDictionary;
-		adapter1 = new AllCVListViewAdapter(this, entries);
+		adapter1 = new AllCWListViewAdapter(this, entries);
 		this.setListAdapter(adapter1);
 	}
 }

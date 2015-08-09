@@ -14,21 +14,28 @@
 
     <TextView
         android:id="@+id/learnedWordsTextView"
+        android:text="Learned words 10 out of 290"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/largeText" />
+        android:textSize="@dimen/largeText"
+        android:layout_marginBottom="@dimen/activity_vertical_margin" />
 
     <TextView
         android:id="@+id/totalPercentageTextView"
         android:layout_width="wrap_content"
+        android:text="By now you've learned 10 words"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/largeText" />
+        android:textSize="@dimen/buttonTextSize"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_gravity="left" />
 
     <TextView
         android:id="@+id/sessionPercentageTextView"
         android:layout_width="wrap_content"
+        android:text="YOu should be more attentive. Your correct answer rate is 10%"
         android:layout_height="wrap_content"
-        android:textSize="@dimen/largeText" />
+        android:textSize="@dimen/buttonTextSize"
+        android:layout_gravity="center_horizontal" />
 
     <TextView
         android:id="@+id/recommendationsTextView"

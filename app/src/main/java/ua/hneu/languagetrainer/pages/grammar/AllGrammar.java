@@ -1,17 +1,10 @@
 package ua.hneu.languagetrainer.pages.grammar;
 
-import java.util.ArrayList;
-
 import ua.hneu.edu.languagetrainer.R;
-import ua.hneu.languagetrainer.AllCVListViewAdapter;
 import ua.hneu.languagetrainer.AllGrammarListViewAdapter;
-import ua.hneu.languagetrainer.AllVocabularyListViewAdapter;
 import ua.hneu.languagetrainer.App;
-import ua.hneu.languagetrainer.ListViewAdapter;
 import ua.hneu.languagetrainer.model.grammar.GrammarDictionary;
-import ua.hneu.languagetrainer.model.other.GiongoDictionary;
-import ua.hneu.languagetrainer.pages.test.MockTestActivity;
-import android.app.Activity;
+
 import android.app.ListActivity;
 import android.app.SearchManager;
 import android.content.Intent;

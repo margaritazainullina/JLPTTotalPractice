@@ -1,33 +1,16 @@
 package ua.hneu.languagetrainer.pages.giongo;
 
-import java.util.ArrayList;
-
 import ua.hneu.edu.languagetrainer.R;
-import ua.hneu.languagetrainer.AllCVListViewAdapter;
-import ua.hneu.languagetrainer.AllGrammarListViewAdapter;
-import ua.hneu.languagetrainer.AllVocabularyListViewAdapter;
 import ua.hneu.languagetrainer.App;
 import ua.hneu.languagetrainer.ExamplesListViewAdapter;
-import ua.hneu.languagetrainer.ListViewAdapter;
 import ua.hneu.languagetrainer.TextToVoiceMediaPlayer;
-import ua.hneu.languagetrainer.model.grammar.GrammarDictionary;
-import ua.hneu.languagetrainer.model.grammar.GrammarRule;
 import ua.hneu.languagetrainer.model.other.Giongo;
-import ua.hneu.languagetrainer.model.other.GiongoDictionary;
-import ua.hneu.languagetrainer.model.vocabulary.VocabularyEntry;
-import android.app.Activity;
+
 import android.app.ListActivity;
-import android.app.SearchManager;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.SearchView;
 import android.widget.TextView;
-import android.widget.SearchView.OnCloseListener;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;

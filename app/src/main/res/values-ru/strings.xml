@@ -147,5 +147,7 @@
     <string name="all_grammar">Все правила уровня</string>
     <string name="all_giongo">Все гионго</string>
     <string name="all_counters">Все счетные слова</string>
+    <string name="random_word">Случайное слово</string>
+    <string name="show_translation">Показать перевод</string>
 
 </resources>

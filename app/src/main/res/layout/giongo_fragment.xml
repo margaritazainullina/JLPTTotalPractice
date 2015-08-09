@@ -1,60 +1,139 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="fill_parent"
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ua.hneu.languagetrainer.masterdetailflow.GioingoActivityFragment" >
+    tools:context="ua.hneu.languagetrainer.masterdetailflow.GioingoActivityFragment">
 
-    <TextView
-        android:id="@+id/infoTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:maxHeight="@dimen/infoMaxHeight"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        android:scrollbars="vertical"
-        android:text="@string/counter_words_info"
-        android:textIsSelectable="true"
-        android:textSize="@dimen/mediumText" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/giongoInfoTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        <TextView
+            android:id="@+id/giongoInfoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="Learned 15 words from 48"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/buttonTextSize" />
+
+        <ProgressBar
+            android:id="@+id/giongoProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:progressDrawable="@drawable/progressbar2" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/practiceGiongo"
+                style="@style/btnStyleOrange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="@dimen/activity_horizontal_margin"
+                android:onClick="onClickPracticeGiongo"
+                android:text="@string/practice_words" />
+
+            <Button
+                android:id="@+id/allGiongo"
+                style="@style/btnStyleOrange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:onClick="onClickAllGiongo"
+                android:text="@string/all_giongo" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/infoTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxHeight="@dimen/infoMaxHeight"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:scrollbars="vertical"
+            android:text="@string/counter_words_info"
+            android:textIsSelectable="true"
+            android:textSize="@dimen/mediumText" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/activity_vertical_margin"
         android:layout_marginTop="@dimen/activity_vertical_margin"
-        android:text="Learned 15 words from 48"
-        android:textIsSelectable="true"
-        android:textSize="@dimen/buttonTextSize" />
+        android:layout_weight="0.4"
+        android:background="@drawable/word_of_day"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
 
-    <ProgressBar
-        android:id="@+id/giongoProgressBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/activity_vertical_margin"
-        android:progressDrawable="@drawable/progressbar2"
-        android:layout_marginTop="@dimen/activity_vertical_margin" />
 
-    <Button
-        android:id="@+id/practiceGiongo"
-        style="@style/btnStyleOrange"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:onClick="onClickPracticeGiongo"
-        android:text="@string/practice_words" />
+        <TextView
+            android:id="@+id/wordOfDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:text="@string/random_word"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
-    <Button
-        android:id="@+id/allGiongo"
-        style="@style/btnStyleOrange"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"        
-        android:layout_gravity="center"
-        android:onClick="onClickAllGiongo"
-        android:text="@string/all_giongo" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/wordTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="能力"
+                android:textSize="@dimen/xlargeText" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/showTranslationGiongoButton"
+                style="@style/btnStyleOrange"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:onClick="onClickShowGiongoTranslation"
+                android:text="@string/show_translation" />
+
+            <TextView
+                android:id="@+id/translationGiongoTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:text="to long for; to yearn after; to admire"
+                android:textSize="@dimen/largeText" />
+        </RelativeLayout>
+    </LinearLayout>
 </LinearLayout>

@@ -1,13 +1,5 @@
 package ua.hneu.languagetrainer.pages.giongo;
 
-import ua.hneu.edu.languagetrainer.R;
-import ua.hneu.languagetrainer.App;
-import ua.hneu.languagetrainer.LearningStatistics;
-import ua.hneu.languagetrainer.model.User;
-import ua.hneu.languagetrainer.model.other.Giongo;
-import ua.hneu.languagetrainer.pages.MainActivity;
-import ua.hneu.languagetrainer.pages.SettingsActivity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,19 +13,26 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.InterstitialAd;
 
+import ua.hneu.edu.languagetrainer.R;
+import ua.hneu.languagetrainer.App;
+import ua.hneu.languagetrainer.LearningStatistics;
+import ua.hneu.languagetrainer.model.other.Giongo;
+import ua.hneu.languagetrainer.pages.MainActivity;
+import ua.hneu.languagetrainer.pages.SettingsActivity;
+
 public class GiongoResultActivity extends Activity {
-	TextView learnedWordsTextView;
-	TextView recommendationsTextView;
-	TextView sessionPercentageTextView;
-	TextView totalPercentageTextView;
-	TextView cautionTextView;
-	TextView mistakesTextView;
+    TextView learnedWordsTextView;
+    TextView recommendationsTextView;
+    TextView sessionPercentageTextView;
+    TextView totalPercentageTextView;
+    TextView cautionTextView;
+    TextView mistakesTextView;
 
     private InterstitialAd mInterstitialAd;
 
-	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
         mInterstitialAd = new InterstitialAd(this);
         mInterstitialAd.setAdUnitId(getString(R.string.interstitial_ad_unit_id));
@@ -61,119 +60,122 @@ public class GiongoResultActivity extends Activity {
         mInterstitialAd.loadAd(adRequestBuilder.build());
 
 
-		setContentView(R.layout.activity_learning_result);
+        setContentView(R.layout.activity_learning_result);
 
-		learnedWordsTextView = (TextView) findViewById(R.id.learnedWordsTextView);
-		totalPercentageTextView = (TextView) findViewById(R.id.totalPercentageTextView);
-		recommendationsTextView = (TextView) findViewById(R.id.recommendationsTextView);
-		sessionPercentageTextView = (TextView) findViewById(R.id.sessionPercentageTextView);
-		cautionTextView = (TextView) findViewById(R.id.cautionTextView);
-		mistakesTextView = (TextView) findViewById(R.id.mistakesTextView);
+        learnedWordsTextView = (TextView) findViewById(R.id.learnedWordsTextView);
+        totalPercentageTextView = (TextView) findViewById(R.id.totalPercentageTextView);
+        recommendationsTextView = (TextView) findViewById(R.id.recommendationsTextView);
+        sessionPercentageTextView = (TextView) findViewById(R.id.sessionPercentageTextView);
+        cautionTextView = (TextView) findViewById(R.id.cautionTextView);
+        mistakesTextView = (TextView) findViewById(R.id.mistakesTextView);
 
-		// information about learned words
-		int numberOfLearnedWords = 0;
-		StringBuffer sb = new StringBuffer();
-		for (Giongo entry : App.gp.getLearnedWords().getEntries()) {
-			if (entry.getLearnedPercentage() >= 1) {
-				numberOfLearnedWords++;
-				sb.append(entry.getRule());
-				sb.append(", ");
-			}
-		}
-		if (sb.length() != 0)
-			sb.delete(sb.length() - 3, sb.length() - 1);
-		StringBuffer sb1 = new StringBuffer();
-		if (numberOfLearnedWords == 0)
-			sb1.append(this.getString(R.string.you_havent_learned_any_word));
-		else {
-			sb1.append(this.getString(R.string.words_learned) + " ");
-			sb1.append(numberOfLearnedWords + ": ");
-		}
-		sb1.append(sb);
-		learnedWordsTextView.setText(sb1);
+        // information about learned words
+        int numberOfLearnedWords = 0;
+        StringBuffer sb = new StringBuffer();
+        for (Giongo entry : App.gp.getLearnedWords().getEntries()) {
+            if (entry.getLearnedPercentage() >= 1) {
+                numberOfLearnedWords++;
+                sb.append(entry.getRule());
+                sb.append(", ");
+            }
+        }
+        if (sb.length() != 0)
+            sb.delete(sb.length() - 3, sb.length() - 1);
+        StringBuffer sb1 = new StringBuffer();
+        if (numberOfLearnedWords == 0)
+            sb1.append(this.getString(R.string.you_havent_learned_any_word));
+        else {
+            sb1.append(this.getString(R.string.words_learned) + " ");
+            sb1.append(numberOfLearnedWords + ": ");
+        }
+        sb1.append(sb);
+        learnedWordsTextView.setText(sb1);
 
-		// total
-		int all = App.userInfo.getNumberOfGiongoInLevel();
-		int learned = App.userInfo.getLearnedGiongo();
-		double totalPercentage = Math
-				.round(((double) learned / (double) all) * 100);
-		totalPercentageTextView.setText(this
-				.getString(R.string.by_now_youve_learned)
-				+ " "
-				+ totalPercentage
-				+ " "
-				+ this.getString(R.string.percentage_of_giongo));
+        // total
+        int all = App.userInfo.getNumberOfGiongoInLevel();
+        int learned = App.userInfo.getLearnedGiongo();
+        double totalPercentage = Math
+                .round(((double) learned / (double) all) * 100);
+        totalPercentageTextView.setText(this
+                .getString(R.string.by_now_youve_learned)
+                + " "
+                + totalPercentage
+                + " "
+                + this.getString(R.string.percentage_of_giongo));
 
-		// mistakes
-		StringBuffer sb2 = new StringBuffer();
-		sb2.append(this.getString(R.string.pay_attention_to) + " ");
-		int numberOfProblemWords = 0;
-		for (Giongo entry : App.gp.getProblemWords().keySet()) {
-			if (App.gp.getProblemWords().get(entry) >= 2) {
-				sb2.append(entry.getRule());
-				sb2.append(", ");
-				numberOfProblemWords++;
-			}
-		}
-		sb2.delete(sb2.length() - 3, sb2.length() - 1);
-		if (numberOfProblemWords != 0)
-			mistakesTextView.setText(sb2);
+        // mistakes
+        StringBuffer sb2 = new StringBuffer();
+        sb2.append(this.getString(R.string.pay_attention_to) + " ");
+        int numberOfProblemWords = 0;
+        for (Giongo entry : App.gp.getProblemWords().keySet()) {
+            if (App.gp.getProblemWords().get(entry) >= 2) {
+                sb2.append(entry.getRule());
+                sb2.append(", ");
+                numberOfProblemWords++;
+            }
+        }
+        sb2.delete(sb2.length() - 3, sb2.length() - 1);
+        if (numberOfProblemWords != 0)
+            mistakesTextView.setText(sb2);
 
-		// information about session result
-		int correct = App.gp.getNumberOfCorrectAnswers();
-		int incorrect = App.gp.getNumberOfIncorrectAnswers();
-		int success = (int) Math.round(((double) (correct - incorrect)
-				/ (correct + incorrect) * 100));
-		if (success < 0)
-			success = 0;
+        // information about session result
+        int correct = App.gp.getNumberOfCorrectAnswers();
+        int incorrect = App.gp.getNumberOfIncorrectAnswers();
+        int success = (int) Math.round(((double) (correct - incorrect)
+                / (correct + incorrect) * 100));
+        if (success < 0)
+            success = 0;
 
-		if (success > 80)
-			sessionPercentageTextView.setText(this.getString(R.string.great)
-					+ " ");
-		else if (success > 60)
-			sessionPercentageTextView.setText(this.getString(R.string.good)
-					+ " ");
-		else
-			sessionPercentageTextView.setText(this
-					.getString(R.string.more_attentive) + " ");
-		sessionPercentageTextView.append(this
-				.getString(R.string.correct_answer_rate) + " " + success + "%");
+        if (success > 80)
+            sessionPercentageTextView.setText(this.getString(R.string.great)
+                    + " ");
+        else if (success > 60)
+            sessionPercentageTextView.setText(this.getString(R.string.good)
+                    + " ");
+        else
+            sessionPercentageTextView.setText(this
+                    .getString(R.string.more_attentive) + " ");
+        sessionPercentageTextView.append(this
+                .getString(R.string.correct_answer_rate) + " " + success + "%");
 
-		// cautions
-		int num = App.gp.getNumberOfPassingsInARow();
-		if (num > 3)
-			cautionTextView.setText(this.getString(R.string.enough));
+        // cautions
+        int num = App.gp.getNumberOfPassingsInARow();
+        if (num > 3)
+            cautionTextView.setText(this.getString(R.string.enough));
 
-		// clear information about passing
-		App.gp.clearInfo();
+        // clear information about passing
+        App.gp.clearInfo();
 
-        // Gets the ad view defined in layout/ad_fragment.xml with ad unit ID set in
-        // values/strings.xml.
-        AdView mAdView = (AdView) findViewById(R.id.adView);
-        // Create an ad request. Check logcat output for the hashed device ID to
-        // get test ads on a physical device. e.g.
-        // "Use AdRequest.Builder.addTestDevice("ABCDEF012345") to get test ads on this device."
-        AdRequest adRequest = new AdRequest.Builder()
-                .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
-                .build();
+        try {
+            // Gets the ad view defined in layout/ad_fragment.xml with ad unit ID set in
+            // values/strings.xml.
+            AdView mAdView = (AdView) findViewById(R.id.adView);
+            // Create an ad request. Check logcat output for the hashed device ID to
+            // get test ads on a physical device. e.g.
+            // "Use AdRequest.Builder.addTestDevice("ABCDEF012345") to get test ads on this device."
+            AdRequest adRequest = new AdRequest.Builder()
+                    .addTestDevice(AdRequest.DEVICE_ID_EMULATOR)
+                    .build();
 
-        // Start loading the ad in the background.
-        mAdView.loadAd(adRequest);
-	}
+            // Start loading the ad in the background.
+            mAdView.loadAd(adRequest);
+        } catch (Exception e) {
+        }
+    }
 
-	public void buttonRepeatTrainingOnClick(View v) {
-		// go to introduction again
-		Intent matchWordsIntent = new Intent(this,
-				GiongoIntroductionActivity.class);
-		startActivity(matchWordsIntent);
-		App.gp.incrementNumberOfPassingsInARow();
-	}
+    public void buttonRepeatTrainingOnClick(View v) {
+        // go to introduction again
+        Intent matchWordsIntent = new Intent(this,
+                GiongoIntroductionActivity.class);
+        startActivity(matchWordsIntent);
+        App.gp.incrementNumberOfPassingsInARow();
+    }
 
-	public void buttonToMainMenuOnClick(View v) {
-		// go to master/detail flow
-		Intent main = new Intent(this, MainActivity.class);
-		startActivity(main);
-	}
+    public void buttonToMainMenuOnClick(View v) {
+        // go to master/detail flow
+        Intent main = new Intent(this, MainActivity.class);
+        startActivity(main);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -181,6 +183,7 @@ public class GiongoResultActivity extends Activity {
         getMenuInflater().inflate(R.menu.settings, menu);
         return true;
     }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {

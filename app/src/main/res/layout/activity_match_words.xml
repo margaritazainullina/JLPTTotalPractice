@@ -1,86 +1,101 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:gravity="center"
     android:orientation="vertical"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:scrollbars="vertical"
-    tools:context=".MatchWordsActivity" >
+    tools:context=".MatchWordsActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout1"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:baselineAligned="false" >
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:baselineAligned="false"
+        android:gravity="center">
 
         <LinearLayout
-            android:layout_width="60dp"
-            android:layout_height="wrap_content" >
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".2"
+            android:gravity="left">
 
             <ListView
                 android:id="@+id/kanjiListView"
-                android:layout_width="60dp"
-                android:listSelector="@drawable/listitem_selector"
-                android:layout_height="wrap_content"
-                android:visibility="visible" >
-            </ListView>
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="visible"
+                android:layout_marginTop="@dimen/activity_vertical_margin" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="160dp"
-            android:layout_height="wrap_content" >
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight=".35">
 
             <ListView
                 android:id="@+id/readingListView"
-                android:layout_width="160dp"
-                android:layout_height="wrap_content"
-                android:visibility="visible" >
-            </ListView>
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="visible"
+                android:layout_marginTop="@dimen/activity_vertical_margin" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:gravity="right" >
+            android:layout_weight=".35"
+            android:gravity="right">
 
             <ListView
                 android:id="@+id/translationListView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:visibility="visible" >
-            </ListView>
-
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:visibility="visible"
+                android:layout_marginTop="@dimen/activity_vertical_margin" />
         </LinearLayout>
     </LinearLayout>
 
     <ImageView
         android:id="@+id/isCorrect"
+        android:gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/no" />
+        android:src="@drawable/no"
+        android:layout_below="@+id/buttonsLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentRight="false"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentTop="false"
+        android:layout_alignBaseline="@+id/linearLayout1"
+        android:layout_marginTop="@dimen/activity_vertical_margin" />
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="bottom"
+        android:gravity="bottom"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/buttonsLayout"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:gravity="center" >
-
-        <Button
-            android:id="@+id/buttonOk"
-            style="@style/btnStyleOrange"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="buttonOkOnClick"
-            android:text="@string/ok" />
-
-        <Button
-            android:id="@+id/buttonSkip"
-            style="@style/btnStyleOrange"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:onClick="buttonSkipMatchOnClick"
-            android:text="@string/skip" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/activity_vertical_margin">
 
         <Button
             android:id="@+id/buttonIAlrKnow"
@@ -89,13 +104,25 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:onClick="buttonIAlrKnow"
-            android:text="@string/i_already_know" />
+            android:text="@string/i_already_know"
+            android:elegantTextHeight="false" />
+
+        <Button
+            android:id="@+id/buttonSkip"
+            style="@style/btnStyleOrange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:onClick="buttonSkipMatchOnClick"
+            android:text="@string/skip" />
+
+        <Button
+            android:id="@+id/buttonOk"
+            style="@style/btnStyleOrange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:onClick="buttonOkOnClick"
+            android:text="@string/ok" />
     </LinearLayout>
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id" />
-</LinearLayout>
+</RelativeLayout>

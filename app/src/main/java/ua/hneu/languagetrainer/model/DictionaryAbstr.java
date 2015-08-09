@@ -4,6 +4,7 @@ import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Random;
 
 import ua.hneu.languagetrainer.model.grammar.GrammarRule;
 
@@ -68,7 +69,5 @@ public abstract class DictionaryAbstr {
         return strings;
     }
 
-  /*  public  void addAll(ArrayList<EntryAbstr> all){
-        entries.addAll(all);
-    }*/
+
 }

@@ -384,8 +384,8 @@
 この手紙の目的は何ですか？
 ">
 <answer isCorrect="0">ワイングラスを送るため</answer>
-<answer isCorrect="0">クーヨン・ゴルフクラブに招待するため</answer>
 <answer isCorrect="1">結婚式に招待するため</answer>
+<answer isCorrect="0">クーヨン・ゴルフクラブに招待するため</answer>
 <answer isCorrect="0">お手伝いを頼むために</answer>
 </question>
 <question weight="3" title="問題　27" text="レオナへ
@@ -510,130 +510,291 @@
 <answer isCorrect="0">椿</answer>
 </question>
 </task>
-
 </section>
 <section name="聴解">
 <task caption="問題1">
-<question weight="1" title="" text="" imgRef="" audioRef="3＿2\n3_2012 (1).mp3">
-<answer isCorrect="0">アイウ</answer>
-<answer isCorrect="1">アウイ</answer>
-<answer isCorrect="0">アイオ</answer>
-<answer isCorrect="0">アエオ</answer>
-</question>
-<question weight="1" title="" text="" imgRef="3_2\5" audioRef="3＿2\n3_2012 (2).mp3">
-<answer isCorrect="0">赤ちゃんのふく</answer>
-<answer isCorrect="0">赤ちゃんのおもちゃ</answer>
-<answer isCorrect="0">友だちのふく</answer>
-<answer isCorrect="1">友だちのバッグ</answer>
-</question>
-<question weight="1" title="" text="" imgRef="" audioRef="3＿2\n3_2012 (3).mp3">
-<answer isCorrect="1">友だちにれんらくする</answer>
-<answer isCorrect="0">レストランをよやくする</answer>
-<answer isCorrect="0">旅行の計画を立てる</answer>
-<answer isCorrect="0">ひこうきをよやくする</answer>
-</question>
-<question weight="1" title="" text="" imgRef="" audioRef="3＿2\n3_2012 (4).mp3">
-<answer isCorrect="0">映画を見る</answer>
-<answer isCorrect="1">にもつを出す</answer>
-<answer isCorrect="0">本屋に行く</answer>
-<answer isCorrect="0">ご飯を食べる</answer>
-</question>
-<question weight="1" title="" text="" imgRef="" audioRef="3＿2\n3_2012 (5).mp3">
-<answer isCorrect="0">かさを用意する</answer>
-<answer isCorrect="0">リビングのエアコンをけす</answer>
-<answer isCorrect="1">台蘇の電気をけす</answer>
-<answer isCorrect="0">台所のまどを閉める</answer>
-</question>
-<question weight="1" title="" text="" imgRef="" audioRef="3＿2\n3_2012 (6).mp3">
-<answer isCorrect="0">アンケートをとる</answer>
-<answer isCorrect="1">行く場所をさがす</answer>
-<answer isCorrect="0">何をするか決める</answer>
-<answer isCorrect="0">食する店を決める</answer>
-</question>
-</task>
-<task caption="問題2">
-<question weight="1" title="" text="" imgRef="" audioRef="3＿2\n3_2012 (7).mp3">
-<answer isCorrect="0">来週の月曜日</answer>
-<answer isCorrect="0">来週の火曜日</answer>
-<answer isCorrect="1">来週の水曜日</answer>
-<answer isCorrect="0">来週の木曜日</answer>
-</question>
-<question weight="1" title="" text="" imgRef="" audioRef="3＿2\n3_2012 (8).mp3">
-<answer isCorrect="1">いろいろな国の料理が作れるか</answer>
-<answer isCorrect="0">へいじつに教室があるから</answer>
-<answer isCorrect="0">—人で作れるから</answer>
-<answer isCorrect="0">料金が安いから</answer>
-</question>
-<question weight="1" title="" text="" imgRef="" audioRef="3＿2\n3_2012 (9).mp3">
-<answer isCorrect="0">朝早い仕事だったから</answer>
-<answer isCorrect="0">じきゅうが安かったから</answer>
-<answer isCorrect="0">3物を作る仕事がしたかったから</answer>
-<answer isCorrect="1">ほかの仕事も経験したかったから</answer>
-</question>
-<question weight="1" title="" text="" imgRef="" audioRef="3＿2\n3_2012 (10).mp3">
-<answer isCorrect="0">インターネットを使うこと</answer>
-<answer isCorrect="1">メールをすること</answer>
-<answer isCorrect="0">プリン夕一を使うこと</answer>
-<answer isCorrect="0">DVDを見ること</answer>
-</question>
-<question weight="1" title="" text="" imgRef="" audioRef="3＿2\n3_2012 (11).mp3">
-<answer isCorrect="0">もうしこみのしめきりがすぎたから</answer>
-<answer isCorrect="0">回目のさんかだから</answer>
-<answer isCorrect="0">1か月後に帰国するから</answer>
-<answer isCorrect="1">来日して半年以上になるから</answer>
-</question>
-<question weight="1" title="" text="" imgRef="" audioRef="3＿2\n3_2012 (12).mp3">
-<answer isCorrect="0">新しい店ではたらけること</answer>
-<answer isCorrect="0">車を使って仕事ができること</answer>
-<answer isCorrect="0">しょうひんがたくさん売れること</answer>
-<answer isCorrect="1">村の人がよろこんでくれること
-</answer>
-</question>
-</task>
-<task caption="問題3">
-<question weight="1" title="問題3では、問題用紙に檢もいんさつされていません。この問題は、ぜんたいとしてどんな ないようかを聞く問題です。話の前に質問はありません。まず話を聞いてください。それから、 質問とせんたくしを聞いて、1から4の中から、最もよいものを一つえらんでください。" text="" imgRef="" audioRef="3＿2\n3_2012 (13).mp3">
-<answer isCorrect="0">1</answer>
-<answer isCorrect="1">2</answer>
-<answer isCorrect="0">3</answer>
-<answer isCorrect="0">4</answer>
-</question>
-<question weight="1" title="問題3では、問題用紙に檢もいんさつされていません。この問題は、ぜんたいとしてどんな ないようかを聞く問題です。話の前に質問はありません。まず話を聞いてください。それから、 質問とせんたくしを聞いて、1から4の中から、最もよいものを一つえらんでください。" text="" imgRef="" audioRef="3＿2\n3_2012 (14).mp3">
-<answer isCorrect="0">1</answer>
-<answer isCorrect="1">2</answer>
-<answer isCorrect="0">3</answer>
-<answer isCorrect="0">4</answer>
-</question>
-<question weight="1" title="問題3では、問題用紙に檢もいんさつされていません。この問題は、ぜんたいとしてどんな ないようかを聞く問題です。話の前に質問はありません。まず話を聞いてください。それから、 質問とせんたくしを聞いて、1から4の中から、最もよいものを一つえらんでください。" text="" imgRef="" audioRef="3＿2\n3_2012 (15).mp3">
-<answer isCorrect="0">1</answer>
+<question weight="1" title="問１・" text="" imgRef="4_3\2003_03_listen_quiz2.jpg" audioRef="
+１ばん。
+男の人と女の人が話しています。
+女の人がいくつ払ったのか？ 
+男：はい、お客さん。全部で１６５０円です 
+女：あれ、１００円足りませんよ。ではこれだけ買う。
+男：その場合には全部で１１００円
+女の人は始めにいくら出しましたか？ 
+">
+<answer isCorrect="1">1</answer>
 <answer isCorrect="0">2</answer>
 <answer isCorrect="0">3</answer>
-<answer isCorrect="1">4</answer>
+<answer isCorrect="0">4</answer>
 </question>
-</task>
-<task caption="問題4">
-<question weight="1" title="" text="" imgRef="3_2\6" audioRef="3＿2\n3_2012 (16).mp3">
+<question weight="1" title="問２・" text="" imgRef="4_3\2003_03_listen_quiz12.jpg" audioRef="
+２ばん。
+男の人がパソコンについて話しています。
+コンピュータを少し使ったことがある人は何番の教室で勉強しますか？ 
+男：お早うございます。
+これからパソコンのクラスを始めますが、２０１番～２０４番の教室に分かれて勉強します。
+え、今日始めてコンピュータを使う人は隣の２０１番の教室に行ってください。 
+少し使ったことがある人はこのままこの教室に行ってください。 
+簡単な文や絵が描ける人は２０３番。 
+もっと複雑なこともできる人は２０４番の教室へ行ってください。 
+では皆さん、頑張ってください。 コンピュータを少し使ったことがある人は何番の教室で勉強しますか？ 
+">
+<answer isCorrect="1">1</answer>
+<answer isCorrect="0">2</answer>
+<answer isCorrect="0">3</answer>
+<answer isCorrect="0">4</answer>
+</question>
+<question weight="1" title="問３・" text="" imgRef="4_3\2003_03_listen_quiz1.jpg" audioRef="
+３ばん。
+男の人と女の人が話しています。 
+部屋はどうなりましたか？ 
+女：ドアを閉めましょうか？ 
+男：はい、ドアを閉めないでください。でも、電気は消していきましょう。
+女：はい、分かりました。
+男：ああ、 結局電気はこのままにおいて。
+部屋はどうなりましたか？
+
+">
 <answer isCorrect="0">1</answer>
 <answer isCorrect="1">2</answer>
 <answer isCorrect="0">3</answer>
 <answer isCorrect="0">4</answer>
 </question>
-<question weight="1" title="" text="" imgRef="3_2\7" audioRef="3＿2\n3_2012 (17).mp3">
+<question weight="1" title="問４・" text="" imgRef="4_3\2003_03_listen_quiz3.jpg" audioRef="
+４ばん。
+男の人と女の人が話しています。
+二人は何時に会いますか？ 
+女：明日八時半に起こしましょう。
+男：うん。でも仕事の前に買い物しましょう、十分くらいかかると思う？ 
+女：そうだね。じゃー、十五分前に起こしましょうか？ 
+男：いいよ、そうしましょう。 
+二人は何時に会いますか？ 
+">
+<answer isCorrect="0">1</answer>
+<answer isCorrect="1">2</answer>
+<answer isCorrect="0">3</answer>
+<answer isCorrect="0">4</answer>
+</question>
+<question weight="1" title="問５・" text="" imgRef="4_3\2003_03_listen_quiz13.jpg" audioRef="
+５ばん。
+女の人と男の人が話しています。
+午後はどんな予定ですか？
+男：午後の予定を言います、よく聞いてください。
+まず水泳が二時間、そして、食事。終わったらビデオを見ていい。 
+女：はい。
+男：あっ、そのあとで掃除をします。
+女：えー、掃除をしなければならないですか？ 
+男：はい、じゃー、頑張ってください 
+女：はーい。
+午後はどんな予定ですか？ 
+">
 <answer isCorrect="0">1</answer>
 <answer isCorrect="0">2</answer>
 <answer isCorrect="1">3</answer>
 <answer isCorrect="0">4</answer>
 </question>
-<question weight="1" title="" text="" imgRef="3_2\8" audioRef="3＿2\n3_2012 (18).mp3">
+<question weight="1" title="問６・" text="" imgRef="4_3\2003_03_listen_quiz9.jpg" audioRef="
+６ばん。
+先生が女の子と話しています。
+誰が女の子に料理を教えていますか？ 
+先生：リンさんは料理が上手ですね？ 
+リン：うちでいつも教えてもらってます。
+先生：そう、お母さんから？ 
+リン：いいえ、お父さんとおばあさんが料理が好きで、かのじょはよく教えてくれるんです。 
+先生：えー、お母さんやおばあさんじゃないの？
+リン：いいえ、お母さんが料理があまり好きない。
+誰が女の子に料理を教えていますか？ 
+">
 <answer isCorrect="0">1</answer>
 <answer isCorrect="1">2</answer>
 <answer isCorrect="0">3</answer>
 <answer isCorrect="0">4</answer>
 </question>
-<question weight="1" title="" text="" imgRef="3_2\9" audioRef="3＿2\n3_2012 (19).mp3">
+</task>
+<task caption="問題2">
+<question weight="1" title="問１・" text="" imgRef="" audioRef="男の人と女の人が話しています。女人はパーティーで何をしますか。
+男：田中さんの結婚パーティーの事なんだけど。
+女：ええ。
+男：パーティーの時、ピアノを弾くお願いしたいんだけど。
+女：え？ピアノはちょっと…
+男：じゃ、お祝いの挨拶をしてくれる？
+女：挨拶は歌よりもっと困るわ。歌うのができるわ・・・
+男：それはもっとうまくしょう、あそこには僕がギターを弾くから、きれいな声を聞かせてよ。
+女人はパーティーで何をしますか。
+">
+<answer isCorrect="0">挨拶をします。</answer>
+<answer isCorrect="0">ギターを弾きます。</answer>
+<answer isCorrect="0">ピアノを弾きます。</answer>
+<answer isCorrect="1">歌を歌います。　</answer>
+</question>
+<question weight="1" title="問２・" text="" imgRef="" audioRef="この店で食べ物はどこで買えますか？ 
+女：お客様にお知らせします。先月売り場は変わりました。
+女性の服は本館の一階になりました、男性の服は本館の二階、野菜や果物は新館の三階、本とステーショナリーの四階です。
+よろしくお願い致します。 
+この店で食べ物はどこで買えますか？
+">
+<answer isCorrect="0">本館の一階です。</answer>
+<answer isCorrect="0">本館の一階です。</answer>
+<answer isCorrect="1">新館の三階です。</answer>
+<answer isCorrect="0">新館の三階です。</answer>
+</question>
+<question weight="1" title="問３・" text="" imgRef="" audioRef="男の人と女の人が話しています。
+今、どんな天気ですか？。 
+男：行ってきます。あっ、りんさん、傘はとって。 
+女：え？雨が降ってるの？ 
+男：まだだけど、外は風が吹いて寒いですよ。 
+女：変ね。天気予報じゃ一日中晴れるって言ってたわよ。 
+今、どんな天気ですか？ 
+">
+<answer isCorrect="0">晴れています。</answer>
+<answer isCorrect="1">曇っています。</answer>
+<answer isCorrect="0">雨が降っています。</answer>
+<answer isCorrect="0">雪が降っています。</answer>
+</question>
+<question weight="1" title="問４・" text="" imgRef="" audioRef="男の人と女の人がレストランで話しています。女の人がどうし味噌汁を食べませんか？ 
+男：ここの味噌汁おいしいですよ。 
+女：そうですか、でも味噌汁はちょっと…
+男：じゃー、今日もう食べたんですか？ 
+女：いいえ。
+男：嫌いなんですか？ 
+女：実は味はあまり好きじゃない。 
+男：そうなんですか。
+女の人がどうし味噌汁を食べませんか？ 
+">
+<answer isCorrect="0">味噌汁を全然食べない。</answer>
+<answer isCorrect="0">このレストランで味噌汁がおいしくない。</answer>
+<answer isCorrect="1">味噌汁が嫌いだからです。</answer>
+<answer isCorrect="0">今日味噌汁を食べたからです。</answer>
+</question>
+<question weight="1" title="問5・" text="" imgRef="" audioRef="先生が生徒たちに話しています。明日、何時に、どこに集まりますか。男：え、皆さん、よく聞いてください。明日は9時半のバスに乗ります。図書館の前に10時に集まることになっていましたが、集まる場所は駅に変わりました。
+駅の前に集まってください。時間は10時です。遅れないてください。明日、何時に、どこに集まりますか。
+">
+<answer isCorrect="0">10時に図書館の前です。</answer>
+<answer isCorrect="0">9時半に図書館の前です。</answer>
+<answer isCorrect="1">10時に駅の前です。</answer>
+<answer isCorrect="0">9時半に駅の前です。</answer>
+</question>
+<question weight="1" title="問6・" text="" imgRef="" audioRef="男の人と女の人が話しています。女の人は何人で旅行をしましたか？ 
+男：お帰り、旅行はどうだった？ 
+女：すごく楽しかった。皆で夜遅くまで話して。 
+男：え？あいこさんと二人じゃなかったの？ 
+女：いいえ、後でみゆが来ました。 
+男：あーそう。 
+女の人は何人で旅行をしましたか？ 
+">
+<answer isCorrect="0">二人です。</answer>
+<answer isCorrect="1">三人です。</answer>
+<answer isCorrect="0">四人です。</answer>
+<answer isCorrect="0">五人です。</answer>
+</question>
+<question weight="1" title="問7・" text="" imgRef="" audioRef="男の人が病院で医者と話しています。
+男の人は今走ったり、野球をしたりしてもいいですか。
+女：うん、だんだんよくなっていますね。
+男：ありがとうございます。先生、明日野球をしていいの？
+女：それはちょっと待ってください、一ヶ月後でしょう。
+男：じゃあ、走るのは？
+女：今まだ走るのはだめ。
+男：はい。
+男の人は今走ったり、野球をしたりしてもいいですか
+">
+<answer isCorrect="0">走ってもいいし、野球をしてもいいです。</answer>
+<answer isCorrect="0">走ってはいけませんが、野球をしてもいいです。</answer>
+<answer isCorrect="0">走ってもいいですが、野球をしてはだめです。</answer>
+<answer isCorrect="1">走ってもいけないし、野球をしてもだめです。</answer>
+</question>
+</task>
+<task caption="問題3">
+<question weight="1" title="" text="" imgRef="4_1\2005_03_listen_quiz1.jpg" audioRef=" 
+1番。 
+学生が先生に漢字のテストについて聞いています。
+学生が書いたい漢字はどれですか。 
+学生：先生、先週の漢字のテストですけど、これですね。 
+先生：これですね。 
+学生：はい。いぬっていう漢字を書いたんですが、どこがまちがっているんでしょう。 
+先生：点はここで正しいですか。 
+学生：あのう、点は横の線の下じゃなくて、上につけましたが、あっ、ひだりにつけてしまいました。 
+">
 <answer isCorrect="1">1</answer>
 <answer isCorrect="0">2</answer>
 <answer isCorrect="0">3</answer>
 <answer isCorrect="0">4</answer>
+</question>
+<question weight="2" title="" text="" imgRef="4_1\2005_03_listen_quiz3.jpg" audioRef="
+2 番。
+男の人が外国にいる女の人と話しています。
+女の人の国は今何時ですか。 
+男の人：今、そっちは何時です？ 
+女の人：8 時15分。 
+男の人：へえ、日本で今9時15 分だよ、まさかタイムゾーンの相違が１時です。 
+女の人：いいえ、こっちは朝だよ。朝の8 時50 分。 
+女の人：へえ。 
+">
+<answer isCorrect="1">1</answer>
+<answer isCorrect="0">2</answer>
+<answer isCorrect="0">3</answer>
+<answer isCorrect="0">4</answer>
+</question>
+<question weight="3" title="" text="" imgRef="4_1\2005_03_listen_quiz8.jpg" audioRef="
+3 番。
+男の人と女の人が駅で話しています。
+男の人はいつもどうやって駅まで行きましたか。
+男の人：おはよう、すごい雨だね、今日は。女の人：う
+女の人：うん、田中さん、バスできた？ 
+男の人：うーん、車。友達に駅まで送ってもらったんだ。
+女の人：いいな。いつも車。 
+男の人：今日は特別。いつもは自転車なんだ。歩久のは楽しいけど時間がかかる。
+女の人：うん、私は毎日歩くんだ。 
+ ">
+<answer isCorrect="0">1</answer>
+<answer isCorrect="1">2</answer>
+<answer isCorrect="0">3</answer>
+<answer isCorrect="0">4</answer>
+</question>
+</task>
+<task caption="問題4">
+<question weight="4" title="" text="" imgRef="" audioRef="
+医者と男の人が話しています。
+勧めないやり方はどれですか。 
+男の人：先生、ちょっと聞きたいですけど。泳いだり、走ったり、テニスと野球をしたり、一日続けてやってもいいですか。 
+女の人：そうですね、走ったり、テニスをしたりしてから、泳ぐのは危ないですよ。 
+男の人：あっ、そうですか、テニスをしてから、腕が痛いのができます。 
+女の人：それなら、いいですよ。　とにかく、テニスは泳ぎより好きです。 
+1。泳ぎ。2。テニス。3。野球。4。走り。
+">
+<answer isCorrect="0">1</answer>
+<answer isCorrect="1">2</answer>
+<answer isCorrect="0">3</answer>
+<answer isCorrect="0">4</answer>
+</question>
+
+<question weight="4" title="" text="" imgRef="4_1\2005_03_listen_quiz9.jpg" audioRef="
+会社で、男の人と女の人が話しています。
+二人はいつ遊園地に行きますか。 
+男の人：あした、遊園地にいかない？休日で毎月一日は安いんだよ。 
+女の人：明日はちょっと、友達に手伝わなければならない、やくそくした・・・ 
+男の人：再来週なら、まだいいんじゃない？ 土曜日ならいい？ 
+女の人：いいけど、安くないでしょう、でも月曜日は平日んだ。 
+男の人：大丈夫。僕が払うから、行こう。 
+女の人：ほんとう、じゃ。 
+1。明日。2。来週のげつ曜日。3。来週土の曜日。4。来週の日曜日。
+">
+<answer isCorrect="0">1</answer>
+<answer isCorrect="0">2</answer>
+<answer isCorrect="1">3</answer>
+<answer isCorrect="0">4</answer>
+</question>
+
+<question weight="4" title="" text="" imgRef="4_1\2005_03_listen_quiz9.jpg" audioRef="
+女の人が話しています。雨が降ったらどうしますか。 女の人：それでは、今から、自由に過ごしてください。
+帰りですが、２時に公園の入り口に集まってください。
+でも、もし雨が降ったら、30分早く集まることにします。
+それから、公園の入り口じゃなくて、あの図書館の前に集まってください。いいですね。 
+1。2時に公園の入り口に集まります。 2。1時半に図書館の前に集まります。 3。2時に公園の入り口に集まります。 4。1時半に図書館館の前に集まります。  
+">
+<answer isCorrect="0">1</answer>
+<answer isCorrect="0">2</answer>
+<answer isCorrect="0">3</answer>
+<answer isCorrect="1">4</answer>
 </question>
 </task>
 <task caption="問題5">

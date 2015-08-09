@@ -104,7 +104,7 @@ public class DictionaryService {
         TreeSet<String> words=new TreeSet<String>(String.CASE_INSENSITIVE_ORDER);
         while (!c.isAfterLast()) {
             words.add(c.getString(0).trim());
-            Log.d("getListByLang",c.getString(0));
+           // Log.d("getListByLang",c.getString(0));
             c.moveToNext();
         }
         return words;

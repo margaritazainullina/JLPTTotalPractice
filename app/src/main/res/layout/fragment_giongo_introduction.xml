@@ -1,92 +1,80 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:scrollbars="vertical"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background_portrait"
+    android:gravity="top"
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="ua.hneu.languagetrainer.pages.giongo.GiongoIntroductionActivity" >
+    tools:context="ua.hneu.languagetrainer.pages.vocabulary.WordIntroductionActivity$PlaceholderFragment">
 
-    <LinearLayout
-        android:id="@+id/linearLayout1"
+    <ProgressBar
+        android:id="@+id/intro_progress"
+        style="@style/ProgressBarLime"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical" >
+        android:layout_marginBottom="@dimen/activity_vertical_margin"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:progress="0"
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        android:progressDrawable="@drawable/progressbar2" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="240dp"
+        android:background="@drawable/container_dropshadow"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/giongoTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
             android:gravity="center"
-            android:orientation="horizontal"
-            android:paddingLeft="@dimen/activity_horizontal_margin" >
+            android:text="面"
+            android:textAlignment="center"
+            android:textSize="@dimen/xlargeText"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin" />
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:paddingBottom="@dimen/activity_vertical_margin" >
+        <TextView
+            android:id="@+id/translationTextView"
+            android:layout_width="fill_parent"
+            android:gravity="center"
+            android:layout_height="0dp"
+            android:layout_weight="0.7"
+            android:layout_gravity="center"
+            android:text="men"
+            android:textSize="@dimen/buttonTextSize"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin" />
 
-                <TextView
-                    android:id="@+id/giongoTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="面	"
-                    android:textSize="@dimen/xlargeText" />
 
-                <TextView
-                    android:id="@+id/translationTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="men"
-                    android:textSize="@dimen/largeText" />
-
-                <ListView
-                    android:id="@+id/giongoExamplesListView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" >
-                </ListView>
-            </LinearLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center" >
-
-            <Button
-                android:id="@+id/buttonPrevious"
-                style="@style/btnStyleOrange"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/buttonTextSize"
-                android:onClick="buttonPreviousOnClick"
-                android:text="@string/previous" />
-
-            <Button
-                android:id="@+id/buttonNext"
-                style="@style/btnStyleOrange"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="buttonNextOnClick"
-                android:textSize="@dimen/buttonTextSize"
-                android:text="@string/next" />
-
-            <Button
-                android:id="@+id/buttonSkip"
-                style="@style/btnStyleOrange"
-                android:textSize="@dimen/buttonTextSize"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="buttonSkipOnClick"
-                android:text="@string/skipIntroduction" />
-        </LinearLayout>
     </LinearLayout>
- </LinearLayout>
+
+    <ListView
+        android:id="@+id/giongoExamplesListView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></ListView>
+
+    <Button
+        android:id="@+id/buttonSkip"
+        style="@style/btnStyleOrange"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="buttonSkipOnClick"
+        android:text="@string/skipIntroduction"
+        android:textSize="@dimen/buttonTextSize" />
+
+</LinearLayout>

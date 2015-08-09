@@ -74,8 +74,16 @@ public class DictionaryActivity extends ListActivity {
         Log.d("TOTAL translation ", allTransl.size() + "");
         long endTime = System.nanoTime();
         Log.d("Load time", "time for loading " + (endTime - startTime) + " nanoseconds.");
-
         showAll();
+
+        //for test
+        for(String s:allTransl){
+            int number=0;
+            for (EntryAbstr entry : all) {
+                if(entry.translationsToString().contains(s)) number++;
+            }
+            if(number==0) Log.d("not found ", s);
+        }
     }
 
     @Override
@@ -159,8 +167,6 @@ public class DictionaryActivity extends ListActivity {
         Intent intent = new Intent(this, EntryDictionaryDetail.class);
 
         for (EntryAbstr ea : result) {
-            Log.d("FOUND: ", ea.toString());
-
             if (ea instanceof VocabularyEntry) {
                 VocabularyEntry ve = (VocabularyEntry) ea;
                 intent.putExtra("entry1", (Parcelable) ve);
@@ -214,9 +220,12 @@ public class DictionaryActivity extends ListActivity {
                 }
             }} else {
                 for (String transl:allTransl) {
-                    if(transl.startsWith(query))
+                    String[] words= transl.split("\\s");
+                    for(String word:words){
+                    if(word.toLowerCase().startsWith(query.toLowerCase()))
                     entriesToShow.add(transl);
                     Log.d("found", transl);
+                    }
                 }
 
         }

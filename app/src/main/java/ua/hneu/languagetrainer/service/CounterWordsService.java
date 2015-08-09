@@ -400,7 +400,7 @@ public class CounterWordsService {
                             App.numberOfEntriesInCurrentDict));
             App.userInfo.setIsCWLaunchedFirstTime(0);
         } else {
-            currentDict = CounterWordsService.getNLastViewedEntries( App.numberOfEntriesInCurrentDict,  "", contentResolver);
+            currentDict = CounterWordsService.getNLastViewedEntries( App.numberOfEntriesInCurrentDict,  section, contentResolver);
         }
         return currentDict;
 	}

@@ -21,10 +21,12 @@ import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
@@ -36,10 +38,21 @@ public class GrammarIntroductionActivity extends FragmentActivity {
 	public static GrammarRule curRule;
 	public static int idx = -1;
 
+    private static final int ACTION_TYPE_DEFAULT = 0;
+    private static final int ACTION_TYPE_UP = 1;
+    private static final int ACTION_TYPE_RIGHT = 2;
+    private static final int ACTION_TYPE_DOWN = 3;
+    private static final int ACTION_TYPE_LEFT = 4;
+    private static final int SLIDE_RANGE = 100;
+    private float mTouchStartPointX;
+    private float mTouchStartPointY;
+    private int mActionType = ACTION_TYPE_DEFAULT;
+    ProgressBar progressBar;
+
 	TextView ruleTextView;
 	TextView descriptionTextView;
 	ListView grammarExamplesListView;
-	Button prevButton;
+	//Button prevButton;
 	TextToVoiceMediaPlayer twmp;
 	String phrase = "";
 
@@ -60,10 +73,11 @@ public class GrammarIntroductionActivity extends FragmentActivity {
 		ruleTextView = (TextView) findViewById(R.id.ruleTextView);
 		descriptionTextView = (TextView) findViewById(R.id.transcriptionTextView);
 		grammarExamplesListView = (ListView) findViewById(R.id.grammarExamplesListView);
+        progressBar = (ProgressBar) findViewById(R.id.intro_progress);
 
 		// increment number of
 		App.vp.incrementNumberOfPassingsInARow();
-		prevButton = (Button) findViewById(R.id.buttonPrevious);
+		//prevButton = (Button) findViewById(R.id.buttonPrevious);
 
 		// show first entry
 		curRule = App.grammarDictionary.get(0);
@@ -73,8 +87,7 @@ public class GrammarIntroductionActivity extends FragmentActivity {
 		twmp = new TextToVoiceMediaPlayer();
 		showEntry(curRule);
 		ruleTextView.setTypeface(App.kanjiFont, Typeface.NORMAL);
-		
-		prevButton.setEnabled(false);
+
 	}
 
     @Override
@@ -99,19 +112,65 @@ public class GrammarIntroductionActivity extends FragmentActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        int x = (int) event.getRawX();
+        int y = (int) event.getRawY();
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                mTouchStartPointX = event.getRawX();
+                mTouchStartPointY = event.getRawY();
+                break;
+            case MotionEvent.ACTION_MOVE:
+                if (mTouchStartPointX - x > SLIDE_RANGE) {
+                    mActionType = ACTION_TYPE_LEFT;
+                } else if (x - mTouchStartPointX > SLIDE_RANGE) {
+                    mActionType = ACTION_TYPE_RIGHT;
+                } else if (mTouchStartPointY - y > SLIDE_RANGE) {
+                    mActionType = ACTION_TYPE_UP;
+                } else if (y - mTouchStartPointY > SLIDE_RANGE) {
+                    mActionType = ACTION_TYPE_DOWN;
+                }
+                break;
+            case MotionEvent.ACTION_UP:
+                if (mActionType == ACTION_TYPE_UP) {}
+                else if (mActionType == ACTION_TYPE_RIGHT) {
+                    slideToLeft();
+                } else if (mActionType == ACTION_TYPE_DOWN) {}
+                else if (mActionType == ACTION_TYPE_LEFT) {
+                    slideToRight();
+                }
+                break;
+            default:
+                break;
+        }
+        return true;
+    }
 
-    public void buttonNextOnClick(View v) {
-		idx++;
-		// if Next button was disabled
-		prevButton.setEnabled(true);
-		if (idx >= App.numberOfEntriesInCurrentDict) {
-			// if all words have been showed go to next activity
-			goToNextPassingActivity();
-		} else {
-			curRule = App.grammarDictionary.get(idx);
-			showEntry(curRule);
-		}
-	}
+    protected void slideToRight() {
+        idx++;
+        if (idx >= App.vocabularyDictionary.size()) {
+            // if all words have been showed go to next activity
+            goToNextPassingActivity();
+        } else {
+            int progress = (int) Math
+                    .round(((double) idx / (double) App.vocabularyDictionary.size()) * 100);
+            progressBar.setProgress(progress);
+            curRule=App.grammarDictionary.get(idx);
+            showEntry(App.grammarDictionary.get(idx));
+        }
+    }
+
+    protected void slideToLeft() {
+        if (idx > 0) {
+            idx--;
+            int progress = (int) Math
+                    .round(((double) idx / (double) App.vocabularyDictionary.size()) * 100);
+            progressBar.setProgress(progress);
+            curRule=App.grammarDictionary.get(idx);
+            showEntry(App.grammarDictionary.get(idx));
+        }
+    }
 
 	public void buttonSkipOnClick(View v) {
 		goToNextPassingActivity();
@@ -151,15 +210,7 @@ public class GrammarIntroductionActivity extends FragmentActivity {
 
 	}
 
-	public void buttonPreviousOnClick(View v) {
-		if (idx > 0) {
-			idx--;
-			curRule = App.grammarDictionary.get(idx);
-			showEntry(curRule);
-		} else {
-			prevButton.setEnabled(false);
-		}
-	}
+
 
 	public void onPlayClick1(View v) {
 		// getting layout with text

@@ -1,5 +1,11 @@
 package ua.hneu.languagetrainer;
 
+import android.media.AudioManager;
+import android.media.MediaPlayer;
+import android.media.SoundPool;
+import android.os.StrictMode;
+import android.util.Log;
+
 import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileOutputStream;
@@ -10,30 +16,19 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.net.URLEncoder;
 
-import android.content.Context;
-import android.media.AudioManager;
-import android.media.MediaPlayer;
-import android.media.SoundPool;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.os.AsyncTask;
-import android.os.Environment;
-import android.os.StrictMode;
-import android.util.Log;
-
 public class TextToVoiceMediaPlayer {
-	MediaPlayer mediaPlayer;
-    SoundPool soundPool = new SoundPool(1,1,1);
+    MediaPlayer mediaPlayer;
+    SoundPool soundPool = new SoundPool(1, 1, 1);
     public static int handle1;
 
-	public TextToVoiceMediaPlayer() {
-		mediaPlayer = new MediaPlayer();
-		mediaPlayer.reset();
-		mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
-	}
+    public TextToVoiceMediaPlayer() {
+        mediaPlayer = new MediaPlayer();
+        mediaPlayer.reset();
+        mediaPlayer.setAudioStreamType(AudioManager.STREAM_MUSIC);
+    }
 
-	public void loadAndPlay(String s, final float volume, final float speed) {
-		try {
+    public void loadAndPlay(String s, final float volume, final float speed) {
+        try {
             //a stub
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
             StrictMode.setThreadPolicy(policy);
@@ -54,8 +49,7 @@ public class TextToVoiceMediaPlayer {
                 File file = new File(App.context.getFilesDir(), "temp.mp3");
                 OutputStream output = new FileOutputStream(file);
 
-                if (file.exists())
-                {
+                if (file.exists()) {
                     file.delete();
                 }
                 file.createNewFile();
@@ -64,8 +58,7 @@ public class TextToVoiceMediaPlayer {
                 byte[] buff = new byte[5 * 1024];
 
                 int len;
-                while ((len = input.read(buff)) != -1)
-                {
+                while ((len = input.read(buff)) != -1) {
                     outStream.write(buff, 0, len);
                 }
 
@@ -74,29 +67,28 @@ public class TextToVoiceMediaPlayer {
                 input.close();
 
                 Log.d("file ", file.getPath());
-                Log.d("file ", file.length()+"");
+                Log.d("file ", file.length() + "");
 
+                handle1 = soundPool.load(App.context.getFilesDir() + "/temp.mp3", 1);
+                soundPool.setOnLoadCompleteListener(new SoundPool.OnLoadCompleteListener() {
+                    public void onLoadComplete(SoundPool soundPool, int sampleId, int status) {
+                        Log.d("setOnLoadCompleteListener", "loaded");
+                        soundPool.play(handle1, volume, volume, 1, 0, speed);
+                    }
+                });
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
-           handle1 = soundPool.load(App.context.getFilesDir() +"/temp.mp3",1);
-            soundPool.setOnLoadCompleteListener(new SoundPool.OnLoadCompleteListener() {
-                public void onLoadComplete(SoundPool soundPool, int sampleId,int status) {
-                    Log.d("setOnLoadCompleteListener","loaded");
-                    soundPool.play(handle1,volume,volume,1,0,speed);
-                }
-            });
-		} catch (IllegalArgumentException e) {
-			mediaPlayer.reset();
-			e.printStackTrace();
-		} catch (IllegalStateException e) {
-			mediaPlayer.reset();
-			Log.e("Text to voice media player", "Internet connection is lmited");
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
- 	}
+        } catch (IllegalArgumentException e) {
+            mediaPlayer.reset();
+            e.printStackTrace();
+        } catch (IllegalStateException e) {
+            mediaPlayer.reset();
+            Log.e("Text to voice media player", "Internet connection is lmited");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     public void pause() {
         soundPool.pause(1);
@@ -108,7 +100,7 @@ public class TextToVoiceMediaPlayer {
 
     public void stop() {
         soundPool.stop(1);
-	}
+    }
 
 
 }
